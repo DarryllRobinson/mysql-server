@@ -21,7 +21,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(cors());
 
 // log HTTP requests
-app.use(morgan('combined'));
+//app.use(morgan('combined'));
 
 //app.post('/xxxupload', (req, res) => res.send('Hello World!'));
 
@@ -29,12 +29,8 @@ app.listen(port);
 
 console.log('API server started on: ' + port);
 
-app.get('/', function(req, res) {
-  res.json('Let us get started!');
-})
-
-//const routes = require('./app/routes/appRoutes'); //importing Routes
-//routes(app); //register the route
+const routes = require('./routes/app.routes'); //importing Routes
+routes(app); //register the route
 
 app._router.stack.forEach(function(r){
   if (r.route && r.route.path){
