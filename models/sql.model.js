@@ -11,7 +11,6 @@ Model.getAll = function(result, table) {
       console.log('getAll error: ', err);
       result(null, err);
     } else {
-      //console.log('getAll res: ', res);
       result(null, res);
     }
   });
@@ -23,7 +22,6 @@ Model.createOne = function(newModel, result, table) {
       console.log('createOne error: ', err);
       result(null, err);
     } else {
-      console.log('createOne res: ', res);
       result(null, res);
     }
   });
@@ -33,44 +31,37 @@ Model.createOne = function(newModel, result, table) {
 
 // Read
 Model.getOne = function(id, result, table) {
-  console.log('id: ', id);
-  console.log('result: ', result);
-  console.log('table: ', table);
   sql.query(`SELECT * FROM ${table} WHERE id = ?`, id, function(err, res) {
     if (err) {
       console.log('getOne error: ', err);
       result(null, err);
     } else {
-      console.log('getOne res: ', res);
       result(null, res);
     }
   });
 }
 
 // Update
-Model.updateOne = async function(id, model, result, table) {
-  console.log('updateOne model: ', model);
+Model.updateOne = async function(id, model, result, table)
   let arr = [];
   arr.push(model);
-  console.log('arr: ', arr);
+
   await bulkUpdate(table, arr, id, function(err, res) {
     if (err) {
       console.log('updateOne error: ', err);
       result(null, err);
     } else {
-      console.log('updateOne res: ', res);
       result(null, res);
     }
   });
 }
 
-// function to update a json object without having to worry about the columns and values
+// Function to update a json object without having to worry about the columns and values
 // I have no idea why this isn't an out of the box function but there you have it...
 // It's probably widely insecure but I'll look into that later
 async function bulkUpdate(table, objectArray, id, callback) {
 
   let keys = Object.keys(objectArray[0]);
-  //let values = objectArray.map(obj => keys.map(key => obj[key]));
   let values = [];
   objectArray.map(obj => keys.map(key => {
     if (key !== 'id') {
@@ -89,5 +80,15 @@ async function bulkUpdate(table, objectArray, id, callback) {
 }
 
 // Delete
+Model.removeOne = function(id, result, table) {
+  sql.query(`DELETE FROM ${table} WHERE id = ?;`, [id], function(err, res) {
+    if (err) {
+      console.log('removeOne error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+}
 
 module.exports = Model;

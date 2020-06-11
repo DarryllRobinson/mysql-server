@@ -16,7 +16,6 @@ exports.create_item = function(req, res) {
     if (err) {
       console.log('createOne controller error: ', err);
     } else {
-      console.log('create_item model: ', model);
       res.send(model);
     }
   }, req.table);
@@ -28,7 +27,6 @@ exports.read_item = function(req, res) {
     if (err) {
       console.log('getOne controller error: ', err);
     } else {
-      console.log('read_item model: ', model);
       res.send(model);
     }
   }, req.table);
@@ -40,7 +38,6 @@ exports.update_item = function(req, res) {
     if (err) {
       console.log('updateOne controller error: ', err);
     } else {
-      console.log('update_item model: ', model);
       res.send(model);
     }
   }, req.table);
@@ -52,7 +49,6 @@ exports.delete_item = function(req, res) {
     if (err) {
       console.log('removeOne controller error: ', err);
     } else {
-      console.log('delete_item model: ', model);
       res.send(model);
     }
   }, req.table);
