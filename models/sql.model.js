@@ -66,6 +66,7 @@ Model.updateOne = async function(id, model, result, table) {
 
 // function to update a json object without having to worry about the columns and values
 // I have no idea why this isn't an out of the box function but there you have it...
+// It's probably widely insecure but I'll look into that later
 async function bulkUpdate(table, objectArray, id, callback) {
 
   let keys = Object.keys(objectArray[0]);
@@ -76,26 +77,11 @@ async function bulkUpdate(table, objectArray, id, callback) {
       if (obj[key] === 'NULL') obj[key] = null;
       obj[key] = ` ${key} = '${obj[key]}'`;
     }
-    console.log('obj[key]: ', obj[key]);
     values.push(obj[key]);
   }));
 
-  console.log('values: ', values);
-
-  // replace 'NULL' with NULL
-  /*values.map(outside => {
-    outside.forEach(function(e, i) {
-      if (e === 'NULL') {
-        outside[i] = null;
-      }
-    });
-  });*/
-
-  console.log('values: ', values);
-
   // UPDATE {table} SET colname = ?, ...    WHERE id = ?;
   let sqlstatement = `UPDATE ${table} SET${values} WHERE id = ${id};`;
-  console.log('sqlstatement: ', sqlstatement);
   await sql.query(sqlstatement, function(error, results, fields) {
     if (error) return callback(error);
     callback(null, results);
