@@ -1,5 +1,6 @@
 const Model = require('../models/sql.model');
 
+// Read all
 exports.list_all = function(req, res) {
   Model.getAll(function(err, model) {
     if (err) {
@@ -10,9 +11,9 @@ exports.list_all = function(req, res) {
   }, req.table);
 }
 
+// Create one
 exports.create_item = function(req, res) {
-  const new_item = req.body;
-  Model.createOne(new_item, function(err, model) {
+  Model.createOne(req.body, function(err, model) {
     if (err) {
       console.log('createOne controller error: ', err);
     } else {
@@ -21,7 +22,18 @@ exports.create_item = function(req, res) {
   }, req.table);
 }
 
-// Read
+// Create many
+exports.create_items = function(req, res) {
+  Model.createMany(req.body, function(err, model) {
+    if (err) {
+      console.log('createMany controller error: ', err);
+    } else {
+      res.send(model);
+    }
+  }, req.table);
+}
+
+// Read one
 exports.read_item = function(req, res) {
   Model.getOne(req.params.id, function(err, model) {
     if (err) {
@@ -32,7 +44,7 @@ exports.read_item = function(req, res) {
   }, req.table);
 }
 
-// Update
+// Update one ***** Possibly incredibly unsafe!
 exports.update_item = function(req, res) {
   Model.updateOne(req.params.id, req.body, function(err, model) {
     if (err) {
@@ -43,7 +55,7 @@ exports.update_item = function(req, res) {
   }, req.table);
 }
 
-// Delete
+// Delete one
 exports.delete_item = function(req, res) {
   Model.removeOne(req.params.id, function(err, model) {
     if (err) {

@@ -16,8 +16,8 @@ Model.getAll = function(result, table) {
   });
 };
 
-Model.createOne = function(newModel, result, table) {
-  sql.query(`INSERT INTO ${table} SET ?;`, newModel, function(err, res) {
+Model.createOne = function(newItem, result, table) {
+  sql.query(`INSERT INTO ${table} SET ?;`, newItem, function(err, res) {
     if (err) {
       console.log('createOne error: ', err);
       result(null, err);
@@ -28,6 +28,42 @@ Model.createOne = function(newModel, result, table) {
 };
 
 // Bulk create
+Model.createMany = async function(newItems, result, table) {
+  try {
+    await bulkInsert(table, newItems, (error, response) => {
+      if (error) {
+        console.log('bulkInsert error: ', error);
+        error.json({error_code: 1, err_desc: error, data: null});
+      }
+      console.log(`Successful insert of ${response.affectedRows} rows`);
+      result(null, response.affectedRows);
+    });
+  } catch (e) {
+    console.log('createMany problem (e): ', e);
+    return res.json({error_code: 1,err_desc: err, data: null});
+  }
+}
+
+async function bulkInsert(table, objectArray, callback) {
+  let keys = Object.keys(objectArray[0]);
+  let values = objectArray.map( obj => keys.map( key => obj[key]));
+
+  // replace 'NULL' with NULL
+  values.map(outside => {
+    outside.forEach(function(e, i) {
+      if (e === 'NULL') {
+        outside[i] = null;
+      }
+    });
+  });
+
+  let sqlstatement = 'INSERT INTO ' + table + ' (' + keys.join(', ') + ') VALUES ? ';
+  //console.log('[values]: ', values);
+  await sql.query(sqlstatement, [values], function (error, results, fields) {
+    if (error) return callback(error);
+    callback(null, results);
+  });
+}
 
 // Read
 Model.getOne = function(id, result, table) {
@@ -42,7 +78,7 @@ Model.getOne = function(id, result, table) {
 }
 
 // Update
-Model.updateOne = async function(id, model, result, table)
+Model.updateOne = async function(id, model, result, table) {
   let arr = [];
   arr.push(model);
 
