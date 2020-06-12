@@ -1,0 +1,2 @@
+::1 - - [12/Jun/2020:00:11:38 +0000] "GET /api/users HTTP/1.1" 200 517 "-" "PostmanRuntime/7.25.0"
+::1 - - [12/Jun/2020:00:12:11 +0000] "GET /api/users HTTP/1.1" 200 517 "-" "PostmanRuntime/7.25.0"

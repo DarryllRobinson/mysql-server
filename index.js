@@ -4,6 +4,8 @@ const port = process.env.PORT || 8080;
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
+const path = require('path');
+const rfs = require('rotating-file-stream');
 const mysql = require('mysql');
 const app = express();
 
@@ -20,10 +22,26 @@ app.use(express.static(__dirname + '/public'));
 // enable all CORS requests
 app.use(cors());
 
-// log HTTP requests
-//app.use(morgan('combined'));
+// log HTTP requests to a daily file
+// create a rotating write stream
+const accessLogStream = rfs.createStream('access.log', {
+  interval: '1d', // rotate daily
+  path: path.join(__dirname, 'log')
+});
 
-//app.post('/xxxupload', (req, res) => res.send('Hello World!'));
+/* Perhaps we will want to use specified fields at a later stage
+app.use(morgan(function (tokens, req, res) {
+  console.log('tokens: ', tokens);
+  return [
+    tokens.method(req, res), '-',
+    tokens.url(req, res), '-',
+    tokens.date(req, res), '-',
+    tokens.status(req, res), '-',
+    tokens.res(req, res, 'content-length'), '-',
+    tokens['response-time'](req, res), 'ms'
+  ].join(' ')
+}, { stream: accessLogStream }));*/
+app.use(morgan('combined', { stream: accessLogStream }));
 
 app.listen(port);
 

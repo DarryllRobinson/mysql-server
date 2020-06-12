@@ -13,12 +13,13 @@ module.exports = function(app) {
     return path.substring(indexOfSecond + 1);
   }
 
+  // Adding table name to the req
   app.use(function(req, res, next) {
-    //console.log('req: ', req);
     req.table = getTableName(req.path);
     next();
   });
 
+  // Users
   app.route('/api/users')
     .get(cont.list_all)
     .post(cont.create_item);
@@ -28,11 +29,22 @@ module.exports = function(app) {
     .put(cont.update_item)
     .delete(cont.delete_item);
 
+  // Clients
   app.route('/api/clients')
     .get(cont.list_all)
     .post(cont.create_item);
 
   app.route('/api/clients/:id')
+    .get(cont.read_item)
+    .put(cont.update_item)
+    .delete(cont.delete_item);
+
+  // Blogs
+  app.route('/api/blogs')
+    .get(cont.list_all)
+    .post(cont.create_item);
+
+  app.route('/api/blogs/:id')
     .get(cont.read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
