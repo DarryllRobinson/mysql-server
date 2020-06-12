@@ -59,4 +59,14 @@ module.exports = function(app) {
     .get(comments.read_item)
     .put(comments.update_item)
     .delete(cont.delete_item);
+
+  // Applications
+  app.route('/api/applications')
+    .get(cont.list_all)
+    .post(cont.create_item);
+
+  app.route('/api/applications/:applicationId')
+    .get(cont.read_item)
+    .put(cont.update_item)
+    .delete(cont.delete_item);
 }
