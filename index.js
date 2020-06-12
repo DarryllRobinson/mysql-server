@@ -24,7 +24,7 @@ app.use(cors());
 
 // log HTTP requests to a daily file
 // create a rotating write stream
-const accessLogStream = rfs.createStream('access.log', {
+const accessLogStream = rfs.createStream('access.csv', {
   interval: '1d', // rotate daily
   path: path.join(__dirname, 'log')
 });
@@ -42,6 +42,7 @@ app.use(morgan(function (tokens, req, res) {
   ].join(' ')
 }, { stream: accessLogStream }));*/
 app.use(morgan('combined', { stream: accessLogStream }));
+app.use(morgan('tiny'));
 
 app.listen(port);
 

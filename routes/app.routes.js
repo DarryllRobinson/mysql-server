@@ -1,5 +1,6 @@
 module.exports = function(app) {
   const cont = require('../controllers/sql.controller');
+  const comments = require('../controllers/comments.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -47,5 +48,15 @@ module.exports = function(app) {
   app.route('/api/blogs/:id')
     .get(cont.read_item)
     .put(cont.update_item)
+    .delete(cont.delete_item);
+
+  // Comments
+  app.route('/api/comments')
+    .get(cont.list_all)
+    .post(cont.create_item);
+
+  app.route('/api/comments/:id')
+    .get(comments.read_item)
+    .put(comments.update_item)
     .delete(cont.delete_item);
 }
