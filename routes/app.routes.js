@@ -8,19 +8,34 @@ module.exports = function(app) {
     const indexOfSecond = path.indexOf(searchTerm, (indexOfFirst + 1));
     const indexOfThird = path.indexOf(searchTerm, (indexOfSecond + 1));
     const indexOfFourth = path.indexOf(searchTerm, (indexOfThird + 1));
+    const indexOfFifth = path.indexOf(searchTerm, (indexOfFourth + 1));
     const apiLength = path.length;
 
+    console.log('indexOfFirst: ', indexOfFirst);
+    console.log('indexOfSecond: ', indexOfSecond);
+    console.log('indexOfThird: ', indexOfThird);
+    console.log('indexOfFourth: ', indexOfFourth);
+    console.log('indexOfFifth: ', indexOfFifth);
+    console.log('apiLength: ', apiLength);
+
+    // For routes with /api/{resource}/{table}/{appstatus}/:id pattern
+    if (indexOfFifth < 0) console.log('5: ', path.substring(indexOfFourth + 1, apiLength));
+    if (indexOfFifth < 0) return path.substring(indexOfFourth + 1, apiLength);
     // For routes with /api/{resource}/{table}/:id pattern
+    if (indexOfFourth < 0) console.log('4: ', path.substring(indexOfThird + 1, apiLength));
     if (indexOfFourth < 0) return path.substring(indexOfThird + 1, apiLength);
     // For routes with /api/{table}/:id pattern
-    if (indexOfThird < 0) return path.substring(indexOfSecond + 1, indexOfThird);
+    if (indexOfThird < 0) console.log('3: ', path.substring(indexOfSecond + 1, apiLength));
+    if (indexOfThird < 0) return path.substring(indexOfSecond + 1, apiLength);
     // For routes with /api/{table} pattern
-    if (indexOfSecond < 0) return path.substring(indexOfFirst, indexOfSecond + 1);
+    if (indexOfSecond < 0) console.log('2: ', path.substring(indexOfFirst, indexOfSecond + 1));
+    if (indexOfSecond < 0) return path.substring(indexOfFirst, apiLength);
   }
 
   // Adding table name to the req
   app.use(function(req, res, next) {
     req.table = getTableName(req.path);
+    console.log('req.table: ', req.table);
     next();
   });
 
