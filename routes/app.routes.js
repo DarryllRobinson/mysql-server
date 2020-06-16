@@ -19,8 +19,8 @@ module.exports = function(app) {
     console.log('apiLength: ', apiLength);
 
     // For routes with /api/{resource}/{table}/{appstatus}/:id pattern
-    if (indexOfFifth < 0) console.log('5: ', path.substring(indexOfFourth + 1, apiLength));
-    if (indexOfFifth < 0) return path.substring(indexOfFourth + 1, apiLength);
+    if (indexOfFifth < 0) console.log('5: ', path.substring(indexOfThird + 1, indexOfFourth));
+    if (indexOfFifth < 0) return path.substring(indexOfThird + 1, indexOfFourth);
     // For routes with /api/{resource}/{table}/:id pattern
     if (indexOfFourth < 0) console.log('4: ', path.substring(indexOfThird + 1, apiLength));
     if (indexOfFourth < 0) return path.substring(indexOfThird + 1, apiLength);
