@@ -85,7 +85,7 @@ module.exports = function(app) {
     .post(cont.create_item)
     .post(cont.create_items);
 
-  app.route('/api/workspace/applications/:applicationId')
+  app.route('/api/workspace/applications/:id')
     .get(cont.read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
