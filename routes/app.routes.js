@@ -40,21 +40,21 @@ module.exports = function(app) {
   });
 
   // Users
-  app.route('/api/users')
+  app.route('/api/admin/users')
     .get(cont.list_all)
     .post(cont.create_item);
 
-  app.route('/api/users/:id')
+  app.route('/api/admin/users/:id')
     .get(cont.read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
 
   // Clients
-  app.route('/api/clients')
+  app.route('/api/admin/clients')
     .get(cont.list_all)
     .post(cont.create_item);
 
-  app.route('/api/clients/:id')
+  app.route('/api/admin/clients/:id')
     .get(cont.read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
@@ -117,6 +117,16 @@ module.exports = function(app) {
 
   app.route('/api/maintenance/declines/:declineId')
     .get(cont.read_item)
+    .put(cont.update_item)
+    .delete(cont.delete_item);
+
+  // Services
+  app.route('/api/admin/clientservices')
+    .get(cont.list_all)
+    .post(cont.create_item);
+
+  app.route('/api/admin/clientservices/:f_id')
+    .get(cont.f_read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
 }

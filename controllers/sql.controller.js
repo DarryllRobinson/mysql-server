@@ -44,6 +44,17 @@ exports.read_item = function(req, res) {
   }, req.table);
 }
 
+// Read one using foreign key
+exports.f_read_item = function(req, res) {
+  Model.f_getOne(req.params.f_id, function(err, model) {
+    if (err) {
+      console.log('getOne controller error: ', err);
+    } else {
+      res.send(model);
+    }
+  }, req.table);
+}
+
 // Update one ***** Possibly incredibly unsafe!
 exports.update_item = function(req, res) {
   console.log('req.params.id: ', req.params.id);

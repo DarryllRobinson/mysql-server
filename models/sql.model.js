@@ -77,6 +77,18 @@ Model.getOne = function(id, result, table) {
   });
 }
 
+// Read one based on foreign key
+Model.f_getOne = function(id, result, table) {
+  sql.query(`SELECT * FROM ${table} WHERE f_id = ?`, id, function(err, res) {
+    if (err) {
+      console.log('f_getOne error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+}
+
 // Update
 Model.updateOne = async function(id, model, result, table) {
   let arr = [];
