@@ -90,6 +90,16 @@ module.exports = function(app) {
     .put(cont.update_item)
     .delete(cont.delete_item);
 
+  // Collections
+  app.route('/api/workspace/collections')
+    .get(cont.list_all)
+    .post(cont.create_item);
+
+  app.route('/api/workspace/collections/:f_id')
+    .get(cont.f_read_item)
+    .put(cont.update_item)
+    .delete(cont.delete_item);
+
   // Approved
   app.route('/api/workspace/applications/approved')
     .get(cont.list_all)
