@@ -1,6 +1,7 @@
 module.exports = function(app) {
   const cont = require('../controllers/sql.controller');
   const comments = require('../controllers/comments.controller');
+  const sessions = require('../controllers/sessions.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -58,6 +59,15 @@ module.exports = function(app) {
     .get(cont.read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
+
+  // Sessions
+  app.route('/api/admin/sessions')
+    .post(sessions.auth);
+
+  app.route('/api/admin/sessions/:email')
+    .get(sessions.authCheck)
+    //.put(sessions.update_item)
+    .delete(sessions.delete_item);
 
   // Blogs
   app.route('/api/community/blogs')

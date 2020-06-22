@@ -1,4 +1,5 @@
 const express = require('express');
+const session = require('express-session');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 8080;
 const cors = require('cors');
@@ -8,6 +9,13 @@ const path = require('path');
 const rfs = require('rotating-file-stream');
 const mysql = require('mysql');
 const app = express();
+
+// creating the ability to hold sessions
+app.use(session({
+  secret: 'b0ob1e5',
+  resave: true,
+  saveUninitialized: true
+}));
 
 // enhance your app security with Helmet
 app.use(helmet());
