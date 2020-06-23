@@ -28,6 +28,11 @@ Session.getUser = function(email, result) {
     if (err) {
       console.log('getUser SELECT error: ', err);
       result(null, err);
+    } else if (res.length === 0) {
+      res.push({user: {}});
+      res.push({logged_in: false});
+      console.log('getUser res: ', res);
+      result(null, res);
     } else {
       console.log('getUser SELECT result: ', res);
       result(null, res);
