@@ -1,5 +1,6 @@
 'use strict'
 const sql = require('../config/db');
+const bcrypt = require ('bcryptjs');
 
 const Session = function(model) {
   this.createdDate = new Date();
@@ -7,9 +8,9 @@ const Session = function(model) {
 
 // Read
 Session.createSession = function(newSession, result) {
-  console.log('newSession: ', newSession.email);
+  console.log('newSession: ', newSession);
   console.log('typeof newSession: ', typeof newSession);
-  sql.query(`INSERT INTO sessions  SET ?;`, newSession, function(err, res) {
+  sql.query(`INSERT INTO sessions SET ?;`, newSession, function(err, res) {
   //sql.query(`SELECT * FROM users WHERE email = ?`, id, function(err, res) {
     if (err) {    // ******* include error handling for when rows can't be inserted, etc.
       console.log('createSession INSERT INTO error: ', err);
@@ -22,9 +23,10 @@ Session.createSession = function(newSession, result) {
   });
 }
 
-Session.getUser = function(email, result) {
+Session.getUser = function(email, password, result) {
   console.log('getUser email: ', email);
-  sql.query(`SELECT firstName, surname, email, role, f_clientId FROM users WHERE email = ?;`, email, function(err, res) {
+  console.log('getUser password: ', password);
+  sql.query(`SELECT firstName, surname, role, password, f_clientId FROM users WHERE email = ?;`, email, function(err, res) {
     if (err) {
       console.log('getUser SELECT error: ', err);
       result(null, err);
@@ -34,8 +36,15 @@ Session.getUser = function(email, result) {
       console.log('getUser res: ', res);
       result(null, res);
     } else {
-      console.log('getUser SELECT result: ', res);
-      result(null, res);
+      // comparing passwords
+      bcrypt.compare(password, res[0].password, function(err, match) {
+        if (match) {
+          res.match = match;
+          result(null, res);
+        } else {
+          result(null, false);
+        }
+      });
     }
   });
 }

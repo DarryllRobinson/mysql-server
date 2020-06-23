@@ -1,7 +1,41 @@
 const Session = require('../models/sessions.model');
 
-// Read one
 exports.auth = function(req, res) {
+  Session.getUser(req.body.email, req.body.password, function(err, session) {
+    if (err) {
+      console.log('auth error: ', err);
+    } else {
+      console.log('auth session: ', session);
+      if (session.match) {
+        let newSession = {
+          email: req.body.email,
+          loginDate: req.body.loginDate
+        };
+
+        Session.createSession(newSession, function(err, user) {
+          if (err) {
+            console.log('createSession controller error: ', err);
+          } else {
+            console.log('getUser response: ', user);
+            let response = {
+              firstName: session[0].firstName,
+              surname: session[0].surname,
+              email: user.email,
+              role: session[0].role
+            };
+            console.log('Session response: ', response);
+            res.send(response);
+          }
+        });
+      } else {
+        res.send('No match');
+      }
+    }
+  });
+}
+
+// Read one
+exports.xxxauth = function(req, res) {
   Session.createSession(req.body, function(err, session) {
     if (err) {
       console.log('createSession controller error: ', err);
