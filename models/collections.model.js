@@ -67,7 +67,8 @@ async function bulkInsert(table, objectArray, callback) {
 
 // Read
 Model.getOne = function(id, result, table) {
-  sql.query(`SELECT * FROM accounts, customers WHERE accounts.f_customerId = customers.id AND account.id = ?`, id, function(err, res) {
+  console.log('id: ', id);
+  sql.query(`SELECT * FROM accounts, customers WHERE accounts.f_customerId = customers.id AND accounts.accountNumber = ?`, id, function(err, res) {
     if (err) {
       console.log('getOne error: ', err);
       result(null, err);
@@ -94,7 +95,7 @@ Model.updateOne = async function(id, model, result, table) {
   let arr = [];
   arr.push(model);
 
-  await bulkUpdate(table, arr, id, function(err, res) {
+  await bulkUpdate(arr, id, function(err, res) {
     if (err) {
       console.log('updateOne error: ', err);
       result(null, err);
@@ -107,7 +108,7 @@ Model.updateOne = async function(id, model, result, table) {
 // Function to update a json object without having to worry about the columns and values
 // I have no idea why this isn't an out of the box function but there you have it...
 // It's probably widely insecure but I'll look into that later
-async function bulkUpdate(table, objectArray, id, callback) {
+async function bulkUpdate(objectArray, id, callback) {
 
   let keys = Object.keys(objectArray[0]);
   let values = [];
@@ -120,7 +121,7 @@ async function bulkUpdate(table, objectArray, id, callback) {
   }));
 
   // UPDATE {table} SET colname = ?, ...    WHERE id = ?;
-  let sqlstatement = `UPDATE ${table} SET${values} WHERE id = ${id};`;
+  let sqlstatement = `UPDATE accounts SET ${values} WHERE accountNumber = ${id};`;
   await sql.query(sqlstatement, function(error, results, fields) {
     if (error) return callback(error);
     callback(null, results);

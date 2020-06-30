@@ -107,8 +107,9 @@ module.exports = function(app) {
     .get(coll.list_all)
     .post(coll.create_item);
 
-  app.route('/api/workspace/collections/:f_id')
-    .get(coll.f_read_item)
+  app.route('/api/workspace/collections/:id')
+    //.get(coll.f_read_item)
+    .get(coll.read_item)
     .put(coll.update_item)
     .delete(coll.delete_item);
 
