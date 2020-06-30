@@ -1,5 +1,4 @@
 const express = require('express');
-const session = require('express-session');
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 8080;
 const cors = require('cors');
@@ -9,13 +8,10 @@ const path = require('path');
 const rfs = require('rotating-file-stream');
 const mysql = require('mysql');
 const app = express();
-
-// creating the ability to hold sessions
-app.use(session({
-  secret: 'b0ob1e5',
-  resave: true,
-  saveUninitialized: true
-}));
+const cron = require('node-cron');
+const sql = require('./config/db');
+const moment = require('moment');
+//const crons = require('./cron.jobs/cron.jobs');
 
 // enhance your app security with Helmet
 app.use(helmet());
@@ -51,6 +47,86 @@ app.use(morgan(function (tokens, req, res) {
 }, { stream: accessLogStream }));*/
 app.use(morgan('combined', { stream: accessLogStream }));
 app.use(morgan('tiny'));
+
+// Cron jobs
+//cron.schedule('*/2 * * * *', () => {
+  //console.log('running a task every 2 minutes');
+//});
+
+//cron.schedule('0 1 * * *', () => {
+  //console.log('running a task every hour - this is where the account update will come');
+  //crons.createCustomers();
+//});
+
+cron.schedule('2 * * * * *', () => {
+  console.log('running createCustomers');
+  sql.query(`SELECT * FROM applications WHERE status = 'Approved' and booked is NULL;`, function(err, res) {
+    if (err) {
+      console.log('createCustomers error: ', err);
+      //result(null, err);
+    } else {
+      //console.log('createCustomers res: ', res[1]);
+      //result(null, res);
+      //let records = [];
+      res.forEach(record => {
+        let customer = {
+          firstName: record.firstName,
+          surname: record.surname,
+          idNumber: record.idNumber,
+          sex: record.sex,
+          mobile: record.mobile,
+          email: record.email,
+          dob: record.dob,
+          address1: record.address1,
+          address2: record.address2,
+          address3: record.address3,
+          address4: record.address4,
+          address5: record.address5,
+          employer: record.employer,
+          createdBy: 'System'
+        };
+
+        sql.query(`INSERT INTO customers SET ?;`, customer, function(err, res) {
+          if (err) {
+            console.log('INSERT INTO customers error: ', err);
+            //result(null, err);
+          } else {
+            console.log('INSERT INTO customers: ', res);
+            let account = {
+              paymentTermDays: 25,
+              creditLimit: record.limit,
+              paymentMethod: 'EFT',
+              paymentDueDate: 25,
+              debitOrderDate: 25,
+              status: 'Current',
+              createdBy: 'System',
+              f_customerId: res.insertId
+            };
+
+            let booked = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
+            let recordId = record.id;
+            console.log('recordId: ', recordId);
+
+            sql.query(`UPDATE applications SET booked = '${booked}' WHERE id = ${record.id};`)
+
+            sql.query(`INSERT INTO accounts SET ?;`, account, function(err, res) {
+              if (err) {
+                console.log('INSERT INTO accounts error: ', err);
+                //result(null, err);
+              } else {
+                console.log('INSERT INTO accounts: ', res);
+              }
+            });
+
+          }
+        });
+
+        //console.log('account: ', account);
+        //console.log('customer: ', customer);
+      });
+    }
+  })
+});
 
 app.listen(port);
 
