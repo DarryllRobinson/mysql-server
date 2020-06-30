@@ -1,5 +1,29 @@
 const Session = require('../models/sessions.model');
 
+exports.auth_user = function(req, res) {
+  Session.getUser(req.body.email, req.body.password, function(err, session) {
+    if (err) {
+      console.log('auth error: ', err);
+    } else {
+      //console.log('controller auth_user session: ', session);
+      let response = [];
+      let user = {
+        firstName: session[0].firstName,
+        surname: session[0].surname,
+        email: session[0].email,
+        role: session[0].role
+      };
+
+      response.push(user);
+      response.push({logged_in: true});
+
+      console.log('Session response: ', response);
+      res.send(response);
+    }
+  });
+}
+
+// Not used any more
 exports.auth = function(req, res) {
   Session.getUser(req.body.email, req.body.password, function(err, session) {
     if (err) {
