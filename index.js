@@ -58,9 +58,10 @@ app.use(morgan('tiny'));
   //crons.createCustomers();
 //});
 
-cron.schedule('2 * * * * *', () => {
+// Customer and Account creation cron
+cron.schedule('* * 1 * * *', () => {
   console.log('running createCustomers');
-  sql.query(`SELECT * FROM applications WHERE status = 'Approved' and booked is NULL;`, function(err, res) {
+  sql.query(`SELECT * FROM applications WHERE status = 'Approved' and bookedDate is NULL;`, function(err, res) {
     if (err) {
       console.log('createCustomers error: ', err);
       //result(null, err);
@@ -107,7 +108,7 @@ cron.schedule('2 * * * * *', () => {
             let recordId = record.id;
             console.log('recordId: ', recordId);
 
-            sql.query(`UPDATE applications SET booked = '${booked}' WHERE id = ${record.id};`)
+            sql.query(`UPDATE applications SET bookedDate = '${booked}' WHERE id = ${record.id};`)
 
             sql.query(`INSERT INTO accounts SET ?;`, account, function(err, res) {
               if (err) {
@@ -117,16 +118,68 @@ cron.schedule('2 * * * * *', () => {
                 console.log('INSERT INTO accounts: ', res);
               }
             });
-
           }
         });
-
-        //console.log('account: ', account);
-        //console.log('customer: ', customer);
       });
     }
   })
 });
+
+// Case creation cron
+cron.schedule('* * 1 * * *', () => {
+  console.log('running createCases');
+  sql.query(`SELECT * FROM accounts WHERE status <> 'Current' and caseDate is NULL;`, function(err, res) {
+    if (err) {
+      console.log('createCases error: ', err);
+      //result(null, err);
+    } else {
+      console.log('createCases res: ', res);
+      //result(null, res);
+      //let records = [];
+      res.forEach(record => {
+        let caseRecord = {
+          createdBy: 'System',
+          f_accountNumber: record.accountNumber
+        };
+
+        let caseDate = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
+        let accountNumber = record.accountNumber;
+        sql.query(`UPDATE accounts SET caseDate = '${caseDate}' WHERE accountNumber = ${accountNumber};`);
+
+        sql.query(`INSERT INTO cases SET ?;`, caseRecord, function(err, res) {
+          if (err) {
+            console.log('INSERT INTO cases error: ', err);
+          } else {
+            console.log('INSERT INTO cases: ', res);
+          }
+        });
+      });
+    }
+  });
+});
+
+  /*sql.query(`SELECT * FROM accounts WHERE status <> 'Current' and caseDate is NULL;`, function(err, res) {
+    if (err) {
+      console.log('createCases error: ', err);
+      //result(null, err);
+    } else {
+      console.log('createCases res: ', res[1]);
+      //result(null, res);
+      //let records = [];
+      res.forEach(record => {
+        let case = {
+          createdBy: 'System',
+          f_accountNumber: res.accountNumber
+        };
+
+        let caseDate = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
+        let recordId = record.id;
+        console.log('recordId: ', recordId);
+
+        sql.query(`UPDATE accounts SET caseDate = '${caseDate}' WHERE id = ${record.id};`);
+      });
+    });
+  });*/
 
 app.listen(port);
 

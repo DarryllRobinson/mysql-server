@@ -13,24 +13,24 @@ module.exports = function(app) {
     const indexOfFifth = path.indexOf(searchTerm, (indexOfFourth + 1));
     const apiLength = path.length;
 
-    console.log('indexOfFirst: ', indexOfFirst);
+    /*console.log('indexOfFirst: ', indexOfFirst);
     console.log('indexOfSecond: ', indexOfSecond);
     console.log('indexOfThird: ', indexOfThird);
     console.log('indexOfFourth: ', indexOfFourth);
     console.log('indexOfFifth: ', indexOfFifth);
-    console.log('apiLength: ', apiLength);
+    console.log('apiLength: ', apiLength);*/
 
     // For routes with /api/{resource}/{table}/{appstatus}/:id pattern
-    if (indexOfFifth < 0) console.log('5: ', path.substring(indexOfThird + 1, indexOfFourth));
+    //if (indexOfFifth < 0) console.log('5: ', path.substring(indexOfThird + 1, indexOfFourth));
     if (indexOfFifth < 0) return path.substring(indexOfThird + 1, indexOfFourth);
     // For routes with /api/{resource}/{table}/:id pattern
-    if (indexOfFourth < 0) console.log('4: ', path.substring(indexOfThird + 1, apiLength));
+    //if (indexOfFourth < 0) console.log('4: ', path.substring(indexOfThird + 1, apiLength));
     if (indexOfFourth < 0) return path.substring(indexOfThird + 1, apiLength);
     // For routes with /api/{table}/:id pattern
-    if (indexOfThird < 0) console.log('3: ', path.substring(indexOfSecond + 1, apiLength));
+    //if (indexOfThird < 0) console.log('3: ', path.substring(indexOfSecond + 1, apiLength));
     if (indexOfThird < 0) return path.substring(indexOfSecond + 1, apiLength);
     // For routes with /api/{table} pattern
-    if (indexOfSecond < 0) console.log('2: ', path.substring(indexOfFirst, indexOfSecond + 1));
+    //if (indexOfSecond < 0) console.log('2: ', path.substring(indexOfFirst, indexOfSecond + 1));
     if (indexOfSecond < 0) return path.substring(indexOfFirst, apiLength);
   }
 
