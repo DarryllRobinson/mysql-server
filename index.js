@@ -125,7 +125,7 @@ cron.schedule('* * 1 * * *', () => {
   })
 });
 
-// Case creation cron
+// Case and Outcome creation cron
 cron.schedule('* * 1 * * *', () => {
   console.log('running createCases');
   sql.query(`SELECT * FROM accounts WHERE status <> 'Current' and caseDate is NULL;`, function(err, res) {
@@ -144,13 +144,33 @@ cron.schedule('* * 1 * * *', () => {
 
         let caseDate = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
         let accountNumber = record.accountNumber;
-        sql.query(`UPDATE accounts SET caseDate = '${caseDate}' WHERE accountNumber = ${accountNumber};`);
+        sql.query(`UPDATE accounts SET caseDate = '${caseDate}' WHERE accountNumber = ${accountNumber};`, function(err, res) {
+          if (err) {
+            console.log('UPDATE accounts error: ', err);
+          } else {
+            console.log('UPDATE accounts: ', res);
+          }
+        });
 
         sql.query(`INSERT INTO cases SET ?;`, caseRecord, function(err, res) {
           if (err) {
             console.log('INSERT INTO cases error: ', err);
           } else {
             console.log('INSERT INTO cases: ', res);
+            let caseId = res.insertId;
+
+            let outcome = {
+              f_caseNumber: caseId,
+              createdBy: 'System'
+            };
+
+            sql.query(`INSERT INTO outcomes SET ?;`, outcome, function(err, res) {
+              if (err) {
+                console.log('INSERT INTO outcomes error: ', err);
+              } else {
+                console.log('INSERT INTO outcomes: ', res);
+              }
+            });
           }
         });
       });

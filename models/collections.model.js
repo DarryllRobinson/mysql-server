@@ -68,7 +68,11 @@ async function bulkInsert(table, objectArray, callback) {
 // Read
 Model.getOne = function(id, result, table) {
   console.log('id: ', id);
-  sql.query(`SELECT * FROM accounts, customers WHERE accounts.f_customerId = customers.id AND accounts.accountNumber = ?`, id, function(err, res) {
+  sql.query(`SELECT * FROM accounts, customers, cases, outcomes
+     WHERE accounts.f_customerId = customers.id
+     AND cases.f_accountNumber = accounts.accountNumber
+     AND cases.id = outcomes.f_caseNumber
+     AND accounts.accountNumber = ?`, id, function(err, res) {
     if (err) {
       console.log('getOne error: ', err);
       result(null, err);

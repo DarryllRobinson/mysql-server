@@ -102,6 +102,28 @@ module.exports = function(app) {
     .put(cont.update_item)
     .delete(cont.delete_item);
 
+  // Cases
+  app.route('/api/workspace/cases')
+    .get(cont.list_all)
+    .post(cont.create_item)
+    .post(cont.create_items);
+
+  app.route('/api/workspace/cases/:id')
+    .get(cont.read_item)
+    .put(cont.update_item)
+    .delete(cont.delete_item);
+
+  // Outcomes
+  app.route('/api/workspace/outcomes')
+    .get(cont.list_all)
+    .post(cont.create_item)
+    .post(cont.create_items);
+
+  app.route('/api/workspace/outcomes/:id')
+    .get(cont.read_item)
+    .put(cont.update_item)
+    .delete(cont.delete_item);
+
   // Collections
   app.route('/api/workspace/collections')
     .get(coll.list_all)
