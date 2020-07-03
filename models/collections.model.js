@@ -6,7 +6,10 @@ const Model = function(model) {
 };
 
 Model.getAll = function(result, table) {
-  sql.query(`SELECT * FROM accounts, customers WHERE accounts.f_customerId = customers.id;`, function(err, res) {
+  sql.query(`SELECT * FROM accounts, customers, cases, outcomes
+     WHERE accounts.f_customerId = customers.id
+     AND cases.f_accountNumber = accounts.accountNumber
+     AND cases.id = outcomes.f_caseNumber;`, function(err, res) {
     if (err) {
       console.log('getAll error: ', err);
       result(null, err);
