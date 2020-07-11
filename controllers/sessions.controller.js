@@ -4,14 +4,20 @@ exports.auth_user = function(req, res) {
   Session.getUser(req.body.email, req.body.password, function(err, session) {
     if (err) {
       console.log('auth error: ', err);
+    } else if (session[1].logged_in === false) {
+      console.log('Failed password authentication: ', session);
+      res.send(session);
     } else {
       //console.log('controller auth_user session: ', session);
+      //console.log('finding the logged_in value: ', session[1].logged_in);
       let response = [];
       let user = {
         firstName: session[0].firstName,
         surname: session[0].surname,
         email: session[0].email,
-        role: session[0].role
+        role: session[0].role,
+        storeId: session[0].storeId,
+        clientId: session[0].f_clientId
       };
 
       response.push(user);

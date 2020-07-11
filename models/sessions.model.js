@@ -26,7 +26,7 @@ Session.createSession = function(newSession, result) {
 Session.getUser = function(email, password, result) {
   console.log('getUser email: ', email);
   console.log('getUser password: ', password);
-  sql.query(`SELECT firstName, surname, email, role, password, f_clientId FROM users WHERE email = ?;`, email, function(err, res) {
+  sql.query(`SELECT firstName, surname, email, role, storeId, password, f_clientId FROM users WHERE email = ?;`, email, function(err, res) {
     if (err) {
       console.log('getUser SELECT error: ', err);
       result(null, err);

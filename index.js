@@ -40,7 +40,7 @@ app.use(morgan(function (tokens, req, res) {
     tokens.method(req, res), '-',
     tokens.url(req, res), '-',
     tokens.date(req, res), '-',
-    tokens.status(req, res), '-',
+    tokens.currentStatus(req, res), '-',
     tokens.res(req, res, 'content-length'), '-',
     tokens['response-time'](req, res), 'ms'
   ].join(' ')
@@ -61,7 +61,7 @@ app.use(morgan('tiny'));
 // Customer and Account creation cron
 cron.schedule('* * 1 * * *', () => {
   console.log('running createCustomers');
-  sql.query(`SELECT * FROM applications WHERE status = 'Approved' and bookedDate is NULL;`, function(err, res) {
+  sql.query(`SELECT * FROM applications WHERE currentStatus = 'Approved' and bookedDate is NULL;`, function(err, res) {
     if (err) {
       console.log('createCustomers error: ', err);
       //result(null, err);
@@ -84,6 +84,7 @@ cron.schedule('* * 1 * * *', () => {
           address4: record.address4,
           address5: record.address5,
           employer: record.employer,
+          f_clientId: record.f_clientId,
           createdBy: 'System'
         };
 
@@ -92,21 +93,21 @@ cron.schedule('* * 1 * * *', () => {
             console.log('INSERT INTO customers error: ', err);
             //result(null, err);
           } else {
-            console.log('INSERT INTO customers: ', res);
+            //console.log('INSERT INTO customers: ', res);
             let account = {
               paymentTermDays: 25,
               creditLimit: record.limit,
               paymentMethod: 'EFT',
               paymentDueDate: 25,
               debitOrderDate: 25,
-              status: 'Current',
+              currentStatus: 'Current',
               createdBy: 'System',
               f_customerId: res.insertId
             };
 
             let booked = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
             let recordId = record.id;
-            console.log('recordId: ', recordId);
+            //console.log('recordId: ', recordId);
 
             sql.query(`UPDATE applications SET bookedDate = '${booked}' WHERE id = ${record.id};`)
 
@@ -115,7 +116,7 @@ cron.schedule('* * 1 * * *', () => {
                 console.log('INSERT INTO accounts error: ', err);
                 //result(null, err);
               } else {
-                console.log('INSERT INTO accounts: ', res);
+                //console.log('INSERT INTO accounts: ', res);
               }
             });
           }
@@ -128,12 +129,12 @@ cron.schedule('* * 1 * * *', () => {
 // Case and Outcome creation cron
 cron.schedule('* * 1 * * *', () => {
   console.log('running createCases');
-  sql.query(`SELECT * FROM accounts WHERE status <> 'Current' and caseDate is NULL;`, function(err, res) {
+  sql.query(`SELECT * FROM accounts WHERE currentStatus <> 'Current' and caseDate is NULL;`, function(err, res) {
     if (err) {
       console.log('createCases error: ', err);
       //result(null, err);
     } else {
-      console.log('createCases res: ', res);
+      //console.log('createCases res: ', res);
       //result(null, res);
       //let records = [];
       res.forEach(record => {
@@ -148,7 +149,7 @@ cron.schedule('* * 1 * * *', () => {
           if (err) {
             console.log('UPDATE accounts error: ', err);
           } else {
-            console.log('UPDATE accounts: ', res);
+            //console.log('UPDATE accounts: ', res);
           }
         });
 
@@ -156,7 +157,7 @@ cron.schedule('* * 1 * * *', () => {
           if (err) {
             console.log('INSERT INTO cases error: ', err);
           } else {
-            console.log('INSERT INTO cases: ', res);
+            //console.log('INSERT INTO cases: ', res);
             let caseId = res.insertId;
 
             let outcome = {
@@ -168,7 +169,7 @@ cron.schedule('* * 1 * * *', () => {
               if (err) {
                 console.log('INSERT INTO outcomes error: ', err);
               } else {
-                console.log('INSERT INTO outcomes: ', res);
+                //console.log('INSERT INTO outcomes: ', res);
               }
             });
           }
@@ -178,7 +179,7 @@ cron.schedule('* * 1 * * *', () => {
   });
 });
 
-  /*sql.query(`SELECT * FROM accounts WHERE status <> 'Current' and caseDate is NULL;`, function(err, res) {
+  /*sql.query(`SELECT * FROM accounts WHERE currentStatus <> 'Current' and caseDate is NULL;`, function(err, res) {
     if (err) {
       console.log('createCases error: ', err);
       //result(null, err);
