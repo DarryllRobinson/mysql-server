@@ -39,9 +39,13 @@ Session.getUser = function(email, password, result) {
       // comparing passwords
       bcrypt.compare(password, res[0].password, function(err, match) {
         if (match) {
+          console.log('Passwords match');
           res.match = match;
+          res.push({logged_in: true});
+          console.log('Matched res in sessions.model.js: ', res);
           result(null, res);
         } else {
+          console.log('Passwords do not match');
           res.push({user: {}});
           res.push({logged_in: false});
           result(null, res);
