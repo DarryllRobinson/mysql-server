@@ -33,7 +33,7 @@ Session.getUser = function(email, password, result) {
     } else if (res.length === 0) {
       res.push({user: {}});
       res.push({logged_in: false});
-      console.log('getUser res: ', res);
+      console.log('Email user not found in sessions.model.js: ', res);
       result(null, res);
     } else {
       // comparing passwords
@@ -45,9 +45,11 @@ Session.getUser = function(email, password, result) {
           console.log('Matched res in sessions.model.js: ', res);
           result(null, res);
         } else {
-          console.log('Passwords do not match');
+          console.log('Passwords do not match in sessions.model.js: ', res);
+          res = [];
           res.push({user: {}});
           res.push({logged_in: false});
+          console.log('Failed authentication in sessions.model.js: ', res);
           result(null, res);
         }
       });

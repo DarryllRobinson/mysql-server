@@ -2,9 +2,51 @@ const Model = require('../models/sql.model');
 
 // Read all
 exports.list_all = function(req, res) {
+  //console.log('req: ', req);
   Model.getAll(function(err, model) {
     if (err) {
       console.log('getAll controller error: ', err);
+    } else {
+      res.send(model);
+    }
+  }, req.table);
+}
+
+exports.list_all_by_clientId = function(req, res) {
+  console.log('req.params: ', req.params);
+
+  switch (req.params.workspace) {
+    case 'applications':
+      console.log('sql.controller pointing to getAllApplicationsByClientId');
+      Model.getAllApplicationsByClientId(req.params.clientId, function(err, model) {
+        if (err) {
+          console.log('getAllApplicationsByClientId controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      });
+      break;
+    case 'collections':
+      console.log('sql.controller pointing to getAllCollectionsByClientId');
+      Model.getAllCollectionsByClientId(req.params.clientId, function(err, model) {
+        if (err) {
+          console.log('getAllCollectionsByClientId controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      });
+      break;
+    default:
+      console.log('No req.params.workspace I know how to deal with: ', req.params.workspace);
+  }
+}
+
+// Read all by clientId
+exports.xxxlist_all_by_clientId = function(req, res) {
+  console.log('req.params: ', req.params);
+  Model.getAllById(req.params.workspace, req.params.clientId, function(err, model) {
+    if (err) {
+      console.log('getAllById controller error: ', err);
     } else {
       res.send(model);
     }

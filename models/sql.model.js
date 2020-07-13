@@ -16,6 +16,77 @@ Model.getAll = function(result, table) {
   });
 };
 
+Model.getAllCollectionsByClientId = function(clientId, result) {
+  console.log('getAllCollectionsByClientId: ', clientId);
+
+  sql.query(`SELECT * FROM accounts, customers, cases, outcomes
+     WHERE accounts.f_customerId = customers.id
+     AND cases.f_accountNumber = accounts.accountNumber
+     AND cases.id = outcomes.f_caseNumber
+     AND f_clientId = ?;`, clientId, function(err, res) {
+    if (err) {
+      console.log('getAllCollectionsByClientId error: ', err);
+      result(null, err);
+    } else {
+      //console.log('collections res: ', res);
+      result(null, res);
+    }
+  });
+};
+
+Model.getAllApplicationsByClientId = function(clientId, result) {
+  console.log('getAllApplicationsByClientId: ', clientId);
+
+  sql.query(`SELECT * FROM applications WHERE f_clientId = ?;`, clientId, function(err, res) {
+    if (err) {
+      console.log('getAllApplicationsByClientId error: ', err);
+      result(null, err);
+    } else {
+      //console.log('applications res: ', res);
+      result(null, res);
+    }
+  });
+}
+
+Model.getAllById = function(workspace, clientId, result, table) {
+  console.log('workspace: ', workspace);
+  console.log('clientId: ', clientId);
+
+  switch (workspace) {
+    case 'collections':
+      console.log('running collections');
+      sql.query(`SELECT * FROM accounts, customers, cases, outcomes
+         WHERE accounts.f_customerId = customers.id
+         AND cases.f_accountNumber = accounts.accountNumber
+         AND cases.id = outcomes.f_caseNumber
+         AND f_clientId = ?;`, clientId, function(err, res) {
+        if (err) {
+          console.log('getAllById error: ', err);
+          result(null, err);
+        } else {
+          console.log('collections res: ', res);
+          result(null, res);
+        }
+      });
+      break;
+    case 'applications':
+      console.log('running applications');
+      sql.query(`SELECT * FROM ${table} WHERE f_clientId = ?;`, clientId, function(err, res) {
+        if (err) {
+          console.log('getAllById error: ', err);
+          result(null, err);
+        } else {
+          console.log('applications res: ', res);
+          result(null, res);
+        }
+      });
+      break;
+    default:
+      console.log('Cannot handle an unknown workspace: ', workspace);
+      break;
+  }
+};
+
 Model.createOne = function(newItem, result, table) {
   sql.query(`INSERT INTO ${table} SET ?;`, newItem, function(err, res) {
     if (err) {
