@@ -11,6 +11,7 @@ const app = express();
 const cron = require('node-cron');
 const sql = require('./config/db');
 const moment = require('moment');
+const winston = require('winston');
 //const crons = require('./cron.jobs/cron.jobs');
 
 // enhance your app security with Helmet
@@ -33,20 +34,44 @@ const accessLogStream = rfs.createStream('access.csv', {
   path: path.join(__dirname, 'log')
 });
 
-/* Perhaps we will want to use specified fields at a later stage
-app.use(morgan(function (tokens, req, res) {
-  console.log('tokens: ', tokens);
-  return [
-    tokens.method(req, res), '-',
-    tokens.url(req, res), '-',
-    tokens.date(req, res), '-',
-    tokens.currentStatus(req, res), '-',
-    tokens.res(req, res, 'content-length'), '-',
-    tokens['response-time'](req, res), 'ms'
-  ].join(' ')
-}, { stream: accessLogStream }));*/
-app.use(morgan('combined', { stream: accessLogStream }));
-app.use(morgan('tiny'));
+morgan.token('user', function getUser (req) {
+  return req.header("User");
+});
+
+morgan.token('ip', function getIp (req) {
+  return req.ip;
+});
+
+morgan.token('body', function getBody (req) {
+  return JSON.stringify(req.body);
+});
+
+app.use(morgan('[:date[iso]] :ip :user :method :url :status :body :response-time ms', { stream: accessLogStream }));
+
+app.use(morgan('[:date[iso]] :ip :user :method :url :status :body :response-time ms'));
+
+// Logger configuration
+/*const logConfiguration = {
+    transports: [
+        new winston.transports.Console()
+    ],
+    format: winston.format.combine(
+        winston.format.splat(),
+        winston.format.simple(),
+        //winston.
+    )
+};
+
+// Create the logger
+const logger = winston.createLogger(logConfiguration);
+
+app.use((req, res, done) => {
+    logger.info(req.body);
+    logger.info(req.header("User"));
+    console.log('req.body: ', req.body);
+    done();
+});*/
+
 
 // Cron jobs
 //cron.schedule('*/2 * * * *', () => {
