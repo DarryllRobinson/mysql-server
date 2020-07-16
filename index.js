@@ -11,7 +11,6 @@ const app = express();
 const cron = require('node-cron');
 const sql = require('./config/db');
 const moment = require('moment');
-const winston = require('winston');
 //const crons = require('./cron.jobs/cron.jobs');
 
 // enhance your app security with Helmet

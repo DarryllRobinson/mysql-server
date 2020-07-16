@@ -3,6 +3,7 @@ module.exports = function(app) {
   const comments = require('../controllers/comments.controller');
   const sessions = require('../controllers/sessions.controller');
   const coll = require('../controllers/collections.controller');
+  const upload = require('../controllers/upload.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -184,4 +185,8 @@ module.exports = function(app) {
     .get(cont.f_read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
+
+  // Uploads
+  app.route('/api/upload/document')
+    .post(upload.single);
 }
