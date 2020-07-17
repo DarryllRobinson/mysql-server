@@ -225,6 +225,18 @@ cron.schedule('* * 1 * * *', () => {
       });
     });
   });*/
+// Cancel applications that haven't been completed within 14 days
+cron.schedule('10 * * * * *', () => {
+  console.log('running cancelApplications');
+  sql.query(`UPDATE applications SET currentStatus = 'Cancelled' WHERE currentStatus = 'Open' and createdDate < (NOW() - 14);;`, function(err, res) {
+    if (err) {
+      console.log('cancelApplications error: ', err);
+      //result(null, err);
+    } else {
+      console.log('Applications cancelled: ', res.affectedRows);
+    }
+  });
+});
 
 app.listen(port);
 

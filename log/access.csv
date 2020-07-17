@@ -238,3 +238,84 @@
 [2020-07-16T04:28:37.319Z] ::1 store@email.com POST /api/upload/document 200 {} 6.035 ms
 [2020-07-16T04:29:22.105Z] ::1 store@email.com POST /api/upload/document 200 {} 4.306 ms
 [2020-07-16T04:29:48.841Z] ::1 store@email.com POST /api/upload/document 200 {} 4.041 ms
+[2020-07-16T04:55:50.822Z] ::1 store@email.com GET /api/admin/clientservices/3 304 {} 40.457 ms
+[2020-07-16T04:55:50.890Z] ::1 store@email.com GET /api/workspace/collections/3 304 {} 22.454 ms
+[2020-07-16T04:55:50.976Z] ::1 store@email.com GET /api/workspace/applications/3 304 {} 96.643 ms
+[2020-07-16T05:39:38.516Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"store@email.com","password":"store","loginDate":"2020-07-16 15:39:38"} 208.441 ms
+[2020-07-16T05:39:38.628Z] ::1 store@email.com GET /api/admin/clientservices/3 304 {} 2.873 ms
+[2020-07-16T05:39:38.699Z] ::1 store@email.com GET /api/workspace/applications/3 304 {} 16.327 ms
+[2020-07-16T05:39:38.740Z] ::1 store@email.com GET /api/workspace/collections/3 304 {} 55.712 ms
+[2020-07-16T05:47:03.012Z] ::1 store@email.com POST /api/upload/document 200 {} 19.358 ms
+[2020-07-16T06:44:23.079Z] ::1 store@email.com POST /api/upload/document 200 {} 8.839 ms
+[2020-07-16T23:17:47.694Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"store@email.com","password":"store","loginDate":"2020-07-17 09:17:47"} 141.324 ms
+[2020-07-16T23:17:47.969Z] ::1 store@email.com GET /api/admin/clientservices/3 304 {} 56.112 ms
+[2020-07-16T23:17:48.043Z] ::1 store@email.com GET /api/workspace/applications/3 304 {} 38.951 ms
+[2020-07-16T23:17:48.058Z] ::1 store@email.com GET /api/workspace/collections/3 304 {} 53.529 ms
+[2020-07-17T01:58:00.338Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"store@email.com","password":"store","loginDate":"2020-07-17 11:58:00"} 152.987 ms
+[2020-07-17T01:58:00.521Z] ::1 store@email.com GET /api/admin/clientservices/3 304 {} 72.166 ms
+[2020-07-17T01:58:00.606Z] ::1 store@email.com GET /api/workspace/applications/3 304 {} 57.244 ms
+[2020-07-17T01:58:00.675Z] ::1 store@email.com GET /api/workspace/collections/3 304 {} 121.197 ms
+[2020-07-17T02:08:29.231Z] ::1 store@email.com POST /api/upload/document 200 {} 6.611 ms
+[2020-07-17T02:55:53.601Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"store@email.com","password":"store","loginDate":"2020-07-17 12:55:53"} 143.777 ms
+[2020-07-17T02:55:53.857Z] ::1 store@email.com GET /api/admin/clientservices/3 304 {} 84.872 ms
+[2020-07-17T02:55:54.129Z] ::1 store@email.com GET /api/workspace/collections/3 304 {} 184.352 ms
+[2020-07-17T02:55:54.255Z] ::1 store@email.com GET /api/workspace/applications/3 304 {} 307.923 ms
+[2020-07-17T04:00:59.233Z] ::1 store@email.com POST /api/upload/document 200 {} 13.409 ms
+[2020-07-17T04:13:41.531Z] ::1 store@email.com POST /api/upload/document 200 {} 10.935 ms
+[2020-07-17T04:49:54.617Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 14:49:53"} 798.403 ms
+[2020-07-17T04:51:30.015Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 14:51:29","f_clientId":"3"} 183.941 ms
+[2020-07-17T04:52:08.645Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 14:52:08","f_clientId":"3"} 106.264 ms
+[2020-07-17T04:53:38.968Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 14:53:38","f_clientId":"3"} 228.055 ms
+[2020-07-17T04:57:41.279Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 14:57:41","f_clientId":"3"} 166.859 ms
+[2020-07-17T04:58:00.579Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 14:58:00","f_clientId":"3"} 64.183 ms
+[2020-07-17T04:58:21.409Z] ::1 store@email.com PUT /api/workspace/applications/547 200 {"firstName":" firstName = 'Peter'","surname":" surname = 'Parker'","idNumber":" idNumber = '1234567890123'","sex":" sex = 'M'","mobile":" mobile = '01234'","email":" email = 'peter@email.com'","dob":" dob = '1990-08-08'","address1":" address1 = '45 Buckingham Place'","address2":" address2 = ''","address3":" address3 = ''","address4":" address4 = 'Durban'","address5":" address5 = '2134'","employer":" employer = 'SAB'","employmentDuration":" employmentDuration = '2'","residencyDuration":" residencyDuration = '2'","numDependents":" numDependents = '2'","bankCode":" bankCode = '123456'","bankAccount":" bankAccount = '22233344'","grossIncome":" grossIncome = '10000'","expenses":" expenses = '2000'","bureauScore":" bureauScore = '650'","createdBy":" createdBy = 'store@email.com'","createdDate":" createdDate = '2020-07-17 14:58:21'"} 26.420 ms
+[2020-07-17T04:58:21.514Z] ::1 store@email.com GET /api/maintenance/declines 200 {} 78.147 ms
+[2020-07-17T04:58:21.590Z] ::1 store@email.com GET /api/maintenance/scorecards 200 {} 52.456 ms
+[2020-07-17T04:59:13.920Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 14:59:13","f_clientId":"3"} 185.826 ms
+[2020-07-17T04:59:28.958Z] ::1 store@email.com PUT /api/workspace/applications/548 200 {"firstName":" firstName = 'Peter'","surname":" surname = 'Parker'","idNumber":" idNumber = '1234567890123'","sex":" sex = 'M'","mobile":" mobile = '01234'","email":" email = 'peter@email.com'","dob":" dob = '1990-08-08'","address1":" address1 = '45 Buckingham Place'","address2":" address2 = ''","address3":" address3 = ''","address4":" address4 = 'Durban'","address5":" address5 = '2134'","employer":" employer = 'SAB'","employmentDuration":" employmentDuration = '2'","residencyDuration":" residencyDuration = '2'","numDependents":" numDependents = '2'","bankCode":" bankCode = '123456'","bankAccount":" bankAccount = '22233344'","grossIncome":" grossIncome = '10000'","expenses":" expenses = '2000'","bureauScore":" bureauScore = '650'","createdBy":" createdBy = 'store@email.com'","createdDate":" createdDate = '2020-07-17 14:59:28'"} 11.627 ms
+[2020-07-17T04:59:28.976Z] ::1 store@email.com GET /api/maintenance/declines 304 {} 3.286 ms
+[2020-07-17T04:59:29.016Z] ::1 store@email.com GET /api/maintenance/scorecards 304 {} 1.977 ms
+[2020-07-17T05:34:24.448Z] ::1 [object Object] POST /api/workspace/applications - {"createdBy":"store@email.com","createdDate":"2020-07-17 15:34:24","f_clientId":"3"} - ms
+[2020-07-17T05:34:33.837Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"store@email.com","password":"store","loginDate":"2020-07-17 15:34:33"} 175.702 ms
+[2020-07-17T05:34:33.992Z] ::1 store@email.com GET /api/admin/clientservices/3 304 {} 24.118 ms
+[2020-07-17T05:34:34.096Z] ::1 store@email.com GET /api/workspace/applications/3 200 {} 63.054 ms
+[2020-07-17T05:34:34.112Z] ::1 store@email.com GET /api/workspace/collections/3 304 {} 67.609 ms
+[2020-07-17T05:34:35.798Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 15:34:35","f_clientId":"3"} 127.428 ms
+[2020-07-17T05:34:41.840Z] ::1 store@email.com PUT /api/workspace/applications/550 200 {"firstName":" firstName = 'Peter'","surname":" surname = 'Parker'","idNumber":" idNumber = '1234567890123'","sex":" sex = 'M'","mobile":" mobile = '01234'","email":" email = 'peter@email.com'","dob":" dob = '1990-08-08'","address1":" address1 = '45 Buckingham Place'","address2":" address2 = ''","address3":" address3 = ''","address4":" address4 = 'Durban'","address5":" address5 = '2134'","employer":" employer = 'SAB'","employmentDuration":" employmentDuration = '2'","residencyDuration":" residencyDuration = '2'","numDependents":" numDependents = '2'","bankCode":" bankCode = '123456'","bankAccount":" bankAccount = '22233344'","grossIncome":" grossIncome = '10000'","expenses":" expenses = '2000'","bureauScore":" bureauScore = '650'","createdBy":" createdBy = 'store@email.com'","createdDate":" createdDate = '2020-07-17 15:34:41'"} 13.362 ms
+[2020-07-17T05:34:41.868Z] ::1 store@email.com GET /api/maintenance/declines 304 {} 4.885 ms
+[2020-07-17T05:34:41.924Z] ::1 store@email.com GET /api/maintenance/scorecards 304 {} 19.848 ms
+[2020-07-17T05:36:25.190Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 15:36:24","f_clientId":"3"} 216.035 ms
+[2020-07-17T05:36:31.006Z] ::1 store@email.com PUT /api/workspace/applications/application/551 200 {"firstName":" firstName = 'Peter'","surname":" surname = 'Parker'","idNumber":" idNumber = '1234567890123'","sex":" sex = 'M'","mobile":" mobile = '01234'","email":" email = 'peter@email.com'","dob":" dob = '1990-08-08'","address1":" address1 = '45 Buckingham Place'","address2":" address2 = ''","address3":" address3 = ''","address4":" address4 = 'Durban'","address5":" address5 = '2134'","employer":" employer = 'SAB'","employmentDuration":" employmentDuration = '2'","residencyDuration":" residencyDuration = '2'","numDependents":" numDependents = '2'","bankCode":" bankCode = '123456'","bankAccount":" bankAccount = '22233344'","grossIncome":" grossIncome = '10000'","expenses":" expenses = '2000'","bureauScore":" bureauScore = '650'","createdBy":" createdBy = 'store@email.com'","createdDate":" createdDate = '2020-07-17 15:36:30'"} 189.754 ms
+[2020-07-17T05:36:31.025Z] ::1 store@email.com GET /api/maintenance/declines 304 {} 1.427 ms
+[2020-07-17T05:36:31.068Z] ::1 store@email.com GET /api/maintenance/scorecards 304 {} 13.595 ms
+[2020-07-17T08:42:24.860Z] ::1 [object Object] POST /api/workspace/applications - {"createdBy":"store@email.com","createdDate":"2020-07-17 18:42:24","f_clientId":"3"} - ms
+[2020-07-17T08:43:35.264Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"store@email.com","password":"store","loginDate":"2020-07-17 18:43:35"} 148.744 ms
+[2020-07-17T08:43:35.441Z] ::1 store@email.com GET /api/admin/clientservices/3 304 {} 11.397 ms
+[2020-07-17T08:43:35.752Z] ::1 store@email.com GET /api/workspace/applications/3 200 {} 281.393 ms
+[2020-07-17T08:43:35.838Z] ::1 store@email.com GET /api/workspace/collections/3 304 {} 366.303 ms
+[2020-07-17T08:43:41.352Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 18:43:41","f_clientId":"3"} 206.133 ms
+[2020-07-17T08:44:37.645Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 18:44:37","f_clientId":"3"} 350.173 ms
+[2020-07-17T09:00:44.988Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:00:44","f_clientId":"3"} 344.740 ms
+[2020-07-17T09:01:06.687Z] ::1 store@email.com POST /api/upload/document 200 {} 20.249 ms
+[2020-07-17T09:05:39.792Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:05:39","f_clientId":"3"} 184.801 ms
+[2020-07-17T09:06:26.462Z] ::1 store@email.com POST /api/upload/document 200 {} 5.003 ms
+[2020-07-17T09:07:52.694Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:07:52","f_clientId":"3"} 304.555 ms
+[2020-07-17T09:08:18.617Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:08:18","f_clientId":"3"} 82.259 ms
+[2020-07-17T09:09:58.087Z] ::1 store@email.com POST /api/upload/document 200 {} 5.115 ms
+[2020-07-17T09:12:23.873Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:12:23","f_clientId":"3"} 108.177 ms
+[2020-07-17T09:12:47.902Z] ::1 store@email.com POST /api/upload/document 200 {} 4.358 ms
+[2020-07-17T09:19:15.214Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:19:14","f_clientId":"3"} 191.530 ms
+[2020-07-17T09:23:33.324Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:23:33","f_clientId":"3"} 124.854 ms
+[2020-07-17T09:38:51.817Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:38:51","f_clientId":"3"} 232.688 ms
+[2020-07-17T09:40:37.525Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:40:37","f_clientId":"3"} 125.370 ms
+[2020-07-17T09:40:48.493Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 19:40:48","f_clientId":"3"} 228.024 ms
+[2020-07-17T11:09:27.536Z] ::1 [object Object] POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 21:09:27","f_clientId":"3"} 94.280 ms
+[2020-07-17T11:09:36.636Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"store@email.com","password":"store","loginDate":"2020-07-17 21:09:36"} 127.233 ms
+[2020-07-17T11:09:36.930Z] ::1 store@email.com GET /api/admin/clientservices/3 304 {} 151.981 ms
+[2020-07-17T11:09:36.978Z] ::1 store@email.com GET /api/workspace/applications/3 200 {} 22.164 ms
+[2020-07-17T11:09:36.995Z] ::1 store@email.com GET /api/workspace/collections/3 304 {} 36.877 ms
+[2020-07-17T11:09:41.671Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 21:09:41","f_clientId":"3"} 190.933 ms
+[2020-07-17T11:11:25.098Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 21:11:24","f_clientId":"3"} 153.592 ms
+[2020-07-17T11:11:47.384Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 21:11:46","f_clientId":"3"} 307.498 ms
+[2020-07-17T11:13:11.442Z] ::1 store@email.com POST /api/workspace/applications 200 {"createdBy":"store@email.com","createdDate":"2020-07-17 21:13:11","f_clientId":"3"} 143.376 ms
+[2020-07-17T11:20:01.226Z] ::1 store@email.com POST /api/workspace/applications 200 {"currentStatus":"Open","createdBy":"store@email.com","createdDate":"2020-07-17 21:20:01","f_clientId":"3"} 28.460 ms

@@ -99,7 +99,7 @@ exports.f_read_item = function(req, res) {
 
 // Update one ***** Possibly incredibly unsafe!
 exports.update_item = function(req, res) {
-  console.log('req.params.id: ', req.params.id);
+  console.log('req.params: ', req.params);
   console.log('req.body: ', req.body);
   Model.updateOne(req.params.id, req.body, function(err, model) {
     if (err) {
