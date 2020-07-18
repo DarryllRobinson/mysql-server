@@ -23,7 +23,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //static folder
 app.use(express.static(__dirname + '/public'));
 
-// enable all CORS requests
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+const fileDir = __dirname + '/_uploads';
+console.log('fileDir: ', fileDir);
+
 app.use(cors());
 
 // log HTTP requests to a daily file

@@ -3,7 +3,7 @@ module.exports = function(app) {
   const comments = require('../controllers/comments.controller');
   const sessions = require('../controllers/sessions.controller');
   const coll = require('../controllers/collections.controller');
-  const upload = require('../controllers/upload.controller');
+  const storage = require('../controllers/storage.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -188,5 +188,9 @@ module.exports = function(app) {
 
   // Uploads
   app.route('/api/upload/document')
-    .post(upload.single);
+    .post(storage.single_upload);
+
+  // Downloads
+  app.route('/api/download/document/:id')
+    .post(storage.single_download);
 }
