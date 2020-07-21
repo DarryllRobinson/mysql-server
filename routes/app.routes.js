@@ -40,22 +40,104 @@ module.exports = function(app) {
     if (indexOfSecond < 0) return path.substring(indexOfFirst, apiLength);
   }
 
+  function getTypeName(path) {
+    const searchTerm = '/';
+    const indexOfFirst = path.indexOf(searchTerm);
+    const indexOfSecond = path.indexOf(searchTerm, (indexOfFirst + 1));
+    const indexOfThird = path.indexOf(searchTerm, (indexOfSecond + 1));
+    const indexOfFourth = path.indexOf(searchTerm, (indexOfThird + 1));
+    const indexOfFifth = path.indexOf(searchTerm, (indexOfFourth + 1));
+    const indexOfSixth = path.indexOf(searchTerm, (indexOfFifth + 1));
+    const apiLength = path.length;
+
+    /*console.log('indexOfFirst: ', indexOfFirst);
+    console.log('indexOfSecond: ', indexOfSecond);
+    console.log('indexOfThird: ', indexOfThird);
+    console.log('indexOfFourth: ', indexOfFourth);
+    console.log('indexOfFifth: ', indexOfFifth);
+    console.log('indexOfSixth: ', indexOfSixth);
+    console.log('apiLength: ', apiLength);*/
+
+    // For routes with /api/{type}/{workspace}/{table}/:id pattern
+    //if (indexOfSixth < 0) console.log('6: ', path.substring(indexOfFourth + 1, indexOfFifth) + 's');
+    if (indexOfSixth < 0) return path.substring(indexOfFourth + 1, indexOfFifth) + 's';
+    // For routes with /api/{type}/{table}/{appstatus}/:id pattern
+    //if (indexOfFifth < 0) console.log('5: ', path.substring(indexOfThird + 1, indexOfFourth));
+    if (indexOfFifth < 0) return path.substring(indexOfThird + 1, indexOfFourth);
+    // For routes with /api/{resource}/{table}/:id pattern
+    //if (indexOfFourth < 0) console.log('4: ', path.substring(indexOfThird + 1, apiLength));
+    if (indexOfFourth < 0) return path.substring(indexOfThird + 1, apiLength);
+    // For routes with /api/{table}/:id pattern
+    //if (indexOfThird < 0) console.log('3: ', path.substring(indexOfSecond + 1, apiLength));
+    if (indexOfThird < 0) return path.substring(indexOfSecond + 1, apiLength);
+    // For routes with /api/{table} pattern
+    //if (indexOfSecond < 0) console.log('2: ', path.substring(indexOfFirst, indexOfSecond + 1));
+    if (indexOfSecond < 0) return path.substring(indexOfFirst, apiLength);
+  }
+
   // Adding table name to the req
   app.use(function(req, res, next) {
+    req.type = getTypeName(req.path);
     req.table = getTableName(req.path);
+    console.log('req.type: ', req.type);
     console.log('req.table: ', req.table);
+    console.log('req.params: ', req.params);
+    console.log('req.body: ', req.body);
     next();
   });
 
+  // cws_admin routes
   // Users
-  app.route('/api/admin/users')
+  app.route('/api/admin/sessions')
+    .post(sessions.auth_user);
+
+  // Services
+  app.route('/api/admin/clientservices/:clientId')
+    .get(sessions.list_all_by_clientId);
+
+
+  // cws_business routes????
+  app.route('/api/:type/:workspace/:clientId')
+    .get(cont.list_all_by_clientId);
+
+/*
+  // Users
+  app.route('/api/:type/admin/users')
     .get(cont.list_all)
     .post(cont.create_item);
 
-  app.route('/api/admin/users/:id')
+  app.route('/api/:type/admin/users/:id')
     .get(cont.read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
+
+  // Sessions
+  app.route('/api/:type/admin/sessions')
+    .post(sessions.auth_user);
+    //.post(sessions.auth);
+
+  app.route('/api/:type/admin/sessions/:email')
+    .get(sessions.authCheck)
+    //.put(sessions.update_item)
+    .delete(sessions.delete_item);
+
+  // Services
+  app.route('/api/:type/admin/clientservices')
+    .get(cont.list_all)
+    .post(cont.create_item);
+
+  app.route('/api/:type/admin/clientservices/:f_id')
+    .get(cont.f_read_item)
+    .put(cont.update_item)
+    .delete(cont.delete_item);
+
+  // Applications & Collections
+  app.route('/api/:type/:workspace/:clientId')
+    .get(cont.list_all_by_clientId);
+
+  app.route('/api/:type/:workspace/:workrecord/:id')
+    .get(cont.read_item)
+    .put(cont.update_item)
 
   // Clients
   app.route('/api/admin/clients')
@@ -66,16 +148,6 @@ module.exports = function(app) {
     .get(cont.read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
-
-  // Sessions
-  app.route('/api/admin/sessions')
-    .post(sessions.auth_user);
-    //.post(sessions.auth);
-
-  app.route('/api/admin/sessions/:email')
-    .get(sessions.authCheck)
-    //.put(sessions.update_item)
-    .delete(sessions.delete_item);
 
   // Blogs
   app.route('/api/community/blogs')
@@ -98,7 +170,7 @@ module.exports = function(app) {
     .delete(cont.delete_item);
 
   // Applications
-  app.route('/api/workspace/applications')
+  app.route('/api/:type/:workspace/:id')
     .get(cont.list_all)
     .post(cont.create_item)
     .post(cont.create_items);
@@ -176,16 +248,6 @@ module.exports = function(app) {
     .put(cont.update_item)
     .delete(cont.delete_item);
 
-  // Services
-  app.route('/api/admin/clientservices')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/admin/clientservices/:f_id')
-    .get(cont.f_read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
   // Uploads
   app.route('/api/upload/document')
     .post(storage.single_upload);
@@ -193,4 +255,5 @@ module.exports = function(app) {
   // Downloads
   app.route('/api/download/document/:id')
     .post(storage.single_download);
+*/
 }

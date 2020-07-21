@@ -6,18 +6,13 @@ const Session = function(model) {
   this.createdDate = new Date();
 };
 
-// Read
-Session.createSession = function(newSession, result) {
-  console.log('newSession: ', newSession);
-  console.log('typeof newSession: ', typeof newSession);
-  sql.query(`INSERT INTO sessions SET ?;`, newSession, function(err, res) {
-  //sql.query(`SELECT * FROM users WHERE email = ?`, id, function(err, res) {
-    if (err) {    // ******* include error handling for when rows can't be inserted, etc.
-      console.log('createSession INSERT INTO error: ', err);
+Session.getServicesByClientId = function(clientId, result) {
+  sql.query(`SELECT * FROM clientservices WHERE f_clientId = ?;`, clientId, function(err, res) {
+    if (err) {
+      console.log('getServicesByClientId error: ', err);
       result(null, err);
     } else {
-      console.log('createSession INSERT INTO result: ', res);
-      res.email = newSession.email;
+      console.log('getServicesByClientId res: ', res);
       result(null, res);
     }
   });
@@ -26,7 +21,7 @@ Session.createSession = function(newSession, result) {
 Session.getUser = function(email, password, result) {
   console.log('getUser email: ', email);
   console.log('getUser password: ', password);
-  sql.query(`SELECT firstName, surname, email, role, storeId, password, f_clientId FROM users WHERE email = ?;`, email, function(err, res) {
+  sql.query(`SELECT firstName, surname, email, role, type, storeId, password, f_clientId FROM users WHERE email = ?;`, email, function(err, res) {
     if (err) {
       console.log('getUser SELECT error: ', err);
       result(null, err);

@@ -16,12 +16,13 @@ Model.getAll = function(result, table) {
   });
 };
 
-Model.getAllCollectionsByClientId = function(clientId, result) {
+Model.getAllCollectionsByClientId = function(type, clientId, result) {
+  console.log('getAllCollectionsByClientId: ', type);
   console.log('getAllCollectionsByClientId: ', clientId);
 
-  sql.query(`SELECT * FROM accounts, customers, cases, outcomes
-     WHERE accounts.f_customerId = customers.id
-     AND cases.f_accountNumber = accounts.accountNumber
+  sql.query(`SELECT * FROM ${type}_accounts, ${type}_customers, cases, outcomes
+     WHERE ${type}_accounts.f_customerId = ${type}_customers.id
+     AND cases.f_accountNumber = ${type}_accounts.accountNumber
      AND cases.id = outcomes.f_caseNumber
      AND f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
@@ -34,10 +35,11 @@ Model.getAllCollectionsByClientId = function(clientId, result) {
   });
 };
 
-Model.getAllApplicationsByClientId = function(clientId, result) {
+Model.getAllApplicationsByClientId = function(type, clientId, result) {
+  console.log('getAllCollectionsByClientId: ', type);
   console.log('getAllApplicationsByClientId: ', clientId);
 
-  sql.query(`SELECT * FROM applications WHERE f_clientId = ?;`, clientId, function(err, res) {
+  sql.query(`SELECT * FROM ${type}_applications WHERE f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
       console.log('getAllApplicationsByClientId error: ', err);
       result(null, err);
@@ -137,8 +139,8 @@ async function bulkInsert(table, objectArray, callback) {
 }
 
 // Read
-Model.getOne = function(id, result, table) {
-  sql.query(`SELECT * FROM ${table} WHERE id = ?`, id, function(err, res) {
+Model.getOne = function(type, id, result, table) {
+  sql.query(`SELECT * FROM ${type}_${table} WHERE id = ?`, id, function(err, res) {
     if (err) {
       console.log('getOne error: ', err);
       result(null, err);
@@ -149,8 +151,8 @@ Model.getOne = function(id, result, table) {
 }
 
 // Read one based on foreign key
-Model.f_getOne = function(id, result, table) {
-  sql.query(`SELECT * FROM ${table} WHERE f_id = ?`, id, function(err, res) {
+Model.f_getOne = function(type, id, result, table) {
+  sql.query(`SELECT * FROM ${type}_${table} WHERE f_id = ?`, id, function(err, res) {
     if (err) {
       console.log('f_getOne error: ', err);
       result(null, err);

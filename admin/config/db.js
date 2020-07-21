@@ -8,14 +8,14 @@ const connection = mysql.createConnection({
   user: process.env.NODE_ENV === 'development' ? 'root' : 'prod-user',
   port: '3306',
   password: process.env.NODE_ENV === 'development' ? 'password' : 'prod-pass',
-  database: 'ciab'
+  database: 'cws_admin'
 });
 
 connection.connect(function(err) {
   if (err) {
     return console.error('Connection error: ' + err.message);
   }
-  console.log('Connected to the ciab MySQL server');
+  console.log('Connected to the cws_admin MySQL server');
 });
 
 function keepalive() {

@@ -1,4 +1,4 @@
-const Comment = require('../models/comments.model');
+const Comment = require('../consumer/models/comments.model');
 
 // Read one
 exports.read_item = function(req, res) {

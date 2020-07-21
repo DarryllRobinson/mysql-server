@@ -1,4 +1,4 @@
-const Model = require('../models/collections.model');
+const Model = require('../consumer/models/collections.model');
 
 // Read all
 exports.list_all = function(req, res) {

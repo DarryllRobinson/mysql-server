@@ -55,9 +55,9 @@ exports.single_upload = function(req, res) {
 
 // Download a single document
 exports.single_download = function(req, res) {
-  console.log('req.params: ', req.params);
-  console.log('fileDir: ', fileDir);
-  console.log('Trying to download a document in storage.controller');
+  //console.log('req.params: ', req.params);
+  //console.log('fileDir: ', fileDir);
+  //console.log('Trying to download a document in storage.controller');
 
   const fileName = fileDir + req.params.id;
   fs.readFile(fileName, (err, data) => {

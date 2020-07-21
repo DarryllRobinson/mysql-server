@@ -1,4 +1,4 @@
-const Cron = require('../models/cron.model');
+const Cron = require('../consumer/models/cron.model');
 
 // Get all
 exports.get_all = function(req, res) {

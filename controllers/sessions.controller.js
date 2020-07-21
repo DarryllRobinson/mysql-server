@@ -1,7 +1,7 @@
-const Session = require('../models/sessions.model');
+const Session = require('../admin/models/sessions.model');
 
 exports.auth_user = function(req, res) {
-  console.log('Session.getUser req.body: ', req.body);
+  //console.log('Session.getUser req.body: ', req.body);
   Session.getUser(req.body.email, req.body.password, function(err, session) {
     if (err) {
       console.log('auth error: ', err);
@@ -17,6 +17,7 @@ exports.auth_user = function(req, res) {
         surname: session[0].surname,
         email: session[0].email,
         role: session[0].role,
+        type: session[0].type,
         storeId: session[0].storeId,
         clientId: session[0].f_clientId
       };
@@ -30,13 +31,27 @@ exports.auth_user = function(req, res) {
   });
 }
 
+exports.list_all_by_clientId = function(req, res) {
+  Session.getServicesByClientId(req.params.clientId, function(err, session) {
+    if (err) {
+      console.log('getServicesByClientId controller error: ', err);
+    } else {
+      res.send(session);
+    }
+  });
+}
+
+
+
+
+
 // Not used any more
 exports.auth = function(req, res) {
   Session.getUser(req.body.email, req.body.password, function(err, session) {
     if (err) {
       console.log('auth error: ', err);
     } else {
-      console.log('auth session: ', session);
+      //console.log('auth session: ', session);
       if (session.match) {
         let newSession = {
           email: req.body.email,
@@ -47,14 +62,14 @@ exports.auth = function(req, res) {
           if (err) {
             console.log('createSession controller error: ', err);
           } else {
-            console.log('getUser response: ', user);
+            //console.log('getUser response: ', user);
             let response = {
               firstName: session[0].firstName,
               surname: session[0].surname,
               email: user.email,
               role: session[0].role
             };
-            console.log('Session response: ', response);
+            //console.log('Session response: ', response);
             res.send(response);
           }
         });
@@ -88,7 +103,7 @@ exports.xxxauth = function(req, res) {
 
 // Check if user is logged in using email address
 exports.authCheck = function(req, res) {
-  console.log('authCheck req.params.email: ', req.params.email);
+  console.log('Is this used still? authCheck req.params.email: ', req.params.email);
   Session.checkAuth(req.params.email, function(err, session) {
     if (err) {
       console.log('checkAuth controller error: ', err);

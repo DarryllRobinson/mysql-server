@@ -9,7 +9,9 @@ const rfs = require('rotating-file-stream');
 const mysql = require('mysql');
 const app = express();
 const cron = require('node-cron');
-const sql = require('./config/db');
+const consumer_sql = require('./consumer/config/db');
+const business_sql = require('./business/config/db');
+const admin_sql = require('./admin/config/db');
 const moment = require('moment');
 //const crons = require('./cron.jobs/cron.jobs');
 
@@ -29,8 +31,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-const fileDir = __dirname + '/_uploads';
-console.log('fileDir: ', fileDir);
+//const fileDir = __dirname + '/_uploads';
+//console.log('fileDir: ', fileDir);
 
 app.use(cors());
 
@@ -92,10 +94,10 @@ app.use((req, res, done) => {
 
 // Customer and Account creation cron
 cron.schedule('* * 1 * * *', () => {
-  console.log('running createCustomers');
-  sql.query(`SELECT * FROM applications WHERE currentStatus = 'Approved' and bookedDate is NULL;`, function(err, res) {
+  console.log('running consumer_createCustomers');
+  sql.query(`SELECT * FROM consumer_applications WHERE currentStatus = 'Approved' and bookedDate is NULL;`, function(err, res) {
     if (err) {
-      console.log('createCustomers error: ', err);
+      console.log('consumer_createCustomers error: ', err);
       //result(null, err);
     } else {
       //console.log('createCustomers res: ', res[1]);
@@ -120,9 +122,9 @@ cron.schedule('* * 1 * * *', () => {
           createdBy: 'System'
         };
 
-        sql.query(`INSERT INTO customers SET ?;`, customer, function(err, res) {
+        sql.query(`INSERT INTO consumer_customers SET ?;`, customer, function(err, res) {
           if (err) {
-            console.log('INSERT INTO customers error: ', err);
+            console.log('INSERT INTO consumer_customers error: ', err);
             //result(null, err);
           } else {
             //console.log('INSERT INTO customers: ', res);
@@ -141,11 +143,11 @@ cron.schedule('* * 1 * * *', () => {
             let recordId = record.id;
             //console.log('recordId: ', recordId);
 
-            sql.query(`UPDATE applications SET bookedDate = '${booked}' WHERE id = ${record.id};`)
+            sql.query(`UPDATE consumer_applications SET bookedDate = '${booked}' WHERE id = ${record.id};`)
 
-            sql.query(`INSERT INTO accounts SET ?;`, account, function(err, res) {
+            sql.query(`INSERT INTO consumer_accounts SET ?;`, account, function(err, res) {
               if (err) {
-                console.log('INSERT INTO accounts error: ', err);
+                console.log('INSERT INTO consumer_accounts error: ', err);
                 //result(null, err);
               } else {
                 //console.log('INSERT INTO accounts: ', res);
@@ -155,15 +157,16 @@ cron.schedule('* * 1 * * *', () => {
         });
       });
     }
-  })
+  });
+  console.log('createCustomers complete');
 });
 
 // Case and Outcome creation cron
 cron.schedule('* * 1 * * *', () => {
-  console.log('running createCases');
-  sql.query(`SELECT * FROM accounts WHERE currentStatus <> 'Current' and caseDate is NULL;`, function(err, res) {
+  console.log('running consumer_createCases');
+  sql.query(`SELECT * FROM consumer_accounts WHERE currentStatus <> 'Current' and caseDate is NULL;`, function(err, res) {
     if (err) {
-      console.log('createCases error: ', err);
+      console.log('consumer_createCases error: ', err);
       //result(null, err);
     } else {
       //console.log('createCases res: ', res);
@@ -177,9 +180,9 @@ cron.schedule('* * 1 * * *', () => {
 
         let caseDate = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
         let accountNumber = record.accountNumber;
-        sql.query(`UPDATE accounts SET caseDate = '${caseDate}' WHERE accountNumber = ${accountNumber};`, function(err, res) {
+        sql.query(`UPDATE consumer_accounts SET caseDate = '${caseDate}' WHERE accountNumber = ${accountNumber};`, function(err, res) {
           if (err) {
-            console.log('UPDATE accounts error: ', err);
+            console.log('UPDATE consumer_accounts error: ', err);
           } else {
             //console.log('UPDATE accounts: ', res);
           }
@@ -201,7 +204,7 @@ cron.schedule('* * 1 * * *', () => {
               if (err) {
                 console.log('INSERT INTO outcomes error: ', err);
               } else {
-                //console.log('INSERT INTO outcomes: ', res);
+                console.log('INSERT INTO outcomes: ', res);
               }
             });
           }
@@ -209,6 +212,7 @@ cron.schedule('* * 1 * * *', () => {
       });
     }
   });
+  console.log('consumer_createCases completed');
 });
 
   /*sql.query(`SELECT * FROM accounts WHERE currentStatus <> 'Current' and caseDate is NULL;`, function(err, res) {
