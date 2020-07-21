@@ -42,3 +42,17 @@
 [2020-07-21T02:46:31.590Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 101.087 ms
 [2020-07-21T02:50:39.854Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 9.747 ms
 [2020-07-21T02:50:40.186Z] ::1 sabco@email.com GET /api/business/collections/1 200 {} 38.018 ms
+[2020-07-21T02:57:07.367Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 72.271 ms
+[2020-07-21T02:57:07.665Z] ::1 sabco@email.com GET /api/business/collections/1 304 {} 4.241 ms
+[2020-07-21T02:58:29.118Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 47.155 ms
+[2020-07-21T02:58:29.298Z] ::1 sabco@email.com GET /api/business/collections/1 304 {} 3.567 ms
+[2020-07-21T04:04:03.448Z] ::1 sabco@email.com POST /api/business/collections,%20accounts 404 {} 2.426 ms
+[2020-07-21T04:40:24.831Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"sabco@email.com","password":"sabco","loginDate":"2020-07-21 14:40:24"} 221.168 ms
+[2020-07-21T04:40:24.916Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 42.758 ms
+[2020-07-21T04:40:25.003Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 200 {} 42.622 ms
+[2020-07-21T04:49:42.379Z] ::1 sabco@email.com POST /api/business/collections/create_item 404 [{"accountRef":"EDG102","amountDue":3500000,"createdBy":"Darryll","createdDate":"2020-07-21 14:49:42","creditLimit":0,"currentBalance":0,"days30":0,"days60":0,"days90":0,"days120":3500000,"f_customerId":1,"lastPTPDate":37457,"paymentMethod":"EFT","paymentTermDays":30,"totalBalance":3500000}] 3.790 ms
+[2020-07-21T04:54:00.947Z] ::1 sabco@email.com POST /api/business/collections/create_item/1 200 [{"accountRef":"EDG102","amountDue":3500000,"createdBy":"Darryll","createdDate":"2020-07-21 14:54:00","creditLimit":0,"currentBalance":0,"days30":0,"days60":0,"days90":0,"days120":3500000,"f_customerId":1,"lastPTPDate":37457,"paymentMethod":"EFT","paymentTermDays":30,"totalBalance":3500000}] 22.167 ms
+[2020-07-21T04:55:26.483Z] ::1 sabco@email.com POST /api/business/collections/create_item/1 200 [{"accountRef":"EDG102","amountDue":3500000,"createdBy":"Darryll","createdDate":"2020-07-21 14:55:26","creditLimit":0,"currentBalance":0,"days30":0,"days60":0,"days90":0,"days120":3500000,"f_customerId":1,"lastPTPDate":37457,"paymentMethod":"EFT","paymentTermDays":30,"totalBalance":3500000}] 29.365 ms
+[2020-07-21T04:56:57.452Z] ::1 sabco@email.com POST /api/business/accounts/create_item/1 200 [{"accountRef":"EDG102","amountDue":3500000,"createdBy":"Darryll","createdDate":"2020-07-21 14:56:57","creditLimit":0,"currentBalance":0,"days30":0,"days60":0,"days90":0,"days120":3500000,"f_customerId":1,"lastPTPDate":37457,"paymentMethod":"EFT","paymentTermDays":30,"totalBalance":3500000}] 8.953 ms
+[2020-07-21T04:57:50.930Z] ::1 sabco@email.com POST /api/business/accounts/create_item/1 200 [{"accountRef":"EDG102","amountDue":3500000,"createdBy":"Darryll","creditLimit":0,"currentBalance":0,"days30":0,"days60":0,"days90":0,"days120":3500000,"f_customerId":1,"lastPTPDate":37457,"paymentMethod":"EFT","paymentTermDays":30,"totalBalance":3500000}] 8.556 ms
+[2020-07-21T04:59:57.311Z] ::1 sabco@email.com POST /api/business/accounts/create_item/1 200 [{"accountRef":"EDG102","amountDue":3500000,"createdBy":"Darryll","creditLimit":0,"currentBalance":0,"days30":0,"days60":0,"days90":0,"days120":3500000,"f_customerId":1,"lastPTPDate":"1970-01-01","paymentMethod":"EFT","paymentTermDays":30,"totalBalance":3500000}] 27.816 ms

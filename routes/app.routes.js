@@ -97,8 +97,9 @@ module.exports = function(app) {
 
 
   // cws_business routes????
-  app.route('/api/:type/:workspace/:clientId')
-    .get(cont.list_all_by_clientId);
+  app.route('/api/:type/:workspace/:task/:clientId')
+    .get(cont.list_all_by_clientId)
+    .post(cont.create_item);
 
 /*
   // Users

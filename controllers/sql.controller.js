@@ -48,7 +48,35 @@ exports.list_all_by_clientId = function(req, res) {
   }
 }
 
+// Create one
+exports.create_item = function(req, res) {
+  console.log('create_item req.params: ', req.params);
+  console.log('create_item req.body: ', req.body);
 
+  switch (req.params.type) {
+    case 'business':
+      BusinessModel.createOne(req.params.workspace, req.body, function(err, model) {
+        if (err) {
+          console.log('BusinessModel.createOne controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      }, req.table);
+      break;
+    case 'consumer':
+      ConsumerModel.createOne(req.body, function(err, model) {
+        if (err) {
+          console.log('ConsumerModel.createOne controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      //}, req.table);
+      });
+      break;
+    default:
+
+  }
+}
 
 /*
 // Read all

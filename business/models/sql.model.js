@@ -5,17 +5,6 @@ const Model = function(model) {
   this.createdDate = new Date();
 };
 
-Model.getAll = function(result, table) {
-  sql.query(`SELECT * FROM ${table};`, function(err, res) {
-    if (err) {
-      console.log('getAll error: ', err);
-      result(null, err);
-    } else {
-      result(null, res);
-    }
-  });
-};
-
 Model.getAllCollectionsByClientId = function(clientId, result) {
   console.log('getAllCollectionsByClientId: ', clientId);
 
@@ -47,6 +36,32 @@ Model.getAllApplicationsByClientId = function(clientId, result) {
     }
   });
 }
+
+
+
+Model.createOne = function(table, newItem, result) {
+  sql.query(`INSERT INTO ${table} SET ?;`, newItem, function(err, res) {
+    if (err) {
+      console.log('createOne error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+};
+
+
+/*
+Model.getAll = function(result, table) {
+  sql.query(`SELECT * FROM ${table};`, function(err, res) {
+    if (err) {
+      console.log('getAll error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+};
 
 Model.getAllById = function(workspace, clientId, result, table) {
   console.log('workspace: ', workspace);
@@ -209,5 +224,5 @@ Model.removeOne = function(id, result, table) {
     }
   });
 }
-
+*/
 module.exports = Model;
