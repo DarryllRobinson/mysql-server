@@ -79,10 +79,10 @@ module.exports = function(app) {
   app.use(function(req, res, next) {
     req.type = getTypeName(req.path);
     req.table = getTableName(req.path);
-    console.log('req.type: ', req.type);
+    /*console.log('req.type: ', req.type);
     console.log('req.table: ', req.table);
     console.log('req.params: ', req.params);
-    console.log('req.body: ', req.body);
+    console.log('req.body: ', req.body);*/
     next();
   });
 
@@ -98,8 +98,14 @@ module.exports = function(app) {
 
   // cws_business routes????
   app.route('/api/:type/:workspace/:task/:clientId')
-    .get(cont.list_all_by_clientId)
-    .post(cont.create_item);
+    .get(cont.list_all)
+    .post(cont.create_item)
+    .post(cont.create_items);
+
+  app.route('/api/:type/:workspace/:task/:clientId/:recordId')
+    .get(cont.read_item)
+    .put(cont.update_item);
+    /*.delete(cont.delete_item);*/
 
 /*
   // Users
@@ -248,13 +254,13 @@ module.exports = function(app) {
     .get(cont.read_item)
     .put(cont.update_item)
     .delete(cont.delete_item);
-
+*/
   // Uploads
-  app.route('/api/upload/document')
+  app.route('/api/:type/:workspace/upload/document')
     .post(storage.single_upload);
 
   // Downloads
-  app.route('/api/download/document/:id')
+  app.route('/api/:type/:workspace/download/document/:id')
     .post(storage.single_download);
-*/
+
 }

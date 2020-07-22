@@ -1,51 +1,245 @@
 const ConsumerModel = require('../consumer/models/sql.model');
 const BusinessModel = require('../business/models/sql.model');
 
-exports.list_all_by_clientId = function(req, res) {
-  console.log('list_all_by_clientId req.params: ', req.params);
+// List all records
+exports.list_all = function(req, res) {
+  console.log('list_all req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
 
-  switch (req.params.type) {
+  // Determine which type
+  switch (type) {
     case 'business':
-      switch (req.params.workspace) {
+      console.log('list_all business');
+      BusinessModel.getAllCollections(clientId, function(err, model) {
+        if (err) {
+          console.log('BusinessModel.getAllCollections controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      });
+      break;
+    case 'consumer':
+      console.log('list_all consumer');
+      res.send(type);
+      break;
+    default:
+      console.log('list_all type not found: ', type);
+      res.send(type);
+      break;
+  }
+}
+
+// Create one
+exports.create_item = function(req, res) {
+  console.log('create_item req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
+
+  // Determine which type
+  switch (type) {
+    case 'business':
+      console.log('create_item business');
+      BusinessModel.createOne(workspace, req.body, function(err, model) {
+        if (err) {
+          console.log('createOne controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      });
+      break;
+    case 'consumer':
+      console.log('create_item consumer');
+      res.send(type);
+      break;
+    default:
+      console.log('create_item type not found: ', type);
+      res.send(type);
+      break;
+  }
+}
+
+// Create many
+exports.create_items = function(req, res) {
+  console.log('create_items req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
+
+  // Determine which type
+  switch (type) {
+    case 'business':
+      console.log('create_items business');
+      BusinessModel.createMany(workspace, req.body, function(err, model) {
+        if (err) {
+          console.log('createMany controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      });
+      break;
+    case 'consumer':
+      console.log('create_items consumer');
+      res.send(type);
+      break;
+    default:
+      console.log('create_items type not found: ', type);
+      res.send(type);
+      break;
+  }
+}
+
+// Read one
+exports.read_item = function(req, res) {
+  console.log('read_item req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
+  const recordId = req.params.recordId;
+
+  // Determine which type
+  switch (type) {
+    case 'business':
+      console.log('read_item business');
+      if (workspace === 'collections') {
+        BusinessModel.getOneCase(workspace, clientId, recordId, function(err, model) {
+          if (err) {
+            console.log('getOneCase controller error: ', err);
+          } else {
+            res.send(model);
+          }
+        });
+      } else {
+        BusinessModel.getOne(workspace, clientId, recordId, function(err, model) {
+          if (err) {
+            console.log('getOne controller error: ', err);
+          } else {
+            res.send(model);
+          }
+        });
+      }
+      break;
+    case 'consumer':
+      console.log('read_item consumer');
+      res.send(type);
+      break;
+    default:
+      console.log('read_item type not found: ', type);
+      res.send(type);
+      break;
+  }
+}
+
+// Update one ***** Possibly incredibly unsafe!
+exports.update_item = function(req, res) {
+  console.log('update_item req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
+  const recordId = req.params.recordId;
+  console.log('update_item req.body: ', req.body);
+
+  // Determine which type
+  switch (type) {
+    case 'business':
+      BusinessModel.updateOne(workspace, clientId, recordId, req.body, function(err, model) {
+        if (err) {
+          console.log('updateOne controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      });
+      break;
+    case 'consumer':
+      console.log('update_item consumer');
+      res.send(type);
+      break;
+    default:
+      console.log('update_item type not found: ', type);
+      res.send(type);
+      break;
+  }
+}
+
+/*exports.list_all_by_clientId = function(req, res) {
+  console.log('list_all_by_clientId req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
+
+  switch (type) {
+    case 'business':
+      switch (workspace) {
         case 'applications':
-          BusinessModel.getAllApplicationsByClientId(req.params.clientId, function(err, model) {
+          console.log('business applications');
+          BusinessModel.getAllApplicationsByClientId(type, workspace, task, clientId, function(err, model) {
             if (err) {
               console.log('BusinessModel.getAllApplicationsByClientId controller error: ', err);
             } else {
               res.send(model);
             }
           });
-          break;
+          //break;
         case 'collections':
-          BusinessModel.getAllCollectionsByClientId(req.params.clientId, function(err, model) {
+          console.log('business collections');
+          BusinessModel.getAllCollectionsByClientId(type, workspace, task, clientId, function(err, model) {
             if (err) {
               console.log('BusinessModel.getAllCollectionsByClientId controller error: ', err);
             } else {
               res.send(model);
             }
           });
-          break;
+          //break;
         default:
-          console.log('list_all_by_clientId unable to handle what came my way inside');
-          break;
+          console.log('default');
+          console.log('list_all_by_clientId unable to handle what came my way outside: ', req.params.workspace);
+          res.send('error');
+          //break;
       }
-
     case 'consumer':
-      switch (req.params.workspace) {
+      switch (workspace) {
         case 'applications':
-          console.log('list_all_by_clientId consumer applications');
-          break;
+          console.log('consumer applications');
+          ConsumerModel.getAllApplicationsByClientId(type, workspace, task, clientId, function(err, model) {
+            if (err) {
+              console.log('ConsumerModel.getAllApplicationsByClientId controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          //break;
         case 'collections':
-          console.log('list_all_by_clientId consumer collections');
-          break;
+          console.log('consumer collections');
+          ConsumerModel.getAllCollectionsByClientId(type, workspace, task, clientId, function(err, model) {
+            if (err) {
+              console.log('ConsumerModel.getAllCollectionsByClientId controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          //break;
         default:
-          console.log('list_all_by_clientId unable to handle what came my way inside');
-          break;
+          console.log('default');
+          console.log('list_all_by_clientId unable to handle what came my way inside: ', req.params.workspace);
+          res.send('error');
+          //break;
       }
     default:
-      console.log('list_all_by_clientId unable to handle what came my way outside: ', req.params);
-      break;
+      console.log('default');
+      console.log('list_all_by_clientId unable to handle what came my way outside: ', req.params.type);
+      res.send('error');
+      //break;
   }
+
+
 }
 
 // Create one

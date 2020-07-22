@@ -4,28 +4,30 @@ const moment = require('moment');
 const path = require('path');
 const fs = require('fs');
 
-const storage = multer.diskStorage({
-      destination: function (req, file, cb) {
-      cb(null, '_uploads');
-    },
-    filename: function (req, file, cb) {
-      cb(null, moment(Date.now()).format('YYYY-MM-DD HH:mm:ss') + '-' +file.originalname )
-    }
-});
-
-const upload = multer({ //multer settings
+/*const download = multer({ //multer settings
   storage: storage
-}).single('file');
-
-const download = multer({ //multer settings
-  storage: storage
-}).single('file');
+}).single('file');*/
 
 const fileDir = '/Users/darryllrobinson/Documents/projects/mysql-server/_uploads/';//path.join(__dirname, '/_uploads');
 
 
 // Upload a single document
 exports.single_upload = function(req, res) {
+  console.log('single_upload params: ', req.params);
+  /*
+  const storage = multer.diskStorage({
+        destination: function (req, file, cb) {
+        cb(null, '_uploads');
+      },
+      filename: function (req, file, cb) {
+        cb(null, moment(Date.now()).format('YYYY-MM-DD HH:mm:ss') + '-' +file.originalname )
+      }
+  });
+
+  const upload = multer({ //multer settings
+    storage: storage
+  }).single('file');
+
   //console.log('req: ', req);
   //console.log('Trying to upload a document in storage.controller');
   upload(req, res, function(err) {
@@ -50,7 +52,8 @@ exports.single_upload = function(req, res) {
     console.log('Successful upload');
     res.json({ upload: 'success' });
     return;
-  });
+  });*/
+  return;
 }
 
 // Download a single document
