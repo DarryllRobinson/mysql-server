@@ -18,6 +18,94 @@ Session.getServicesByClientId = function(clientId, result) {
   });
 }
 
+Session.getAllClients = function(result) {
+  sql.query(`SELECT * FROM clients;`, function(err, res) {
+    if (err) {
+      console.log('getAllClients error: ', err);
+      result(null, err);
+    } else {
+      console.log('getAllClients res: ', res);
+      result(null, res);
+    }
+  });
+}
+
+Session.getConfig = function(table, result) {
+  sql.query(`SELECT * FROM ${table};`, function(err, res) {
+    if (err) {
+      console.log('getConfig error: ', err);
+      result(null, err);
+    } else {
+      console.log('getConfig res: ', res);
+      result(null, res);
+    }
+  });
+}
+
+Session.createUser = function(newUser, result) {
+  console.log('starting createUser: ', newUser);
+  const email = newUser.email;
+  sql.query(`SELECT email FROM users WHERE email = ?;`, email, function(err, res) {
+    if (err) {
+      console.log('getAllUsers error: ', err);
+      result(null, err);
+    } else {
+      console.log('res.length: ', res.length);
+      if (res.length > 0) {
+        result(null, 'user exists');
+      } else {
+        console.log('user is unique');
+        sql.query(`INSERT INTO users SET ?;`, newUser, function(err, res) {
+          if (err) {
+            console.log('createUser error: ', err);
+            result(null, err);
+          } else {
+            console.log('createUser res: ', res);
+            result(null, res);
+          }
+        });
+      }
+    }
+  });
+}
+
+/*Session.createUser = function(newUser, result) {
+  const email = req.body.email;
+  sql.query(`SELECT email FROM users WHERE email = ?;`, email, function(err, res) {
+    if (err) {
+      console.log('getAllUsers error: ', err);
+      result(null, err);
+    } else {
+      if (res.length > 0) {
+        result(null, 'user exists');
+      } else {
+        sql.query(`INSERT INTO users SET ?;`, newUser, function(err, res) {
+          if (err) {
+            console.log('createUser error: ', err);
+            result(null, err);
+          } else {
+            console.log('createUser res: ', res);
+            result(null, res);
+          }
+        });
+      }
+    });}
+  });
+}
+
+Session.createUser = function(newUser, result) {
+  console.log('creating user');
+  sql.query(`INSERT INTO users SET ?;`, newUser, function(err, res) {
+    if (err) {
+      console.log('createUser error: ', err);
+      result(null, err);
+    } else {
+      console.log('createUser res: ', res);
+      result(null, res);
+    }
+  });
+}*/
+
 Session.getUser = function(email, password, result) {
   console.log('getUser email: ', email);
   console.log('getUser password: ', password);

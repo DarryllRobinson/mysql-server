@@ -91,12 +91,23 @@ module.exports = function(app) {
   app.route('/api/admin/sessions')
     .post(sessions.auth_user);
 
+  app.route('/api/admin/user')
+    .post(sessions.create_user);
+
+  // Clients
+  app.route('/api/admin/clients')
+    .get(sessions.list_all_clients);
+
   // Services
   app.route('/api/admin/clientservices/:clientId')
     .get(sessions.list_all_by_clientId);
 
+  // Resolutions etc.
+  app.route('/api/admin/:workspace/:task')
+    .get(sessions.list_all);
 
-  // cws_business routes????
+
+  // cws_business and cws_consumer routes
   app.route('/api/:type/:workspace/:task/:clientId')
     .get(cont.list_all)
     .post(cont.create_item)

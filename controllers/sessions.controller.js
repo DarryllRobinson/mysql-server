@@ -41,7 +41,42 @@ exports.list_all_by_clientId = function(req, res) {
   });
 }
 
+exports.list_all_clients = function(req, res) {
+  Session.getAllClients(function(err, session) {
+    if (err) {
+      console.log('getAllClients controller error: ', err);
+    } else {
+      res.send(session);
+    }
+  });
+}
 
+exports.create_user = function(req, res) {
+  console.log('req.body.email: ', req.body.email);
+  // Check if user email address already exists
+  Session.createUser(req.body, function(err, session) {
+    if (err) {
+      console.log('createUser controller error: ', err);
+    } else {
+      console.log('model createUser: ', session);
+      if (session === 'User exists') {
+        res.send('User exists')
+      } else {
+        res.send(session);
+      }
+    }
+  });
+}
+
+exports.list_all = function(req, res) {
+  Session.getConfig(req.params.workspace, function(err, session) {
+    if (err) {
+      console.log('getConfig controller error: ', err);
+    } else {
+      res.send(session);
+    }
+  });
+}
 
 
 
