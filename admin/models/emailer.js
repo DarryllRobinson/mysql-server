@@ -1,16 +1,13 @@
 "use strict";
 const nodemailer = require("nodemailer");
+const constants = require('../../.stuff.js');
 
 // async..await is not allowed in global scope, must use a wrapper
 const Emailer = async function(email) {
   console.log('email in const: ', email);
 };
 
-Emailer.sendEmail = async function(email) {
-  // Generate test SMTP service account from ethereal.email
-  // Only needed if you don't have a real mail account for testing
-  //let testAccount = await nodemailer.createTestAccount();
-  console.log('Emailer email: ', email);
+Emailer.sendEmail = async function(email, firstName) {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
@@ -19,7 +16,7 @@ Emailer.sendEmail = async function(email) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: 'robot@thesystem.co.za', // generated ethereal user
-      pass: '%IT[Gn+d_.we', // generated ethereal password
+      pass:  constants.emailPass// generated ethereal password
     },
   });
 
@@ -27,12 +24,17 @@ Emailer.sendEmail = async function(email) {
   let info = await transporter.sendMail({
     from: "robot@thesystem.co.za", // sender address
     to: email, // list of receivers
-    subject: "Hello ✔", // Subject line
-    text: "Cello hunt", // plain text body
-    html: "<b>Hello world?</b>", // html body
+    subject: "Welcome to The System", // Subject line
+    text: "Welcome to The System", // plain text body
+    html: `
+          <p>${firstName}, you have been registered as a new user on The System.</p>
+          <p>Please click <a href="https://thesystem.co.za" target="_blank">here</a> to be taken to the login page. You will need to set a password when you login for the first time.</p>
+          <br /><br />
+          <p>The System Team</p>
+          `, // html body
   });
 
-  console.log("Message sent: %s", info.messageId);
+  //console.log("Message sent: %s", info.messageId);
   console.log("Message sent to: %s", info);
   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 

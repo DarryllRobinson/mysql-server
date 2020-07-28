@@ -44,7 +44,7 @@ Session.getConfig = function(table, result) {
 }
 
 Session.createUser = function(newUser, result) {
-  //console.log('starting createUser: ', newUser);
+  console.log('starting createUser: ', newUser);
   const email = newUser.email;
   sql.query(`SELECT email FROM users WHERE email = ?;`, email, function(err, res) {
     if (err) {
@@ -62,7 +62,7 @@ Session.createUser = function(newUser, result) {
             result(null, err);
           } else {
             console.log('createUser res: ', res);
-            Emailer.sendEmail(email);
+            Emailer.sendEmail(email, newUser.firstName);
             result(null, res);
           }
         });

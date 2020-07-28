@@ -36,3 +36,14 @@
 [2020-07-28T07:14:16.298Z] ::1 - GET /api/admin/clients 200 {} 13.664 ms
 [2020-07-28T07:14:57.394Z] ::1 - GET /api/admin/clients 200 {} 19.530 ms
 [2020-07-28T07:15:22.195Z] ::1 - GET /api/admin/clients 200 {} 36.882 ms
+[2020-07-28T07:50:29.875Z] ::1 [object Object] GET /api/admin/clients - {} - ms
+[2020-07-28T07:50:38.084Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-07-28 17:50:37"} 366.503 ms
+[2020-07-28T07:50:38.258Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 8.371 ms
+[2020-07-28T07:50:38.333Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 67.491 ms
+[2020-07-28T07:50:40.836Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 13.505 ms
+[2020-07-28T07:50:40.975Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 53.825 ms
+[2020-07-28T07:50:42.933Z] ::1 email@email.com GET /api/admin/clients 200 {} 38.379 ms
+[2020-07-28T07:51:08.193Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Darryll","surname":"Robinson","email":"darryllrobinson@icloud.com","phone":"0421853016","password":"$2a$10$KfdSPEdKQ5thKpb.IZTgp.Tm396k1iE2vlBX1QPCFMtLervfxfNVW","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-28 17:51:07"} 216.019 ms
+[2020-07-28T07:57:07.872Z] ::1 email@email.com GET /api/admin/clients 304 {} 116.566 ms
+[2020-07-28T08:13:58.258Z] ::1 email@email.com GET /api/admin/clients 304 {} 13.093 ms
+[2020-07-28T08:14:40.213Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Darryll","surname":"Robinson","email":"darryllrobinson@icloud.com","phone":"0421853016","password":"$2a$10$aQJkc3C1W87l377VSnAM/.u38i5gxXszSVwZEL4YkDsjCJeMiE6h6","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-28 18:14:40"} 143.750 ms
