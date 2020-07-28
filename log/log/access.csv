@@ -47,3 +47,72 @@
 [2020-07-28T07:57:07.872Z] ::1 email@email.com GET /api/admin/clients 304 {} 116.566 ms
 [2020-07-28T08:13:58.258Z] ::1 email@email.com GET /api/admin/clients 304 {} 13.093 ms
 [2020-07-28T08:14:40.213Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Darryll","surname":"Robinson","email":"darryllrobinson@icloud.com","phone":"0421853016","password":"$2a$10$aQJkc3C1W87l377VSnAM/.u38i5gxXszSVwZEL4YkDsjCJeMiE6h6","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-28 18:14:40"} 143.750 ms
+[2020-07-28T11:39:50.433Z] ::1 [object Object] GET /api/admin/clients 304 {} 41.741 ms
+[2020-07-28T11:39:58.913Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-07-28 21:39:58"} 371.168 ms
+[2020-07-28T11:39:59.066Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 2.056 ms
+[2020-07-28T11:39:59.144Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 72.837 ms
+[2020-07-28T11:40:02.930Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 75.541 ms
+[2020-07-28T11:40:14.381Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 200 {} 23.562 ms
+[2020-07-28T11:40:14.410Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 4.914 ms
+[2020-07-28T11:40:14.620Z] ::1 email@email.com PUT /api/business/cases/update_item/1/509 200 {"currentStatus":" currentStatus = 'Locked'"} 112.627 ms
+[2020-07-28T11:58:05.155Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 200 {} 126.263 ms
+[2020-07-28T11:58:05.239Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 17.034 ms
+[2020-07-28T11:58:05.328Z] ::1 email@email.com GET /api/admin/pendreaons/list_all 200 {} 44.197 ms
+[2020-07-28T12:02:32.557Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 138.222 ms
+[2020-07-28T12:02:32.656Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 8.290 ms
+[2020-07-28T12:02:32.737Z] ::1 email@email.com GET /api/admin/pendreaons/list_all 304 {} 3.478 ms
+[2020-07-28T12:03:15.532Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 325.048 ms
+[2020-07-28T12:03:15.844Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 13.066 ms
+[2020-07-28T12:03:15.942Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 200 {} 15.498 ms
+[2020-07-28T12:03:16.123Z] ::1 email@email.com PUT /api/business/cases/update_item/1/509 200 {"currentStatus":" currentStatus = 'Locked'"} 28.212 ms
+[2020-07-28T12:04:06.019Z] ::1 email@email.com PUT /api/business/cases/update_item/1/509 200 {"caseNotes":" caseNotes = 'email@email.com - 2020-07-28 22:04:05: Pending test note'","currentStatus":" currentStatus = 'Pended'","pendReason":" pendReason = '[object Object],[object Object],[object Object]'","updatedBy":" updatedBy = 'email@email.com'","updatedDate":" updatedDate = '2020-07-28 22:04:05'"} 47.047 ms
+[2020-07-28T12:04:06.037Z] ::1 email@email.com PUT /api/business/outcomes/update_item/1/236 200 {"nextVisitDate":" nextVisitDate = '2020-07-29'"} 3.980 ms
+[2020-07-28T12:04:06.168Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 34.236 ms
+[2020-07-28T12:04:10.775Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 200 {} 26.382 ms
+[2020-07-28T12:04:10.800Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.832 ms
+[2020-07-28T12:04:10.822Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 2.947 ms
+[2020-07-28T12:04:10.946Z] ::1 email@email.com PUT /api/business/cases/update_item/1/509 200 {"currentStatus":" currentStatus = 'Locked'"} 75.982 ms
+[2020-07-28T12:05:06.897Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 200 {} 271.388 ms
+[2020-07-28T12:05:07.230Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 15.158 ms
+[2020-07-28T12:05:07.334Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 29.330 ms
+[2020-07-28T12:05:07.425Z] ::1 email@email.com PUT /api/business/cases/update_item/1/509 200 {"currentStatus":" currentStatus = 'Locked'"} 3.788 ms
+[2020-07-28T12:05:21.008Z] ::1 email@email.com PUT /api/business/cases/update_item/1/509 200 {"caseNotes":" caseNotes = 'email@email.com - 2020-07-28 22:04:05: Pending test note\n\remail@email.com - 2020-07-28 22:05:20: Pending test note'","currentStatus":" currentStatus = 'Pended'","pendReason":" pendReason = '[object Object],[object Object],[object Object]'","updatedBy":" updatedBy = 'email@email.com'","updatedDate":" updatedDate = '2020-07-28 22:05:20'"} 23.242 ms
+[2020-07-28T12:05:21.053Z] ::1 email@email.com PUT /api/business/outcomes/update_item/1/236 200 {"nextVisitDate":" nextVisitDate = '2020-07-29'"} 12.534 ms
+[2020-07-28T12:05:21.210Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 28.701 ms
+[2020-07-28T12:06:46.297Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 200 {} 17.514 ms
+[2020-07-28T12:06:46.321Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 5.430 ms
+[2020-07-28T12:06:46.352Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 2.342 ms
+[2020-07-28T12:06:46.577Z] ::1 email@email.com PUT /api/business/cases/update_item/1/509 200 {"currentStatus":" currentStatus = 'Locked'"} 167.128 ms
+[2020-07-28T12:07:06.180Z] ::1 email@email.com PUT /api/business/cases/update_item/1/509 200 {"caseNotes":" caseNotes = 'email@email.com - 2020-07-28 22:04:05: Pending test note\n\remail@email.com - 2020-07-28 22:05:20: Pending test note\n\remail@email.com - 2020-07-28 22:07:06: Note for testing'","currentStatus":" currentStatus = 'Closed'","updatedBy":" updatedBy = 'email@email.com'","updatedDate":" updatedDate = '2020-07-28 22:07:06'"} 116.889 ms
+[2020-07-28T12:07:06.203Z] ::1 email@email.com PUT /api/business/outcomes/update_item/1/236 200 {"closedDate":" closedDate = '2020-07-28 22:07:06'","closedBy":" closedBy = 'email@email.com'","resolution":" resolution = 'info'"} 6.952 ms
+[2020-07-28T12:07:06.384Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 30.789 ms
+[2020-07-28T12:07:10.738Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 29.268 ms
+[2020-07-28T12:07:14.212Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 20.432 ms
+[2020-07-28T12:07:16.048Z] ::1 email@email.com GET /api/business/collections/read_item/1/510 200 {} 81.539 ms
+[2020-07-28T12:07:16.068Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 9.124 ms
+[2020-07-28T12:07:16.080Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 3.475 ms
+[2020-07-28T12:07:16.127Z] ::1 email@email.com PUT /api/business/cases/update_item/1/510 200 {"currentStatus":" currentStatus = 'Locked'"} 14.018 ms
+[2020-07-28T12:07:35.632Z] ::1 email@email.com PUT /api/business/cases/update_item/1/510 200 {"caseNotes":" caseNotes = 'email@email.com - 2020-07-28 22:07:35: New note cccc'","currentStatus":" currentStatus = 'Pended'","pendReason":" pendReason = '[object Object],[object Object],[object Object]'","updatedBy":" updatedBy = 'email@email.com'","updatedDate":" updatedDate = '2020-07-28 22:07:35'"} 95.884 ms
+[2020-07-28T12:07:35.652Z] ::1 email@email.com PUT /api/business/outcomes/update_item/1/237 200 {"nextVisitDate":" nextVisitDate = '2020-07-30'"} 6.429 ms
+[2020-07-28T12:07:35.792Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 48.836 ms
+[2020-07-28T12:07:50.184Z] ::1 email@email.com GET /api/business/collections/read_item/1/510 200 {} 13.127 ms
+[2020-07-28T12:07:50.213Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.873 ms
+[2020-07-28T12:07:50.239Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 4.549 ms
+[2020-07-28T12:07:50.383Z] ::1 email@email.com PUT /api/business/cases/update_item/1/510 200 {"currentStatus":" currentStatus = 'Locked'"} 70.706 ms
+[2020-07-28T12:09:38.386Z] ::1 email@email.com GET /api/business/collections/read_item/1/510 200 {} 153.551 ms
+[2020-07-28T12:09:38.443Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 0.778 ms
+[2020-07-28T12:09:38.537Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 12.485 ms
+[2020-07-28T12:09:38.943Z] ::1 email@email.com PUT /api/business/cases/update_item/1/510 200 {"currentStatus":" currentStatus = 'Locked'"} 36.235 ms
+[2020-07-28T12:11:17.156Z] ::1 email@email.com GET /api/business/collections/read_item/1/510 304 {} 208.882 ms
+[2020-07-28T12:11:17.187Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 5.242 ms
+[2020-07-28T12:11:17.260Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 2.113 ms
+[2020-07-28T12:11:17.664Z] ::1 email@email.com PUT /api/business/cases/update_item/1/510 200 {"currentStatus":" currentStatus = 'Locked'"} 42.029 ms
+[2020-07-28T12:11:30.839Z] ::1 email@email.com PUT /api/business/cases/update_item/1/510 200 {"currentStatus":" currentStatus = 'Open'"} 178.342 ms
+[2020-07-28T12:11:31.081Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 42.595 ms
+[2020-07-28T12:11:32.980Z] ::1 email@email.com GET /api/business/collections/read_item/1/510 200 {} 24.839 ms
+[2020-07-28T12:11:33.029Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 14.611 ms
+[2020-07-28T12:11:33.063Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 16.006 ms
+[2020-07-28T12:11:33.303Z] ::1 email@email.com PUT /api/business/cases/update_item/1/510 200 {"currentStatus":" currentStatus = 'Locked'"} 208.515 ms
+[2020-07-28T12:11:53.921Z] ::1 email@email.com PUT /api/business/cases/update_item/1/510 200 {"caseNotes":" caseNotes = 'email@email.com - 2020-07-28 22:07:35: New note cccc\n\remail@email.com - 2020-07-28 22:11:53: sdsdsdsdsdsd'","currentStatus":" currentStatus = 'Pended'","pendReason":" pendReason = 'code1'","updatedBy":" updatedBy = 'email@email.com'","updatedDate":" updatedDate = '2020-07-28 22:11:53'"} 50.662 ms
+[2020-07-28T12:11:53.954Z] ::1 email@email.com PUT /api/business/outcomes/update_item/1/237 200 {"nextVisitDate":" nextVisitDate = '2020-07-24'"} 16.373 ms
+[2020-07-28T12:11:54.141Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 59.977 ms
