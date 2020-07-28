@@ -1,6 +1,7 @@
 'use strict'
 const sql = require('../config/db');
 const bcrypt = require ('bcryptjs');
+const Emailer = require('../models/emailer');
 
 const Session = function(model) {
   this.createdDate = new Date();
@@ -36,31 +37,32 @@ Session.getConfig = function(table, result) {
       console.log('getConfig error: ', err);
       result(null, err);
     } else {
-      console.log('getConfig res: ', res);
+      //console.log('getConfig res: ', res);
       result(null, res);
     }
   });
 }
 
 Session.createUser = function(newUser, result) {
-  console.log('starting createUser: ', newUser);
+  //console.log('starting createUser: ', newUser);
   const email = newUser.email;
   sql.query(`SELECT email FROM users WHERE email = ?;`, email, function(err, res) {
     if (err) {
       console.log('getAllUsers error: ', err);
       result(null, err);
     } else {
-      console.log('res.length: ', res.length);
+      //console.log('res.length: ', res.length);
       if (res.length > 0) {
         result(null, 'user exists');
       } else {
-        console.log('user is unique');
+        //console.log('user is unique');
         sql.query(`INSERT INTO users SET ?;`, newUser, function(err, res) {
           if (err) {
             console.log('createUser error: ', err);
             result(null, err);
           } else {
             console.log('createUser res: ', res);
+            Emailer.sendEmail(email);
             result(null, res);
           }
         });

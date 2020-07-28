@@ -1,0 +1,38 @@
+[2020-07-28T04:50:25.586Z] ::1 sabco@email.com GET /api/admin/clientservices/1 200 {} 50.030 ms
+[2020-07-28T04:50:25.832Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 200 {} 112.631 ms
+[2020-07-28T04:55:27.632Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 3.644 ms
+[2020-07-28T04:55:27.725Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 27.319 ms
+[2020-07-28T04:55:30.219Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 61.774 ms
+[2020-07-28T04:55:35.215Z] ::1 sabco@email.com GET /api/business/collections/read_item/1/509 200 {} 26.528 ms
+[2020-07-28T04:55:35.279Z] ::1 sabco@email.com GET /api/admin/resolutions/list_all 200 {} 46.843 ms
+[2020-07-28T04:55:35.400Z] ::1 sabco@email.com PUT /api/business/cases/update_item/1/509 200 {"currentStatus":" currentStatus = 'Locked'"} 25.187 ms
+[2020-07-28T04:57:31.876Z] ::1 sabco@email.com GET /api/business/collections/read_item/1/509 200 {} 144.491 ms
+[2020-07-28T04:57:32.005Z] ::1 sabco@email.com GET /api/admin/resolutions/list_all 304 {} 10.565 ms
+[2020-07-28T04:57:32.556Z] ::1 sabco@email.com PUT /api/business/cases/update_item/1/509 200 {"currentStatus":" currentStatus = 'Locked'"} 70.269 ms
+[2020-07-28T04:57:42.289Z] ::1 sabco@email.com PUT /api/business/cases/update_item/1/509 200 {"currentStatus":" currentStatus = 'Open'"} 45.186 ms
+[2020-07-28T04:57:42.521Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 45.162 ms
+[2020-07-28T05:30:10.216Z] ::1 [object Object] GET /api/business/collections/list_all/1 304 {} 96.177 ms
+[2020-07-28T05:35:30.133Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"sabco@email.com","password":"sabco","loginDate":"2020-07-28 15:35:29"} 396.102 ms
+[2020-07-28T05:35:30.287Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 49.449 ms
+[2020-07-28T05:35:30.389Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 78.168 ms
+[2020-07-28T05:35:50.898Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 1.931 ms
+[2020-07-28T05:35:51.240Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 220.888 ms
+[2020-07-28T05:38:29.962Z] ::1 sabco@email.com GET /api/admin/clientservices/1 304 {} 79.002 ms
+[2020-07-28T05:38:30.300Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 37.271 ms
+[2020-07-28T05:41:20.537Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 93.337 ms
+[2020-07-28T05:52:06.335Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 152.203 ms
+[2020-07-28T06:15:01.993Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-07-28 16:15:01"} 374.105 ms
+[2020-07-28T06:15:02.010Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 5.635 ms
+[2020-07-28T06:15:02.158Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 50.993 ms
+[2020-07-28T06:17:59.289Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 8.345 ms
+[2020-07-28T06:17:59.475Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 24.196 ms
+[2020-07-28T06:18:19.832Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 31.279 ms
+[2020-07-28T06:18:19.940Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 17.954 ms
+[2020-07-28T06:18:22.748Z] ::1 email@email.com GET /api/admin/clients 200 {} 44.802 ms
+[2020-07-28T07:04:00.556Z] ::1 - GET /api/admin/clients 200 {} 8.622 ms
+[2020-07-28T07:09:30.392Z] ::1 - GET /api/admin/clients 200 {} 15.182 ms
+[2020-07-28T07:10:39.439Z] ::1 - GET /api/admin/clients 200 {} 22.176 ms
+[2020-07-28T07:13:51.343Z] ::1 - GET /api/admin/clients 200 {} 6.442 ms
+[2020-07-28T07:14:16.298Z] ::1 - GET /api/admin/clients 200 {} 13.664 ms
+[2020-07-28T07:14:57.394Z] ::1 - GET /api/admin/clients 200 {} 19.530 ms
+[2020-07-28T07:15:22.195Z] ::1 - GET /api/admin/clients 200 {} 36.882 ms

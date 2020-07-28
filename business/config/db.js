@@ -5,10 +5,10 @@ console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: process.env.NODE_ENV === 'development' ? 'root' : 'prod-user',
+  user: process.env.NODE_ENV === 'development' ? 'root' : 'root',
   port: '3306',
-  password: process.env.NODE_ENV === 'development' ? 'password' : 'prod-pass',
-  database: 'cws_business'
+  password: process.env.NODE_ENV === 'development' ? 'password' : 'newpass',
+  database: process.env.NODE_ENV === 'development' ? 'cws_business' : 'thesyste_cws_business'
 });
 
 connection.connect(function(err) {

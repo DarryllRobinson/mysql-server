@@ -1,0 +1,99 @@
+[2020-07-22T23:11:58.483Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-07-23 09:11:58"} 114.237 ms
+[2020-07-22T23:14:57.002Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-07-23 09:14:56"} 206.173 ms
+[2020-07-22T23:14:57.290Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 91.427 ms
+[2020-07-22T23:14:57.361Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 36.191 ms
+[2020-07-22T23:16:14.065Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 13.528 ms
+[2020-07-22T23:16:30.789Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 22.825 ms
+[2020-07-22T23:16:31.984Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 15.976 ms
+[2020-07-23T01:50:49.668Z] ::1 [object Object] GET /api/business/collections/list_all/1 - {} - ms
+[2020-07-23T01:51:31.659Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-07-23 11:51:31"} 251.673 ms
+[2020-07-23T01:51:31.712Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 8.364 ms
+[2020-07-23T01:51:31.794Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 25.937 ms
+[2020-07-23T01:51:37.532Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 17.188 ms
+[2020-07-23T01:59:36.955Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 144.309 ms
+[2020-07-23T01:59:50.759Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 115.650 ms
+[2020-07-23T02:00:00.608Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 11.950 ms
+[2020-07-23T02:00:44.560Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 18.392 ms
+[2020-07-23T02:01:18.135Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 9.191 ms
+[2020-07-23T02:03:17.103Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 10.231 ms
+[2020-07-23T02:04:31.763Z] ::1 email@email.com GET /api/admin/clients 404 {} 17.566 ms
+[2020-07-23T02:04:47.001Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 28.353 ms
+[2020-07-23T02:08:28.638Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 28.564 ms
+[2020-07-23T02:08:28.704Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 25.563 ms
+[2020-07-23T02:08:30.313Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 20.040 ms
+[2020-07-23T02:13:27.090Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 10.185 ms
+[2020-07-23T02:14:20.126Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 16.792 ms
+[2020-07-23T02:14:42.831Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 7.751 ms
+[2020-07-23T02:27:13.287Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 48.507 ms
+[2020-07-23T02:27:15.973Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 200 {} 70.602 ms
+[2020-07-23T02:36:22.182Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 195.879 ms
+[2020-07-23T02:36:22.415Z] ::1 email@email.com GET /api/admin/resolutions/list_all 200 {} 102.347 ms
+[2020-07-23T02:37:24.044Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 142.098 ms
+[2020-07-23T02:37:24.178Z] ::1 email@email.com GET /api/admin/resolutions/list_all 200 {} 18.713 ms
+[2020-07-23T02:40:40.649Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 243.836 ms
+[2020-07-23T02:40:40.732Z] ::1 email@email.com GET /api/admin/resolutions/list_all 200 {} 6.514 ms
+[2020-07-23T02:42:05.928Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 177.356 ms
+[2020-07-23T02:42:06.010Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.289 ms
+[2020-07-23T02:45:20.164Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 176.994 ms
+[2020-07-23T02:45:20.300Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 5.680 ms
+[2020-07-23T02:46:19.570Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 117.164 ms
+[2020-07-23T02:46:19.641Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 4.637 ms
+[2020-07-23T02:46:48.862Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 207.552 ms
+[2020-07-23T02:46:48.929Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 3.182 ms
+[2020-07-23T02:47:28.813Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 207.126 ms
+[2020-07-23T02:47:28.928Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 84.750 ms
+[2020-07-23T02:47:49.025Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 36.587 ms
+[2020-07-23T02:47:49.103Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 5.607 ms
+[2020-07-23T02:48:45.186Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 136.748 ms
+[2020-07-23T02:48:45.258Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.730 ms
+[2020-07-23T02:51:27.183Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 267.562 ms
+[2020-07-23T02:51:27.239Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 5.061 ms
+[2020-07-23T02:52:09.768Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 182.808 ms
+[2020-07-23T02:52:09.815Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.273 ms
+[2020-07-23T03:06:48.513Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 257.437 ms
+[2020-07-23T03:06:48.568Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 22.787 ms
+[2020-07-23T03:15:41.545Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 360.052 ms
+[2020-07-23T03:15:42.016Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 9.048 ms
+[2020-07-23T03:16:39.003Z] ::1 email@email.com GET /api/business/collections/read_item/1/509 304 {} 78.577 ms
+[2020-07-23T03:16:39.098Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 3.590 ms
+[2020-07-23T03:18:56.732Z] ::1 email@email.com GET /api/admin/clients 404 {} 2.119 ms
+[2020-07-23T03:24:18.074Z] ::1 email@email.com GET /api/admin/clients 200 {} 47.050 ms
+[2020-07-23T03:29:18.239Z] ::1 email@email.com POST /api/admin/users 404 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$8GcfiM/YW3WziLNAUGAfeuAcqwdIeglHzT/QZfG63U/7BvFKl.4X.","role":"agent","storeId":"1","f_clientId":"5","createdDate":"2020-07-23 13:29:18"} 2.736 ms
+[2020-07-23T03:30:28.557Z] ::1 email@email.com GET /api/admin/clients 304 {} 102.154 ms
+[2020-07-23T03:30:46.372Z] ::1 email@email.com POST /api/admin/sessions 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$ciKv1ZdsvNuIHOqC9xd09.L./Y6s3X2ppefIWKbaIeFS37XxsOv9O","role":"agent","storeId":"1","f_clientId":"5","createdDate":"2020-07-23 13:30:46"} 115.944 ms
+[2020-07-23T03:43:42.404Z] ::1 email@email.com GET /api/admin/clients 304 {} 254.841 ms
+[2020-07-23T03:51:19.915Z] ::1 email@email.com POST /api/admin/user 500 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$UTJ6yhKlNR23nqvDUln.2uhpbInDomPnZqqoDmGonpn0lcJt1Clwe","role":"agent","storeId":"1","f_clientId":"5","createdDate":"2020-07-23 13:51:19"} 6.925 ms
+[2020-07-23T03:52:31.778Z] ::1 email@email.com POST /api/admin/user 500 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$A1D/KCd.yufODSRwkehaaOSsq.Fl93vzEYF2oHNbetkwKNI2e74R.","role":"agent","storeId":"1","f_clientId":"5","createdDate":"2020-07-23 13:52:31"} 2.152 ms
+[2020-07-23T04:01:15.184Z] ::1 email@email.com POST /api/admin/user 500 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$IfqVdjN8pQozggh1cNDVUuZQc8lA5kUx4iRuxNZwXhSlnEEw7/7Ba","role":"agent","storeId":"1","f_clientId":"5","createdDate":"2020-07-23 14:01:15"} 2.136 ms
+[2020-07-23T04:02:37.249Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$.8vSO9PRCXhy8bokCe.NjuibBrMYxkGXbBbusORJxZYWyrG7BFcOe","role":"agent","storeId":"1","f_clientId":"5","createdDate":"2020-07-23 14:02:37"} 29.255 ms
+[2020-07-23T04:10:36.239Z] ::1 email@email.com GET /api/admin/clients 304 {} 22.721 ms
+[2020-07-23T04:11:20.290Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$spW7Jsr4UwmNjnkp9EUr8.qcCeWE/xAzVdVmVYtxu780Ri909vEk.","role":"agent","storeId":"1","f_clientId":"5","createdDate":"2020-07-23 14:11:20"} 65.992 ms
+[2020-07-23T04:13:09.521Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.345 ms
+[2020-07-23T04:13:28.639Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$PGzq1av0Izit7GP9DzJDLO1yVAFF1bND6ODTpLAcp2ShnCiBhCtmW","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 14:13:28"} 204.612 ms
+[2020-07-23T04:15:24.790Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$EyvsZEMnKnAlpKJJq22ml.koDqX3XhcENYu1E4FkEhz8bpVewdvFe","role":"store","storeId":"2","type":"","f_clientId":"5","createdDate":"2020-07-23 14:15:24"} 136.756 ms
+[2020-07-23T04:16:53.212Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$pHA4QhBuVaLY76KmHjaQ6eDoqNy5GK8iwDNr5.V8uVK4XcN0ub0ce","role":"agent","storeId":"1","type":"","f_clientId":"5","createdDate":"2020-07-23 14:16:53"} 33.897 ms
+[2020-07-23T04:18:34.321Z] ::1 email@email.com GET /api/admin/clients 304 {} 83.657 ms
+[2020-07-23T04:18:50.114Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"01111","password":"$2a$10$GJFrt2cB25NLwx6v/DeGwec3/EdojbAwb.Qt086fbfbLp7LV6LsGu","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 14:18:50"} 40.968 ms
+[2020-07-23T04:48:46.560Z] ::1 email@email.com GET /api/admin/clients 304 {} 110.180 ms
+[2020-07-23T04:49:04.473Z] ::1 email@email.com POST /api/admin/user 500 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$KitELTJ4d23GKatvqV8dMuxMWXzS8AjmxmBILVnLZyQyMr2z.3L9y","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 14:49:04"} 3.218 ms
+[2020-07-23T04:50:28.571Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$xeNsA79Np7FZThIGG8QonenvHd8D0hcfkYoZnCWiicyDDXk2TrMQC","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 14:50:28"} 86.805 ms
+[2020-07-23T04:52:12.493Z] ::1 email@email.com GET /api/admin/clients 304 {} 120.114 ms
+[2020-07-23T04:52:38.160Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$7MqXlIEMXvelHZWBIKdBXeWh9.gDaWyEvcxnJchtXGaEyHxMrkUlK","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 14:52:38"} 7.292 ms
+[2020-07-23T04:54:22.262Z] ::1 email@email.com GET /api/admin/clients 304 {} 64.531 ms
+[2020-07-23T04:54:24.561Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.544 ms
+[2020-07-23T04:54:42.088Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$6tn61OLEcnazOJ4QshGJXOCpi/TjkPVgW64q/dEjx1qsE3DmcsIE.","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 14:54:42"} 5.820 ms
+[2020-07-23T04:57:52.257Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.643 ms
+[2020-07-23T04:58:09.060Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"User","email":"test@email.com","phone":"0111","password":"$2a$10$OMRIAQDVt2nWyS.XffqEW.cI9thy2VJOqJgYfhHdQh7L1tAKnWJWi","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 14:58:09"} 37.119 ms
+[2020-07-23T04:59:02.628Z] ::1 email@email.com GET /api/admin/clients 304 {} 6.960 ms
+[2020-07-23T04:59:18.724Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"ddd","surname":"dddd","email":"dddd@email.com","phone":"0111","password":"$2a$10$odkDItZEeP3e8XXYklOh6.R7tz/YNDzEGnaOUobelgfq2DEN6EmBu","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 14:59:18"} 171.783 ms
+[2020-07-23T04:59:57.464Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.417 ms
+[2020-07-23T05:00:24.762Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"dddd","surname":"dddd","email":"dddd@email.com","phone":"ddd","password":"$2a$10$UOryvAatsZzMJwUgOBwiBOCLDuV8jfmx7mkBR4wuaDbzNF/WyXG.a","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 15:00:24"} 3.581 ms
+[2020-07-23T05:02:58.479Z] ::1 email@email.com GET /api/admin/clients 304 {} 15.127 ms
+[2020-07-23T05:03:44.058Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Sabco","surname":"Testing","email":"sabco@email.com","phone":"01111","password":"$2a$10$R0t7lReFQCPVY.EVrGTPE.1pRoSXntHyvyd4pqaKY5OxS/FVnhmAO","role":"agent","storeId":"1","type":"business","f_clientId":"5","createdDate":"2020-07-23 15:03:44"} 2.557 ms
+[2020-07-23T11:41:29.985Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"email","loginDate":"2020-07-23 21:41:28"} 1401.057 ms
+[2020-07-23T11:42:24.390Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"sabco@email.com","password":"sabco","loginDate":"2020-07-23 21:42:23"} 188.139 ms
+[2020-07-23T11:42:24.539Z] ::1 sabco@email.com GET /api/admin/clientservices/1 200 {} 82.578 ms
+[2020-07-23T11:42:24.853Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 200 {} 293.379 ms
+[2020-07-23T11:42:48.167Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 304 {} 37.197 ms
+[2020-07-23T11:44:53.776Z] ::1 sabco@email.com GET /api/admin/clientservices/1 200 {} 116.508 ms
+[2020-07-23T11:44:54.002Z] ::1 sabco@email.com GET /api/business/collections/list_all/1 200 {} 207.234 ms

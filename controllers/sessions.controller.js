@@ -52,13 +52,13 @@ exports.list_all_clients = function(req, res) {
 }
 
 exports.create_user = function(req, res) {
-  console.log('req.body.email: ', req.body.email);
+  //console.log('req.body.email: ', req.body.email);
   // Check if user email address already exists
   Session.createUser(req.body, function(err, session) {
     if (err) {
       console.log('createUser controller error: ', err);
     } else {
-      console.log('model createUser: ', session);
+      //console.log('model createUser: ', session);
       if (session === 'User exists') {
         res.send('User exists')
       } else {

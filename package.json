@@ -1,10 +1,18 @@
 {
   "name": "mysql-server",
   "version": "1.0.0",
-  "description": "MySQL server for all ciab requests",
+  "description": "MySQL server for all The System requests",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "pkg": {
+    "assets": [
+      "**/*"
+    ],
+    "targets": [
+      "node13-linux-x64"
+    ]
   },
   "repository": {
     "type": "git",
@@ -35,6 +43,7 @@
     "multer": "^1.4.2",
     "mysql": "^2.18.1",
     "node-cron": "^2.0.3",
+    "nodemailer": "^6.4.10",
     "rotating-file-stream": "^2.1.1"
   },
   "devDependencies": {
