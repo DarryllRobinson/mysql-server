@@ -139,13 +139,31 @@ cron.schedule('*/1 * * * *', () => {
           } else {
             //console.log('INSERT INTO customers: ', res);
             let account = {
-              paymentTermDays: 25,
-              creditLimit: record.limit,
-              paymentMethod: 'EFT',
-              paymentDueDate: 25,
-              debitOrderDate: 25,
-              currentStatus: 'Current',
-              createdBy: 'System',
+              accountRef: record.accountRef,
+              debtorAge: record.debtorAge,
+              paymentTermDays: record.paymentTermDays,
+              creditLimit: record.creditLimit,
+              totalBalance: record.totalBalance,
+              amountDue: record.amountDue,
+              currentBalance: record.currentBalance,
+              days30: record.days30,
+              days60: record.days60,
+              days90: record.days90,
+              days120: record.days120,
+              days150: record.days150,
+              days180: record.days180,
+              paymentMethod: record.paymentMethod,
+              paymentDueDate: record.paymentDueDate,
+              debitOrderDate: record.debitOrderDate,
+              lastPaymentDate: record.lastPaymentDate,
+              lastPaymentAmount: record.lastPaymentAmount,
+              lastPTPDate: record.lastPTPDate,
+              lastPTPAmount: record.lastPTPAmount,
+              accountNotes: record.accountNotes,
+              nextVisitDate: record.nextVisitDate,
+              currentStatus: record.currentStatus,
+              arg: record.arg,
+              createdBy: record.createdBy,
               f_customerId: res.insertId
             };
 
@@ -238,13 +256,12 @@ cron.schedule('*/1 * * * *', () => {
       //let records = [];
       res.forEach(record => {
         let customer = {
-          firstName: record.firstName,
-          surname: record.surname,
-          idNumber: record.idNumber,
-          sex: record.sex,
-          mobile: record.mobile,
+          name: record.name,
+          type: record.type,
+          regNumber: record.regNumber,
+          representativeName: record.representativeName,
+          telephone: record.telephone,
           email: record.email,
-          dob: record.dob,
           address1: record.address1,
           address2: record.address2,
           address3: record.address3,
@@ -262,13 +279,31 @@ cron.schedule('*/1 * * * *', () => {
           } else {
             //console.log('INSERT INTO customers: ', res);
             let account = {
-              paymentTermDays: 25,
-              creditLimit: record.limit,
-              paymentMethod: 'EFT',
-              paymentDueDate: 25,
-              debitOrderDate: 25,
-              currentStatus: 'Current',
-              createdBy: 'System',
+              accountRef: record.accountRef,
+              debtorAge: record.debtorAge,
+              paymentTermDays: record.paymentTermDays,
+              creditLimit: record.creditLimit,
+              totalBalance: record.totalBalance,
+              amountDue: record.amountDue,
+              currentBalance: record.currentBalance,
+              days30: record.days30,
+              days60: record.days60,
+              days90: record.days90,
+              days120: record.days120,
+              days150: record.days150,
+              days180: record.days180,
+              paymentMethod: record.paymentMethod,
+              paymentDueDate: record.paymentDueDate,
+              debitOrderDate: record.debitOrderDate,
+              lastPaymentDate: record.lastPaymentDate,
+              lastPaymentAmount: record.lastPaymentAmount,
+              lastPTPDate: record.lastPTPDate,
+              lastPTPAmount: record.lastPTPAmount,
+              accountNotes: record.accountNotes,
+              nextVisitDate: record.nextVisitDate,
+              currentStatus: record.currentStatus,
+              arg: record.arg,
+              createdBy: record.createdBy,
               f_customerId: res.insertId
             };
 
@@ -346,6 +381,19 @@ cron.schedule('*/1 * * * *', () => {
     }
   });
   console.log('business_sql createCases completed');
+});
+
+// Unlock Collections records that have been locked for more than 30 minutes
+cron.schedule('*/1 * * * *', () => {
+  console.log('running unlockCollections');
+  business_sql.query(`UPDATE cases SET currentStatus = 'Open' WHERE currentStatus = 'Locked' AND lockedDatetime < (now() - interval 30 minute);`, function(err, res) {
+    if (err) {
+      console.log('unlockCollections error: ', err);
+      //result(null, err);
+    } else {
+      console.log('Collections records unlocked: ', res.affectedRows);
+    }
+  });
 });
 
   /*sql.query(`SELECT * FROM accounts WHERE currentStatus <> 'Current' and caseDate is NULL;`, function(err, res) {

@@ -28,7 +28,7 @@ Emailer.sendEmail = async function(email, firstName) {
     text: "Welcome to The System", // plain text body
     html: `
           <p>${firstName}, you have been registered as a new user on The System.</p>
-          <p>Please click <a href="https://thesystem.co.za" target="_blank">here</a> to be taken to the login page. You will need to set a password when you login for the first time.</p>
+          <p>Please click <a href="https://thesystem.co.za" target="_blank">here</a> to be taken to the login page. Your password will be sent to you by your supervisor.</p>
           <br /><br />
           <p>The System Team</p>
           `, // html body
