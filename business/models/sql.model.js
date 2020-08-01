@@ -21,6 +21,23 @@ Model.getAllCollections = function(clientId, result) {
   });
 }
 
+Model.getAllCollectionsForToday = function(clientId, result) {
+  sql.query(`SELECT * FROM accounts, customers, cases, outcomes
+     WHERE accounts.f_customerId = customers.id
+     AND cases.f_accountNumber = accounts.accountNumber
+     AND cases.id = outcomes.f_caseNumber
+     AND outcomes.nextVisitDate < NOW()
+     AND customers.f_clientId = ?;`, clientId, function(err, res) {
+    if (err) {
+      console.log('getAllCollectionsForToday error: ', err);
+      result(null, err);
+    } else {
+      console.log('getAllCollectionsForToday res: ', res);
+      result(null, res);
+    }
+  });
+}
+
 Model.createOne = function(table, newItem, result) {
   sql.query(`INSERT INTO ${table} SET ?;`, newItem, function(err, res) {
     if (err) {

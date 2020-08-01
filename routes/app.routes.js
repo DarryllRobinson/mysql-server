@@ -110,6 +110,7 @@ module.exports = function(app) {
   // cws_business and cws_consumer routes
   app.route('/api/:type/:workspace/:task/:clientId')
     .get(cont.list_all)
+    .get(cont.list_today)
     .post(cont.create_item)
     .post(cont.create_items);
 

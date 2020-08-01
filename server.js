@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const port = process.env.NODE_ENV === 'development' ? 8080 : 8081;
+//const port = process.env.REACT_APP_STAGE === 'development' ? 8080 : 8081;
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -14,6 +14,28 @@ const business_sql = require('./business/config/db');
 const admin_sql = require('./admin/config/db');
 const moment = require('moment');
 //const crons = require('./cron.jobs/cron.jobs');
+
+console.log('process.env.REACT_APP_STAGE: ', process.env.REACT_APP_STAGE);
+let port = 0;
+switch (process.env.REACT_APP_STAGE) {
+  case 'development':
+    port = 8080;
+    break;
+  case 'production':
+    port = 8081;
+    break;
+  case 'sit':
+    port = 8082;
+    break;
+  case 'uat':
+    port = 8083;
+    break;
+  default:
+    port = 0;
+    break;
+}
+
+console.log('port: ', port);
 
 // enhance your app security with Helmet
 app.use(helmet());
@@ -41,7 +63,7 @@ app.use(cors());
 // create a rotating write stream
 let accessLogStream = null;
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.REACT_APP_STAGE !== 'development') {
   accessLogStream = rfs.createStream('/log/access.csv', {
     interval: '1d', // rotate daily
     //path: path.join(__dirname, 'log')
@@ -137,7 +159,7 @@ cron.schedule('*/1 * * * *', () => {
             console.log('INSERT INTO consumer_sqlcustomers error: ', err);
             //result(null, err);
           } else {
-            //console.log('INSERT INTO customers: ', res);
+            console.log('INSERT INTO customers: ', res);
             let account = {
               accountRef: record.accountRef,
               debtorAge: record.debtorAge,

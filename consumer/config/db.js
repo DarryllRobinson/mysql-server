@@ -1,14 +1,40 @@
 'use strict'
 const mysql = require('mysql');
+const dbConfig = require('./.stuff.js');
+//console.log('dbConfig: ', dbConfig);
 
-console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
+//console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
+let config = '';
+
+switch (process.env.REACT_APP_STAGE) {
+  case 'development':
+    config = dbConfig.devConfig;
+    //console.log('config: ', config);
+    break;
+  case 'production':
+    config = dbConfig.prodConfig;
+    //console.log('config: ', config);
+    break;
+  case 'sit':
+    config = dbConfig.sitConfig;
+    //console.log('config: ', config);
+    break;
+  case 'uat':
+    config = dbConfig.uatConfig;
+    //console.log('config: ', config);
+    break;
+  default:
+    config = dbConfig.devConfig;
+    //console.log('config: ', config);
+    break;
+}
 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: process.env.NODE_ENV === 'development' ? 'root' : 'root',
-  port: '3306',
-  password: process.env.NODE_ENV === 'development' ? 'password' : 'newpass',
-  database: process.env.NODE_ENV === 'development' ? 'cws_consumer' : 'thesyste_cws_consumer'
+  host: config.host,
+  user: config.user,
+  port: config.port,
+  password: config.password,
+  database: config.database
 });
 
 connection.connect(function(err) {

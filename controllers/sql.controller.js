@@ -32,6 +32,37 @@ exports.list_all = function(req, res) {
   }
 }
 
+// List today's records
+exports.list_today = function(req, res) {
+  console.log('list_today req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
+
+  // Determine which type
+  switch (type) {
+    case 'business':
+      console.log('list_today business');
+      BusinessModel.getAllCollectionsForToday(clientId, function(err, model) {
+        if (err) {
+          console.log('BusinessModel.getAllCollectionsForToday controller error: ', err);
+        } else {
+          res.send(model);
+        }
+      });
+      break;
+    case 'consumer':
+      console.log('list_today consumer');
+      res.send(type);
+      break;
+    default:
+      console.log('list_today type not found: ', type);
+      res.send(type);
+      break;
+  }
+}
+
 // Create one
 exports.create_item = function(req, res) {
   console.log('create_item req.params: ', req.params);

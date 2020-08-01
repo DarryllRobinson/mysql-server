@@ -28,6 +28,7 @@ start() {
      export NODE_ENV=production
      chmod +x ${APP}
      nohup ./${APP} > ${LOGFILE} 2>&1 &
+     netstat -tulpn
      echo "Process started!"
     else
      echo "Process already running!"
@@ -44,6 +45,7 @@ stop() {
      echo "Stopping process..."
      sleep 1
      kill -9 ${PID}
+     sleep 2
      echo "Process stopped!"
     fi
 
@@ -76,7 +78,6 @@ case "$1" in
   restart)
     checkuser
     stop
-    sleep 5
     start
     ;;
   *)
