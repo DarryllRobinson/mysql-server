@@ -6,6 +6,7 @@ const Model = function(model) {
 };
 
 Model.getAllCollections = function(clientId, result) {
+  console.log('Running getAllCollections');
   sql.query(`SELECT * FROM accounts, customers, cases, outcomes
      WHERE accounts.f_customerId = customers.id
      AND cases.f_accountNumber = accounts.accountNumber
@@ -22,11 +23,13 @@ Model.getAllCollections = function(clientId, result) {
 }
 
 Model.getAllCollectionsForToday = function(clientId, result) {
+  console.log('Running getAllCollectionsForToday');
   sql.query(`SELECT * FROM accounts, customers, cases, outcomes
      WHERE accounts.f_customerId = customers.id
      AND cases.f_accountNumber = accounts.accountNumber
      AND cases.id = outcomes.f_caseNumber
      AND outcomes.nextVisitDate < NOW()
+     AND outcomes.nextVisitDate IS NOT NULL
      AND customers.f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
       console.log('getAllCollectionsForToday error: ', err);

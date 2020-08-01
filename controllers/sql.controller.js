@@ -9,58 +9,68 @@ exports.list_all = function(req, res) {
   const task = req.params.task;
   const clientId = req.params.clientId;
 
-  // Determine which type
-  switch (type) {
-    case 'business':
-      console.log('list_all business');
-      BusinessModel.getAllCollections(clientId, function(err, model) {
-        if (err) {
-          console.log('BusinessModel.getAllCollections controller error: ', err);
-        } else {
-          res.send(model);
-        }
-      });
-      break;
-    case 'consumer':
-      console.log('list_all consumer');
-      res.send(type);
-      break;
-    default:
-      console.log('list_all type not found: ', type);
-      res.send(type);
-      break;
-  }
-}
 
-// List today's records
-exports.list_today = function(req, res) {
-  console.log('list_today req.params: ', req.params);
-  const type = req.params.type;
-  const workspace = req.params.workspace;
-  const task = req.params.task;
-  const clientId = req.params.clientId;
 
   // Determine which type
   switch (type) {
     case 'business':
-      console.log('list_today business');
-      BusinessModel.getAllCollectionsForToday(clientId, function(err, model) {
-        if (err) {
-          console.log('BusinessModel.getAllCollectionsForToday controller error: ', err);
-        } else {
-          res.send(model);
-        }
-      });
+      console.log('business');
+      switch (task) {
+        case 'list_all':
+          BusinessModel.getAllCollections(clientId, function(err, model) {
+            if (err) {
+              console.log('BusinessModel.getAllCollections controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        case 'list_today':
+          BusinessModel.getAllCollectionsForToday(clientId, function(err, model) {
+            if (err) {
+              console.log('BusinessModel.getAllCollectionsForToday controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        default:
+          console.log('task not found: ', task);
+          res.send(task);
+          break;
+      }
       break;
     case 'consumer':
-      console.log('list_today consumer');
-      res.send(type);
-      break;
+      console.log('consumer');
+      switch (task) {
+        case 'list_all':
+          ConsumerModel.getAllCollections(clientId, function(err, model) {
+            if (err) {
+              console.log('ConsumerModel.getAllCollections controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        case 'list_today':
+          ConsumerModel.getAllCollectionsForToday(clientId, function(err, model) {
+            if (err) {
+              console.log('ConsumerModel.getAllCollectionsForToday controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        default:
+          console.log('task not found: ', task);
+          res.send(task);
+          break;
+      }
     default:
-      console.log('list_today type not found: ', type);
+      console.log('type not found: ', type);
       res.send(type);
       break;
-  }
+    }
 }
 
 // Create one
