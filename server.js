@@ -37,7 +37,7 @@ switch (process.env.REACT_APP_STAGE) {
 
 console.log('port: ', port);
 
-// enhance your app security with Helmet
+// enhancing security with Helmet
 app.use(helmet());
 
 // use bodyParser to parse application/json content-type
@@ -278,18 +278,16 @@ cron.schedule('*/1 * * * *', () => {
       //let records = [];
       res.forEach(record => {
         let customer = {
-          name: record.name,
-          type: record.type,
+          customerRefNo: record.customerRefNo,
+          companyName: record.companyName,
           regNumber: record.regNumber,
-          representativeName: record.representativeName,
-          telephone: record.telephone,
-          email: record.email,
+          customerType: record.customerType,
+          productType: record.productType,
           address1: record.address1,
           address2: record.address2,
           address3: record.address3,
           address4: record.address4,
           address5: record.address5,
-          employer: record.employer,
           f_clientId: record.f_clientId,
           createdBy: 'System'
         };
@@ -301,7 +299,7 @@ cron.schedule('*/1 * * * *', () => {
           } else {
             //console.log('INSERT INTO customers: ', res);
             let account = {
-              accountRef: record.accountRef,
+              accountNumber: record.accountNumber,
               debtorAge: record.debtorAge,
               paymentTermDays: record.paymentTermDays,
               creditLimit: record.creditLimit,
@@ -314,6 +312,7 @@ cron.schedule('*/1 * * * *', () => {
               days120: record.days120,
               days150: record.days150,
               days180: record.days180,
+              days180Over: record.days180Over,
               paymentMethod: record.paymentMethod,
               paymentDueDate: record.paymentDueDate,
               debitOrderDate: record.debitOrderDate,
@@ -322,11 +321,10 @@ cron.schedule('*/1 * * * *', () => {
               lastPTPDate: record.lastPTPDate,
               lastPTPAmount: record.lastPTPAmount,
               accountNotes: record.accountNotes,
-              nextVisitDate: record.nextVisitDate,
               currentStatus: record.currentStatus,
               arg: record.arg,
               createdBy: record.createdBy,
-              f_customerId: res.insertId
+              f_customerId: res.customerRefNo
             };
 
             let booked = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
@@ -340,7 +338,7 @@ cron.schedule('*/1 * * * *', () => {
                 console.log('INSERT INTO business_sql accounts error: ', err);
                 //result(null, err);
               } else {
-                //console.log('INSERT INTO accounts: ', res);
+                console.log('INSERT INTO accounts: ', res.affectedRows);
               }
             });
           }
@@ -362,15 +360,17 @@ cron.schedule('*/1 * * * *', () => {
       //console.log('createCases res: ', res);
       //result(null, res);
       //let records = [];
+      let count = 0;
       res.forEach(record => {
         let caseRecord = {
           createdBy: 'System',
           f_accountNumber: record.accountNumber
         };
+          count++;
 
         let caseDate = moment(new Date()).format('YYYY-MM-DD HH:mm:ss');
         let accountNumber = record.accountNumber;
-        business_sql.query(`UPDATE accounts SET caseDate = '${caseDate}' WHERE accountNumber = ${accountNumber};`, function(err, res) {
+        business_sql.query(`UPDATE accounts SET caseDate = '${caseDate}' WHERE accountNumber = '${accountNumber}';`, function(err, res) {
           if (err) {
             console.log('UPDATE business_sql accounts error: ', err);
           } else {
@@ -394,12 +394,13 @@ cron.schedule('*/1 * * * *', () => {
               if (err) {
                 console.log('INSERT INTO business_sql outcomes error: ', err);
               } else {
-                console.log('INSERT INTO business_sql outcomes: ', res);
+                //console.log('INSERT INTO business_sql outcomes: ', res.affectedRows);
               }
             });
           }
         });
       });
+      console.log('INSERT INTO business_sql outcomes: ', count);
     }
   });
   console.log('business_sql createCases completed');
