@@ -7,11 +7,10 @@ const Model = function(model) {
 
 Model.getAllCollections = function(clientId, result) {
   console.log('Running getAllCollections');
-  sql.query(`SELECT * FROM accounts, customers, cases, outcomes
-     WHERE accounts.f_customerId = customers.id
-     AND cases.f_accountNumber = accounts.accountNumber
-     AND cases.id = outcomes.f_caseNumber
-     AND customers.f_clientId = ?;`, clientId, function(err, res) {
+  sql.query(`SELECT * FROM customers, accounts, cases
+    WHERE  customers.customerRefNo = accounts.f_customerId
+    AND accounts.accountNumber = cases.f_accountNumber
+    AND customers.f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
       console.log('getAllCollectionsByClientId error: ', err);
       result(null, err);
@@ -113,12 +112,13 @@ Model.getOne = function(table, clientId, recordId, result) {
 
 Model.getOneCase = function(table, clientId, recordId, result) {
   console.log('getOneCase params: ', table, clientId, recordId);
-  sql.query(`SELECT * FROM accounts, customers, cases, outcomes
-     WHERE accounts.f_customerId = customers.id
-     AND cases.f_accountNumber = accounts.accountNumber
-     AND cases.id = outcomes.f_caseNumber
+  sql.query(`SELECT * FROM customers, accounts, contacts, cases, outcomes
+     WHERE customers.customerRefNo = accounts.f_customerId
+     AND accounts.accountNumber = cases.f_accountNumber
+     AND contacts.f_accountNumber = accounts.accountNumber
+     AND cases.caseNumber = outcomes.f_caseNumber
      AND customers.f_clientId = ${clientId}
-     AND cases.id = ?;`, recordId, function(err, res) {
+     AND cases.caseNumber = ?;`, recordId, function(err, res) {
     if (err) {
       console.log('cases getOne error: ', err);
       result(null, err);
