@@ -112,6 +112,24 @@ Model.getOne = function(table, clientId, recordId, result) {
 
 Model.getOneCase = function(table, clientId, recordId, result) {
   console.log('getOneCase params: ', table, clientId, recordId);
+  sql.query(`SELECT * FROM customers, accounts, contacts, cases
+     WHERE customers.customerRefNo = accounts.f_customerId
+     AND accounts.accountNumber = cases.f_accountNumber
+     AND contacts.f_accountNumber = accounts.accountNumber
+     AND customers.f_clientId = ${clientId}
+     AND cases.caseNumber = ?;`, recordId, function(err, res) {
+    if (err) {
+      console.log('cases getOne error: ', err);
+      result(null, err);
+    } else {
+      console.log('collections res: ', res);
+      result(null, res);
+    }
+  });
+}
+
+Model.getOutcomesForCase = function(table, clientId, recordId, result) {
+  console.log('getOutcomesForCase params: ', table, clientId, recordId);
   sql.query(`SELECT * FROM customers, accounts, contacts, cases, outcomes
      WHERE customers.customerRefNo = accounts.f_customerId
      AND accounts.accountNumber = cases.f_accountNumber

@@ -25,7 +25,7 @@ start() {
      echo "Starting process..."
      sleep 1
      cd ${WORKINGDIR}
-     export NODE_ENV=production
+     export REACT_APP_STAGE=production
      chmod +x ${APP}
      nohup ./${APP} > ${LOGFILE} 2>&1 &
      netstat -tulpn
