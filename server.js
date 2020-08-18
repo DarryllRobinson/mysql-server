@@ -352,7 +352,7 @@ cron.schedule('*/1 * * * *', () => {
 // Case and Outcome creation cron
 cron.schedule('*/1 * * * *', () => {
   console.log('running createCases');
-  business_sql.query(`SELECT * FROM accounts WHERE currentStatus <> 'Current' and caseDate is NULL;`, function(err, res) {
+  business_sql.query(`SELECT * FROM accounts WHERE accountStatus <> 'Active' and caseDate is NULL;`, function(err, res) {
     if (err) {
       console.log('business_sql createCases error: ', err);
       //result(null, err);

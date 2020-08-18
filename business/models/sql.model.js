@@ -23,13 +23,13 @@ Model.getAllCollections = function(clientId, result) {
 
 Model.getAllCollectionsForToday = function(clientId, result) {
   console.log('Running getAllCollectionsForToday');
-  sql.query(`SELECT * FROM accounts, customers, cases, outcomes
-     WHERE accounts.f_customerId = customers.id
-     AND cases.f_accountNumber = accounts.accountNumber
-     AND cases.id = outcomes.f_caseNumber
-     AND outcomes.nextVisitDate < NOW()
-     AND outcomes.nextVisitDate IS NOT NULL
-     AND customers.f_clientId = ?;`, clientId, function(err, res) {
+  sql.query(`SELECT * FROM customers, accounts, cases, outcomes
+    WHERE  customers.customerRefNo = accounts.f_customerId
+    AND accounts.accountNumber = cases.f_accountNumber
+    AND cases.caseNumber = outcomes.f_caseNumber
+    AND outcomes.nextVisitDateTime > (Now() - interval 3000 minute)
+    AND outcomes.nextVisitDateTime IS NOT NULL
+    AND customers.f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
       console.log('getAllCollectionsForToday error: ', err);
       result(null, err);
@@ -149,6 +149,10 @@ Model.getOutcomesForCase = function(table, clientId, recordId, result) {
 
 // Update
 Model.updateOne = async function(table, clientId, id, model, result) {
+  console.log('updateOne table: ', table);
+  console.log('updateOne clientId: ', clientId);
+  console.log('updateOne id: ', id);
+  console.log('updateOne model: ', model);
   let arr = [];
   arr.push(model);
 
@@ -172,13 +176,31 @@ async function bulkUpdate(table, objectArray, id, callback) {
   objectArray.map(obj => keys.map(key => {
     if (key !== 'id') {
       if (obj[key] === 'NULL') obj[key] = null;
-      obj[key] = ` ${key} = '${obj[key]}'`;
+      obj[key] = ` ${key} = "${obj[key]}"`;
     }
     values.push(obj[key]);
   }));
 
+  // determining which identifier to use based on the table name
+  let identifier = '';
+  switch (table) {
+    case 'customers':
+      identifier = 'customerRefNo';
+      break;
+    case 'accounts':
+      identifier = 'accountNumber';
+      break;
+    case 'cases':
+      identifier = 'caseNumber';
+      break;
+    default:
+      identifier = 'id';
+      break;
+  }
+
   // UPDATE {table} SET colname = ?, ...    WHERE id = ?;
-  let sqlstatement = `UPDATE ${table} SET${values} WHERE id = ${id};`;
+  let sqlstatement = `UPDATE ${table} SET ${values} WHERE ${identifier} = "${id}";`;
+  console.log('sqlstatement: ', sqlstatement);
   await sql.query(sqlstatement, function(error, results, fields) {
     if (error) return callback(error);
     callback(null, results);
