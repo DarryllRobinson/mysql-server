@@ -119,10 +119,10 @@ Model.getOneCase = function(table, clientId, recordId, result) {
      AND customers.f_clientId = ${clientId}
      AND cases.caseNumber = ?;`, recordId, function(err, res) {
     if (err) {
-      console.log('cases getOne error: ', err);
+      console.log('getOneCase error: ', err);
       result(null, err);
     } else {
-      console.log('collections res: ', res);
+      console.log('getOneCase res: ', res);
       result(null, res);
     }
   });
@@ -136,12 +136,35 @@ Model.getOutcomesForCase = function(table, clientId, recordId, result) {
      AND contacts.f_accountNumber = accounts.accountNumber
      AND cases.caseNumber = outcomes.f_caseNumber
      AND customers.f_clientId = ${clientId}
-     AND cases.caseNumber = ?;`, recordId, function(err, res) {
+     AND cases.caseNumber = ?
+     ORDER BY outcomes.closedDate DESC;`, recordId, function(err, res) {
     if (err) {
-      console.log('cases getOne error: ', err);
+      console.log('getOutcomesForCase error: ', err);
       result(null, err);
     } else {
-      console.log('collections res: ', res);
+      console.log('getOutcomesForCase res: ', res);
+      result(null, res);
+    }
+  });
+}
+
+Model.getContactsForCase = function(table, clientId, recordId, result) {
+  console.log('getContactsForCase params: ', table, clientId, recordId);
+  sql.query(`SELECT primaryContactName, primaryContactNumber, primaryContactEmail, representativeName, representativeNumber, representativeEmail,
+  	  alternativeRepName, alternativeRepNumber, alternativeRepEmail, otherNumber1, otherNumber2, otherNumber3, otherNumber4, otherNumber5,
+      otherEmail1, otherEmail2, otherEmail3, otherEmail4, otherEmail5,
+      dnc1, dnc2, dnc3, dnc4, dnc5
+      FROM customers, accounts, contacts, cases
+      WHERE customers.customerRefNo = accounts.f_customerId
+      AND contacts.f_accountNumber = accounts.accountNumber
+      AND accounts.accountNumber = cases.f_accountNumber
+      AND customers.f_clientId = ${clientId}
+      AND cases.caseNumber = ?;`, recordId, function(err, res) {
+    if (err) {
+      console.log('getContactsForCase error: ', err);
+      result(null, err);
+    } else {
+      console.log('getContactsForCase res: ', res);
       result(null, res);
     }
   });

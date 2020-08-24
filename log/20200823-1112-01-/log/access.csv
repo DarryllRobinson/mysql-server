@@ -1,0 +1,528 @@
+[2020-08-20T23:53:42.715Z] ::1 [object Object] GET /api/admin/clientservices/1 - {} - ms
+[2020-08-21T00:42:21.572Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-08-21 10:42:21"} 292.790 ms
+[2020-08-21T00:42:21.748Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 77.920 ms
+[2020-08-21T00:42:21.903Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 129.714 ms
+[2020-08-21T00:42:21.965Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 132.463 ms
+[2020-08-21T00:43:54.074Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 30.109 ms
+[2020-08-21T00:43:54.408Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 20.757 ms
+[2020-08-21T00:43:54.450Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 62.630 ms
+[2020-08-21T00:44:27.788Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.913 ms
+[2020-08-21T00:44:27.961Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 20.190 ms
+[2020-08-21T00:44:28.054Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 109.215 ms
+[2020-08-21T00:44:30.147Z] ::1 email@email.com GET /api/undefined/collections/list_all/1 200 {} 7.501 ms
+[2020-08-21T00:45:06.186Z] ::1 email@email.com GET /api/undefined/collections/list_all/1 304 {} 0.433 ms
+[2020-08-21T00:46:05.013Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 121.639 ms
+[2020-08-21T00:46:10.153Z] ::1 email@email.com GET /api/business/collections/read_item/1/9 200 {} 99.974 ms
+[2020-08-21T00:46:10.203Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/9 200 {} 38.434 ms
+[2020-08-21T00:46:10.225Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 7.856 ms
+[2020-08-21T00:46:10.249Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 13.472 ms
+[2020-08-21T00:46:10.269Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 7.877 ms
+[2020-08-21T00:46:10.285Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.590 ms
+[2020-08-21T00:46:10.300Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.749 ms
+[2020-08-21T00:46:10.689Z] ::1 email@email.com PUT /api/business/cases/update_item/1/9 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 10:46:10\""} 248.207 ms
+[2020-08-21T00:47:28.354Z] ::1 email@email.com GET /api/business/collections/read_item/1/9 200 {} 656.199 ms
+[2020-08-21T00:47:28.615Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/9 200 {} 72.314 ms
+[2020-08-21T00:47:28.666Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 22.686 ms
+[2020-08-21T00:47:28.710Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 10.921 ms
+[2020-08-21T00:47:28.756Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 2.062 ms
+[2020-08-21T00:47:29.011Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 53.139 ms
+[2020-08-21T00:47:29.067Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 3.771 ms
+[2020-08-21T00:47:29.463Z] ::1 email@email.com PUT /api/business/cases/update_item/1/9 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 10:47:29\""} 243.745 ms
+[2020-08-21T00:48:32.882Z] ::1 email@email.com GET /api/business/collections/read_item/1/9 200 {} 458.438 ms
+[2020-08-21T00:48:33.378Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/9 200 {} 146.908 ms
+[2020-08-21T00:48:33.686Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 141.773 ms
+[2020-08-21T00:48:33.701Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 2.044 ms
+[2020-08-21T00:48:33.717Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 0.997 ms
+[2020-08-21T00:48:33.732Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 2.143 ms
+[2020-08-21T00:48:33.745Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.659 ms
+[2020-08-21T00:48:34.100Z] ::1 email@email.com PUT /api/business/cases/update_item/1/9 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 10:48:33\""} 171.702 ms
+[2020-08-21T00:49:27.240Z] ::1 email@email.com GET /api/business/collections/read_item/1/9 200 {} 706.758 ms
+[2020-08-21T00:49:27.261Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/9 200 {} 7.422 ms
+[2020-08-21T00:49:27.281Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.560 ms
+[2020-08-21T00:49:27.304Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 9.913 ms
+[2020-08-21T00:49:27.316Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 0.735 ms
+[2020-08-21T00:49:27.327Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 0.786 ms
+[2020-08-21T00:49:27.344Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.691 ms
+[2020-08-21T00:49:27.572Z] ::1 email@email.com PUT /api/business/cases/update_item/1/9 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 10:49:27\""} 118.106 ms
+[2020-08-21T02:04:43.032Z] ::1 [object Object] GET /api/business/collections/read_item/1/9 200 {} 544.758 ms
+[2020-08-21T02:04:50.831Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-08-21 12:04:50"} 144.458 ms
+[2020-08-21T02:04:50.890Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 46.316 ms
+[2020-08-21T02:04:51.016Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 58.859 ms
+[2020-08-21T02:04:51.224Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 218.122 ms
+[2020-08-21T02:04:56.331Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 15.685 ms
+[2020-08-21T02:05:01.932Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 161.029 ms
+[2020-08-21T02:05:01.987Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 36.322 ms
+[2020-08-21T02:05:01.999Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.340 ms
+[2020-08-21T02:05:02.012Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 0.987 ms
+[2020-08-21T02:05:02.036Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 8.574 ms
+[2020-08-21T02:05:02.052Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.938 ms
+[2020-08-21T02:05:02.067Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 3.372 ms
+[2020-08-21T02:05:02.293Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:05:02\""} 150.905 ms
+[2020-08-21T02:05:25.783Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 46.117 ms
+[2020-08-21T02:05:26.011Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 111.389 ms
+[2020-08-21T02:05:26.091Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 0.946 ms
+[2020-08-21T02:05:26.163Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 4.094 ms
+[2020-08-21T02:05:26.613Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 2.425 ms
+[2020-08-21T02:05:26.687Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 2.353 ms
+[2020-08-21T02:05:26.746Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 11.628 ms
+[2020-08-21T02:05:27.281Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:05:27\""} 134.386 ms
+[2020-08-21T02:07:45.877Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 551.699 ms
+[2020-08-21T02:07:46.303Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 73.280 ms
+[2020-08-21T02:07:46.369Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 24.649 ms
+[2020-08-21T02:07:46.426Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 8.744 ms
+[2020-08-21T02:07:46.641Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 15.999 ms
+[2020-08-21T02:07:46.667Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 0.752 ms
+[2020-08-21T02:07:46.735Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 3.822 ms
+[2020-08-21T02:07:47.079Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:07:46\""} 209.957 ms
+[2020-08-21T02:08:45.344Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 187.301 ms
+[2020-08-21T02:08:45.470Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 21.181 ms
+[2020-08-21T02:08:45.586Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 10.116 ms
+[2020-08-21T02:08:46.049Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 3.663 ms
+[2020-08-21T02:08:46.120Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 7.107 ms
+[2020-08-21T02:08:46.251Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 22.896 ms
+[2020-08-21T02:08:46.431Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.752 ms
+[2020-08-21T02:08:46.778Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:08:46\""} 206.711 ms
+[2020-08-21T02:09:39.803Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 212.155 ms
+[2020-08-21T02:09:39.930Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 15.826 ms
+[2020-08-21T02:09:40.044Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 10.307 ms
+[2020-08-21T02:09:40.803Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 9.864 ms
+[2020-08-21T02:09:40.884Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 18.095 ms
+[2020-08-21T02:09:40.981Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.612 ms
+[2020-08-21T02:09:41.314Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 9.746 ms
+[2020-08-21T02:09:41.695Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:09:41\""} 151.177 ms
+[2020-08-21T02:10:31.008Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 374.078 ms
+[2020-08-21T02:10:31.510Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 55.869 ms
+[2020-08-21T02:10:31.592Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 26.039 ms
+[2020-08-21T02:10:31.643Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 21.527 ms
+[2020-08-21T02:10:31.941Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 28.762 ms
+[2020-08-21T02:10:32.106Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 3.077 ms
+[2020-08-21T02:10:32.178Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 5.382 ms
+[2020-08-21T02:10:32.449Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:10:32\""} 189.292 ms
+[2020-08-21T02:18:13.298Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 168.561 ms
+[2020-08-21T02:18:13.395Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 31.961 ms
+[2020-08-21T02:18:13.466Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 7.058 ms
+[2020-08-21T02:18:13.848Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.166 ms
+[2020-08-21T02:18:13.895Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 2.932 ms
+[2020-08-21T02:18:13.992Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 5.971 ms
+[2020-08-21T02:18:14.077Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.713 ms
+[2020-08-21T02:18:14.414Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:18:14\""} 154.213 ms
+[2020-08-21T02:31:28.191Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 365.564 ms
+[2020-08-21T02:31:28.663Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 72.673 ms
+[2020-08-21T02:31:28.778Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 85.558 ms
+[2020-08-21T02:31:29.048Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 26.997 ms
+[2020-08-21T02:31:29.180Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 5.045 ms
+[2020-08-21T02:31:29.242Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.157 ms
+[2020-08-21T02:31:29.265Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 4.503 ms
+[2020-08-21T02:31:29.532Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:31:29\""} 194.055 ms
+[2020-08-21T02:33:05.302Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 25.822 ms
+[2020-08-21T02:33:05.519Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 24.800 ms
+[2020-08-21T02:33:05.602Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 5.523 ms
+[2020-08-21T02:33:06.071Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 4.525 ms
+[2020-08-21T02:33:06.146Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 7.956 ms
+[2020-08-21T02:33:06.214Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 9.091 ms
+[2020-08-21T02:33:06.269Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.378 ms
+[2020-08-21T02:33:06.782Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:33:06\""} 159.891 ms
+[2020-08-21T02:35:42.020Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 151.218 ms
+[2020-08-21T02:35:42.298Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 160.930 ms
+[2020-08-21T02:35:42.725Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 57.986 ms
+[2020-08-21T02:35:42.832Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 69.562 ms
+[2020-08-21T02:35:43.055Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 12.760 ms
+[2020-08-21T02:35:43.117Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.303 ms
+[2020-08-21T02:35:43.151Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.473 ms
+[2020-08-21T02:35:43.326Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:35:43\""} 48.946 ms
+[2020-08-21T02:37:35.808Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 445.251 ms
+[2020-08-21T02:37:36.201Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 55.742 ms
+[2020-08-21T02:37:36.280Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 37.878 ms
+[2020-08-21T02:37:36.301Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 0.715 ms
+[2020-08-21T02:37:36.562Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 11.625 ms
+[2020-08-21T02:37:36.696Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 8.580 ms
+[2020-08-21T02:37:36.762Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.923 ms
+[2020-08-21T02:37:36.978Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:37:36\""} 141.531 ms
+[2020-08-21T02:37:51.504Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 173.502 ms
+[2020-08-21T02:37:51.604Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 35.382 ms
+[2020-08-21T02:37:51.670Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.586 ms
+[2020-08-21T02:37:52.110Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 2.008 ms
+[2020-08-21T02:37:52.172Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 2.516 ms
+[2020-08-21T02:37:52.246Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 11.970 ms
+[2020-08-21T02:37:52.303Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 4.828 ms
+[2020-08-21T02:37:52.765Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:37:52\""} 117.338 ms
+[2020-08-21T02:38:02.413Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 206.656 ms
+[2020-08-21T02:38:02.526Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 33.427 ms
+[2020-08-21T02:38:02.627Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 27.901 ms
+[2020-08-21T02:38:03.087Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 52.034 ms
+[2020-08-21T02:38:03.176Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 3.297 ms
+[2020-08-21T02:38:03.256Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.976 ms
+[2020-08-21T02:38:03.402Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 5.807 ms
+[2020-08-21T02:38:03.785Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:38:03\""} 205.526 ms
+[2020-08-21T02:41:31.305Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 418.076 ms
+[2020-08-21T02:41:31.842Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 51.240 ms
+[2020-08-21T02:41:31.897Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 18.003 ms
+[2020-08-21T02:41:31.958Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 27.458 ms
+[2020-08-21T02:41:32.205Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 91.450 ms
+[2020-08-21T02:41:32.366Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 9.273 ms
+[2020-08-21T02:41:32.443Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 0.774 ms
+[2020-08-21T02:41:32.739Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:41:32\""} 199.571 ms
+[2020-08-21T02:42:24.663Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 291.362 ms
+[2020-08-21T02:42:24.763Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 30.199 ms
+[2020-08-21T02:42:25.186Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 20.229 ms
+[2020-08-21T02:42:25.262Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 2.678 ms
+[2020-08-21T02:42:25.329Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 20.906 ms
+[2020-08-21T02:42:25.559Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 58.784 ms
+[2020-08-21T02:42:25.611Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 21.059 ms
+[2020-08-21T02:42:25.993Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:42:25\""} 197.649 ms
+[2020-08-21T02:43:46.988Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 251.177 ms
+[2020-08-21T02:43:47.139Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 101.820 ms
+[2020-08-21T02:43:47.572Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 2.357 ms
+[2020-08-21T02:43:47.644Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.520 ms
+[2020-08-21T02:43:47.739Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 37.865 ms
+[2020-08-21T02:43:47.971Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 24.727 ms
+[2020-08-21T02:43:48.114Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 67.108 ms
+[2020-08-21T02:43:48.539Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 12:43:48\""} 248.177 ms
+[2020-08-21T03:09:51.011Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 595.855 ms
+[2020-08-21T03:09:51.343Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 67.836 ms
+[2020-08-21T03:09:51.442Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 200 {} 54.249 ms
+[2020-08-21T03:09:51.826Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 195.441 ms
+[2020-08-21T03:09:51.974Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.965 ms
+[2020-08-21T03:09:51.993Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 1.833 ms
+[2020-08-21T03:09:52.017Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 7.830 ms
+[2020-08-21T03:09:52.037Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 4.473 ms
+[2020-08-21T03:09:52.324Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:09:52\""} 181.183 ms
+[2020-08-21T03:10:53.050Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 286.608 ms
+[2020-08-21T03:10:53.339Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 186.091 ms
+[2020-08-21T03:10:53.672Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 200 {} 25.924 ms
+[2020-08-21T03:10:53.747Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 6.971 ms
+[2020-08-21T03:10:53.826Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 20.904 ms
+[2020-08-21T03:10:53.994Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 14.518 ms
+[2020-08-21T03:10:54.075Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 8.838 ms
+[2020-08-21T03:10:54.126Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.114 ms
+[2020-08-21T03:10:54.452Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:10:54\""} 170.810 ms
+[2020-08-21T03:11:40.931Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 156.996 ms
+[2020-08-21T03:11:41.010Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 5.968 ms
+[2020-08-21T03:11:41.397Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 200 {} 5.594 ms
+[2020-08-21T03:11:41.916Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 71.664 ms
+[2020-08-21T03:11:41.971Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 0.839 ms
+[2020-08-21T03:11:42.168Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 5.082 ms
+[2020-08-21T03:11:42.184Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 3.864 ms
+[2020-08-21T03:11:42.257Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 60.163 ms
+[2020-08-21T03:11:42.459Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:11:42\""} 33.321 ms
+[2020-08-21T03:14:52.701Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 9.568 ms
+[2020-08-21T03:14:53.055Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 12.534 ms
+[2020-08-21T03:14:53.150Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 200 {} 50.617 ms
+[2020-08-21T03:14:53.183Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 9.499 ms
+[2020-08-21T03:14:53.201Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.054 ms
+[2020-08-21T03:14:53.281Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 63.920 ms
+[2020-08-21T03:14:53.646Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 3.109 ms
+[2020-08-21T03:14:53.698Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 5.957 ms
+[2020-08-21T03:14:54.160Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:14:53\""} 313.452 ms
+[2020-08-21T03:18:23.594Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 150.597 ms
+[2020-08-21T03:18:23.831Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 86.607 ms
+[2020-08-21T03:18:24.225Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 200 {} 20.193 ms
+[2020-08-21T03:18:24.290Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 26.944 ms
+[2020-08-21T03:18:24.423Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 28.872 ms
+[2020-08-21T03:18:24.456Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 3.861 ms
+[2020-08-21T03:18:24.568Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 17.826 ms
+[2020-08-21T03:18:24.628Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 13.916 ms
+[2020-08-21T03:18:24.859Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:18:24\""} 50.535 ms
+[2020-08-21T03:19:32.048Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 124.240 ms
+[2020-08-21T03:19:32.272Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 12.277 ms
+[2020-08-21T03:19:32.553Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 25.530 ms
+[2020-08-21T03:19:32.650Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.934 ms
+[2020-08-21T03:19:32.664Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.134 ms
+[2020-08-21T03:19:32.690Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 14.881 ms
+[2020-08-21T03:19:32.706Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.939 ms
+[2020-08-21T03:19:32.742Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 20.734 ms
+[2020-08-21T03:19:32.946Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:19:32\""} 56.439 ms
+[2020-08-21T03:20:55.437Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 372.539 ms
+[2020-08-21T03:20:55.557Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 34.883 ms
+[2020-08-21T03:20:55.581Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 8.293 ms
+[2020-08-21T03:20:55.610Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 16.719 ms
+[2020-08-21T03:20:55.639Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 14.004 ms
+[2020-08-21T03:20:55.661Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 8.967 ms
+[2020-08-21T03:20:55.689Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 15.874 ms
+[2020-08-21T03:20:55.712Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.056 ms
+[2020-08-21T03:20:55.871Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:20:55\""} 41.847 ms
+[2020-08-21T03:21:20.509Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 146.627 ms
+[2020-08-21T03:21:20.746Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 89.247 ms
+[2020-08-21T03:21:21.192Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 15.347 ms
+[2020-08-21T03:21:21.279Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 9.857 ms
+[2020-08-21T03:21:21.364Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 47.636 ms
+[2020-08-21T03:21:21.667Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 83.478 ms
+[2020-08-21T03:21:21.849Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.925 ms
+[2020-08-21T03:21:21.876Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.052 ms
+[2020-08-21T03:21:21.983Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:21:21\""} 30.076 ms
+[2020-08-21T03:22:05.707Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 408.278 ms
+[2020-08-21T03:22:06.055Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 33.182 ms
+[2020-08-21T03:22:06.205Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 68.247 ms
+[2020-08-21T03:22:06.481Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 35.558 ms
+[2020-08-21T03:22:06.565Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 51.619 ms
+[2020-08-21T03:22:06.711Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 0.919 ms
+[2020-08-21T03:22:06.728Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.390 ms
+[2020-08-21T03:22:06.746Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.505 ms
+[2020-08-21T03:22:06.866Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:22:06\""} 11.674 ms
+[2020-08-21T03:23:15.239Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 40.494 ms
+[2020-08-21T03:23:15.462Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 40.003 ms
+[2020-08-21T03:23:15.540Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 29.072 ms
+[2020-08-21T03:23:15.879Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 20.861 ms
+[2020-08-21T03:23:15.991Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 4.444 ms
+[2020-08-21T03:23:16.065Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 24.304 ms
+[2020-08-21T03:23:16.343Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 109.728 ms
+[2020-08-21T03:23:16.388Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 10.548 ms
+[2020-08-21T03:23:16.718Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:23:16\""} 195.282 ms
+[2020-08-21T03:23:31.035Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 342.018 ms
+[2020-08-21T03:23:31.255Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 38.187 ms
+[2020-08-21T03:23:31.642Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 36.152 ms
+[2020-08-21T03:23:31.707Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 6.835 ms
+[2020-08-21T03:23:31.775Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 18.228 ms
+[2020-08-21T03:23:32.156Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 47.995 ms
+[2020-08-21T03:23:32.331Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 29.075 ms
+[2020-08-21T03:23:32.407Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 0.837 ms
+[2020-08-21T03:23:32.593Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:23:32\""} 103.514 ms
+[2020-08-21T03:23:45.376Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 130.241 ms
+[2020-08-21T03:23:45.481Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 27.931 ms
+[2020-08-21T03:23:45.576Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 11.723 ms
+[2020-08-21T03:23:45.919Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 18.062 ms
+[2020-08-21T03:23:45.991Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 8.115 ms
+[2020-08-21T03:23:46.082Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 15.152 ms
+[2020-08-21T03:23:46.303Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 17.531 ms
+[2020-08-21T03:23:46.397Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 29.102 ms
+[2020-08-21T03:23:46.710Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:23:46\""} 110.186 ms
+[2020-08-21T03:24:05.367Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 151.018 ms
+[2020-08-21T03:24:05.594Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 155.048 ms
+[2020-08-21T03:24:06.100Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 45.232 ms
+[2020-08-21T03:24:06.196Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 32.988 ms
+[2020-08-21T03:24:06.313Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 8.005 ms
+[2020-08-21T03:24:06.492Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 3.954 ms
+[2020-08-21T03:24:06.572Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 18.153 ms
+[2020-08-21T03:24:06.753Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 18.907 ms
+[2020-08-21T03:24:07.011Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:24:06\""} 96.885 ms
+[2020-08-21T03:26:12.848Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 417.527 ms
+[2020-08-21T03:26:13.258Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 79.639 ms
+[2020-08-21T03:26:13.352Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 56.330 ms
+[2020-08-21T03:26:13.390Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 2.524 ms
+[2020-08-21T03:26:13.674Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 39.595 ms
+[2020-08-21T03:26:13.790Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 0.708 ms
+[2020-08-21T03:26:13.856Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.198 ms
+[2020-08-21T03:26:13.876Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 4.841 ms
+[2020-08-21T03:26:46.664Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 304 {} 55.231 ms
+[2020-08-21T03:26:46.850Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 304 {} 63.220 ms
+[2020-08-21T03:26:46.944Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 7.839 ms
+[2020-08-21T03:26:47.397Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 2.960 ms
+[2020-08-21T03:26:47.509Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 8.956 ms
+[2020-08-21T03:26:47.780Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 1.563 ms
+[2020-08-21T03:26:47.822Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 10.147 ms
+[2020-08-21T03:26:47.874Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 8.068 ms
+[2020-08-21T03:26:48.204Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:26:48\""} 136.446 ms
+[2020-08-21T03:26:54.878Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 47.982 ms
+[2020-08-21T03:26:55.300Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 279.570 ms
+[2020-08-21T03:26:55.403Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 49.507 ms
+[2020-08-21T03:26:55.743Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 16.017 ms
+[2020-08-21T03:26:55.830Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 3.667 ms
+[2020-08-21T03:26:56.157Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 24.179 ms
+[2020-08-21T03:26:56.243Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 24.578 ms
+[2020-08-21T03:26:56.409Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.251 ms
+[2020-08-21T03:27:50.121Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 304 {} 228.302 ms
+[2020-08-21T03:27:50.254Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 304 {} 83.539 ms
+[2020-08-21T03:27:50.649Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 29.280 ms
+[2020-08-21T03:27:50.750Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 42.317 ms
+[2020-08-21T03:27:50.803Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 13.581 ms
+[2020-08-21T03:27:50.865Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 11.510 ms
+[2020-08-21T03:27:51.071Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 12.169 ms
+[2020-08-21T03:27:51.213Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.304 ms
+[2020-08-21T03:27:51.496Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:27:51\""} 157.411 ms
+[2020-08-21T03:30:39.203Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 300.712 ms
+[2020-08-21T03:30:39.572Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 34.792 ms
+[2020-08-21T03:30:39.723Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 82.382 ms
+[2020-08-21T03:30:39.758Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 6.669 ms
+[2020-08-21T03:30:40.002Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 35.620 ms
+[2020-08-21T03:30:40.151Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 0.754 ms
+[2020-08-21T03:30:40.240Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.709 ms
+[2020-08-21T03:30:40.266Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.303 ms
+[2020-08-21T03:30:40.503Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:30:40\""} 164.115 ms
+[2020-08-21T03:46:48.517Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 532.767 ms
+[2020-08-21T03:46:49.200Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 189.771 ms
+[2020-08-21T03:46:49.480Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 27.196 ms
+[2020-08-21T03:46:49.738Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 64.355 ms
+[2020-08-21T03:46:49.794Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 3.742 ms
+[2020-08-21T03:46:49.818Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 1.476 ms
+[2020-08-21T03:46:49.835Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 0.994 ms
+[2020-08-21T03:46:49.853Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 0.934 ms
+[2020-08-21T03:46:50.266Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:46:50\""} 210.115 ms
+[2020-08-21T03:47:16.528Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 827.276 ms
+[2020-08-21T03:47:16.696Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 20.300 ms
+[2020-08-21T03:47:16.842Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 72.379 ms
+[2020-08-21T03:47:16.875Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 0.817 ms
+[2020-08-21T03:47:17.102Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 11.823 ms
+[2020-08-21T03:47:17.279Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 24.560 ms
+[2020-08-21T03:47:17.343Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.035 ms
+[2020-08-21T03:47:17.362Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.642 ms
+[2020-08-21T03:47:17.560Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:47:17\""} 119.168 ms
+[2020-08-21T03:47:40.078Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 27.849 ms
+[2020-08-21T03:47:40.382Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 206.997 ms
+[2020-08-21T03:47:40.517Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 30.016 ms
+[2020-08-21T03:47:40.975Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 34.349 ms
+[2020-08-21T03:47:41.088Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 6.209 ms
+[2020-08-21T03:47:41.147Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 8.392 ms
+[2020-08-21T03:47:41.430Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 71.975 ms
+[2020-08-21T03:47:41.450Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 6.575 ms
+[2020-08-21T03:47:41.829Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:47:41\""} 183.008 ms
+[2020-08-21T03:48:57.056Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 287.234 ms
+[2020-08-21T03:48:57.528Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 30.266 ms
+[2020-08-21T03:48:57.619Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 24.772 ms
+[2020-08-21T03:48:57.690Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 16.661 ms
+[2020-08-21T03:48:57.940Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 98.987 ms
+[2020-08-21T03:48:57.983Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 0.790 ms
+[2020-08-21T03:48:58.012Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 4.519 ms
+[2020-08-21T03:48:58.035Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.075 ms
+[2020-08-21T03:48:58.313Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:48:58\""} 138.803 ms
+[2020-08-21T03:49:43.276Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 337.458 ms
+[2020-08-21T03:49:43.867Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 167.810 ms
+[2020-08-21T03:49:44.378Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 355.538 ms
+[2020-08-21T03:49:44.465Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 38.684 ms
+[2020-08-21T03:49:44.553Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 76.759 ms
+[2020-08-21T03:49:44.564Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 1.121 ms
+[2020-08-21T03:49:44.574Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 0.763 ms
+[2020-08-21T03:49:44.585Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 0.843 ms
+[2020-08-21T03:49:44.752Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:49:44\""} 87.997 ms
+[2020-08-21T03:59:16.557Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 238.293 ms
+[2020-08-21T03:59:16.621Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 15.774 ms
+[2020-08-21T03:59:16.725Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 12.688 ms
+[2020-08-21T03:59:17.056Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 3.246 ms
+[2020-08-21T03:59:17.149Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 3.345 ms
+[2020-08-21T03:59:17.239Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 43.465 ms
+[2020-08-21T03:59:17.502Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 75.362 ms
+[2020-08-21T03:59:17.529Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 5.241 ms
+[2020-08-21T03:59:17.857Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:59:17\""} 87.715 ms
+[2020-08-21T03:59:36.823Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 373.062 ms
+[2020-08-21T03:59:37.173Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 79.716 ms
+[2020-08-21T03:59:37.294Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 69.516 ms
+[2020-08-21T03:59:37.563Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 9.124 ms
+[2020-08-21T03:59:37.603Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.149 ms
+[2020-08-21T03:59:37.642Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 3.819 ms
+[2020-08-21T03:59:37.734Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.181 ms
+[2020-08-21T03:59:37.791Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.783 ms
+[2020-08-21T03:59:38.019Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:59:37\""} 138.052 ms
+[2020-08-21T03:59:51.395Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 9.694 ms
+[2020-08-21T03:59:51.552Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 23.770 ms
+[2020-08-21T03:59:51.603Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 20.950 ms
+[2020-08-21T03:59:51.658Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 6.289 ms
+[2020-08-21T03:59:51.988Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 3.174 ms
+[2020-08-21T03:59:52.107Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 40.770 ms
+[2020-08-21T03:59:52.269Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 33.273 ms
+[2020-08-21T03:59:52.437Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 11.689 ms
+[2020-08-21T03:59:52.821Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 13:59:52\""} 53.371 ms
+[2020-08-21T04:01:13.877Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 576.602 ms
+[2020-08-21T04:01:14.134Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 71.838 ms
+[2020-08-21T04:01:14.266Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 91.800 ms
+[2020-08-21T04:01:14.535Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 36.897 ms
+[2020-08-21T04:01:14.576Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 10.143 ms
+[2020-08-21T04:01:14.721Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 1.612 ms
+[2020-08-21T04:01:14.789Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.278 ms
+[2020-08-21T04:01:14.808Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.801 ms
+[2020-08-21T04:01:15.083Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 14:01:14\""} 198.665 ms
+[2020-08-21T04:10:07.414Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 483.473 ms
+[2020-08-21T04:10:08.043Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 113.136 ms
+[2020-08-21T04:10:08.149Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 28.982 ms
+[2020-08-21T04:10:08.318Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 125.515 ms
+[2020-08-21T04:10:08.566Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 80.917 ms
+[2020-08-21T04:10:08.617Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 14.293 ms
+[2020-08-21T04:10:08.879Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 55.471 ms
+[2020-08-21T04:10:10.187Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 34.548 ms
+[2020-08-21T04:10:10.564Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 14:10:10\""} 111.264 ms
+[2020-08-21T04:11:04.123Z] ::1 email@email.com GET /api/business/collections/read_item/1/10 200 {} 236.811 ms
+[2020-08-21T04:11:04.424Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/10 200 {} 133.961 ms
+[2020-08-21T04:11:05.070Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/10 304 {} 19.892 ms
+[2020-08-21T04:11:05.274Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 98.100 ms
+[2020-08-21T04:11:05.635Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 142.952 ms
+[2020-08-21T04:11:05.719Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 4.015 ms
+[2020-08-21T04:11:05.768Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 17.936 ms
+[2020-08-21T04:11:05.782Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.943 ms
+[2020-08-21T04:11:06.284Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-08-21 14:11:05\""} 322.342 ms
+[2020-08-21T04:18:37.833Z] ::1 email@email.com PUT /api/business/cases/update_item/1/10 200 {"currentStatus":" currentStatus = \"Open\""} 145.707 ms
+[2020-08-21T04:18:38.007Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 31.667 ms
+[2020-08-21T04:21:36.561Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 110.901 ms
+[2020-08-21T04:21:36.797Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 71.941 ms
+[2020-08-21T04:21:37.017Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 288.662 ms
+[2020-08-21T04:39:14.217Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 15.090 ms
+[2020-08-21T04:39:14.369Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 35.976 ms
+[2020-08-21T04:39:15.226Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 884.606 ms
+[2020-08-21T04:42:00.291Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 18.764 ms
+[2020-08-21T04:42:00.440Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 50.878 ms
+[2020-08-21T04:42:00.449Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 51.147 ms
+[2020-08-21T04:48:25.115Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 86.901 ms
+[2020-08-21T04:48:25.806Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 37.581 ms
+[2020-08-21T04:48:26.161Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 388.096 ms
+[2020-08-21T04:49:09.410Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 15.498 ms
+[2020-08-21T04:49:09.538Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 41.585 ms
+[2020-08-21T04:49:10.013Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 514.884 ms
+[2020-08-21T04:49:52.378Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.902 ms
+[2020-08-21T04:49:52.537Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 63.885 ms
+[2020-08-21T04:49:52.762Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 288.300 ms
+[2020-08-21T04:55:02.990Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 61.351 ms
+[2020-08-21T04:55:03.155Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 7.282 ms
+[2020-08-21T04:55:04.220Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 1071.285 ms
+[2020-08-21T04:58:27.549Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 68.520 ms
+[2020-08-21T04:58:27.806Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 73.925 ms
+[2020-08-21T04:58:28.277Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 543.513 ms
+[2020-08-21T06:46:51.082Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-08-21 16:46:50"} 483.146 ms
+[2020-08-21T06:46:51.324Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.497 ms
+[2020-08-21T06:46:51.383Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 17.180 ms
+[2020-08-21T06:46:51.489Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 113.370 ms
+[2020-08-21T08:58:50.104Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-08-21 18:58:49"} 266.486 ms
+[2020-08-21T08:58:50.301Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 3.959 ms
+[2020-08-21T08:58:50.431Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 70.609 ms
+[2020-08-21T08:58:50.522Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 156.078 ms
+[2020-08-21T08:59:33.839Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 2.619 ms
+[2020-08-21T08:59:34.032Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 48.888 ms
+[2020-08-21T08:59:34.132Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 146.383 ms
+[2020-08-21T09:35:25.555Z] ::1 [object Object] GET /api/admin/clientservices/1 304 {} 7.993 ms
+[2020-08-21T09:35:35.924Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-08-21 19:35:35"} 284.899 ms
+[2020-08-21T09:35:36.092Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.138 ms
+[2020-08-21T09:35:36.167Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 14.800 ms
+[2020-08-21T09:35:36.222Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 61.834 ms
+[2020-08-22T11:42:01.118Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-08-22 21:42:00"} 242.543 ms
+[2020-08-22T11:42:01.348Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 41.475 ms
+[2020-08-22T11:42:01.511Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 122.667 ms
+[2020-08-22T11:42:01.605Z] ::1 email@email.com GET /api/business/collections/list_today/1 200 {} 156.495 ms
+[2020-08-22T11:47:49.635Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 48.436 ms
+[2020-08-22T11:47:49.753Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 11.574 ms
+[2020-08-22T11:47:49.806Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 62.729 ms
+[2020-08-22T12:05:40.722Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 5.283 ms
+[2020-08-22T12:05:40.929Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 57.853 ms
+[2020-08-22T12:05:40.998Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 112.927 ms
+[2020-08-22T12:11:56.770Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.496 ms
+[2020-08-22T12:11:57.017Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 78.495 ms
+[2020-08-22T12:11:57.032Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 72.403 ms
+[2020-08-22T12:14:55.505Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 23.047 ms
+[2020-08-22T12:14:55.670Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 73.535 ms
+[2020-08-22T12:14:55.712Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 108.964 ms
+[2020-08-22T12:15:18.707Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.169 ms
+[2020-08-22T12:15:18.938Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 42.983 ms
+[2020-08-22T12:15:18.961Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 64.278 ms
+[2020-08-22T12:27:55.167Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 13.438 ms
+[2020-08-22T12:27:55.391Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 46.174 ms
+[2020-08-22T12:27:55.417Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 58.411 ms
+[2020-08-22T12:28:43.610Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.027 ms
+[2020-08-22T12:28:43.762Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 24.173 ms
+[2020-08-22T12:28:43.809Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 60.501 ms
+[2020-08-22T12:28:57.652Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 15.783 ms
+[2020-08-22T12:28:57.872Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 12.904 ms
+[2020-08-22T12:28:57.977Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 117.254 ms
+[2020-08-22T12:29:12.055Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 11.068 ms
+[2020-08-22T12:29:12.251Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 31.942 ms
+[2020-08-22T12:29:12.281Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 49.775 ms
+[2020-08-22T12:29:28.649Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.843 ms
+[2020-08-22T12:29:28.855Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 20.579 ms
+[2020-08-22T12:29:28.913Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 77.719 ms
+[2020-08-22T12:34:39.880Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 2.825 ms
+[2020-08-22T12:34:40.192Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 44.205 ms
+[2020-08-22T12:34:40.406Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 255.855 ms
+[2020-08-22T12:36:22.500Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 11.441 ms
+[2020-08-22T12:36:22.747Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 11.663 ms
+[2020-08-22T12:36:22.983Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 246.736 ms
+[2020-08-22T12:40:08.568Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 23.416 ms
+[2020-08-22T12:40:08.759Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 7.830 ms
+[2020-08-22T12:40:08.820Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 67.925 ms
+[2020-08-22T12:40:34.070Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-08-22 22:40:33"} 370.634 ms
+[2020-08-22T12:40:34.336Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 134.673 ms
+[2020-08-22T12:40:34.400Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 22.430 ms
+[2020-08-22T12:40:34.573Z] ::1 email@email.com GET /api/business/collections/list_today/1 304 {} 187.509 ms

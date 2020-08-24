@@ -148,7 +148,7 @@ exports.read_item = function(req, res) {
   switch (type) {
     case 'business':
       console.log('read_item business');
-      if (workspace === 'collections' && task !== 'read_outcomes') {
+      if (workspace === 'collections' && task === 'read_item') {
         BusinessModel.getOneCase(workspace, clientId, recordId, function(err, model) {
           if (err) {
             console.log('getOneCase controller error: ', err);
@@ -159,6 +159,15 @@ exports.read_item = function(req, res) {
       } else if (workspace === 'collections' && task === 'read_outcomes') {
         console.log('read_outcomes business');
         BusinessModel.getOutcomesForCase(workspace, clientId, recordId, function(err, model) {
+          if (err) {
+            console.log('getOne controller error: ', err);
+          } else {
+            res.send(model);
+          }
+        });
+      } else if (workspace === 'collections' && task === 'read_contacts') {
+        console.log('read_contacts business');
+        BusinessModel.getContactsForCase(workspace, clientId, recordId, function(err, model) {
           if (err) {
             console.log('getOne controller error: ', err);
           } else {
