@@ -21,7 +21,7 @@ Model.getAllCollections = function(clientId, result) {
   });
 }
 
-Model.getAllCollectionsForToday = function(clientId, result) {
+Model.getAllCollectionsForToday = function(clientId, user, result) {
   console.log('Running getAllCollectionsForToday');
   sql.query(`SELECT * FROM customers, accounts, cases, outcomes
     WHERE  customers.customerRefNo = accounts.f_customerId
@@ -29,6 +29,7 @@ Model.getAllCollectionsForToday = function(clientId, result) {
     AND cases.caseNumber = outcomes.f_caseNumber
     AND outcomes.nextVisitDateTime > (Now() - interval 3000 minute)
     AND outcomes.nextVisitDateTime IS NOT NULL
+    AND cases.currentAssignment = "${user}"
     AND customers.f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
       console.log('getAllCollectionsForToday error: ', err);

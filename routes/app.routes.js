@@ -106,12 +106,14 @@ module.exports = function(app) {
   app.route('/api/admin/:workspace/:task')
     .get(sessions.list_all);
 
-
   // cws_business and cws_consumer routes
   app.route('/api/:type/:workspace/:task/:clientId')
     .get(cont.list_all)
     .post(cont.create_item)
     .post(cont.create_items);
+
+  app.route('/api/:type/:workspace/:task/:clientId/workzone/:user')
+    .get(cont.list_today);
 
   app.route('/api/:type/:workspace/:task/:clientId/:recordId')
     .get(cont.read_item)

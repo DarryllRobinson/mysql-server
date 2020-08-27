@@ -9,8 +9,6 @@ exports.list_all = function(req, res) {
   const task = req.params.task;
   const clientId = req.params.clientId;
 
-
-
   // Determine which type
   switch (type) {
     case 'business':
@@ -25,6 +23,7 @@ exports.list_all = function(req, res) {
             }
           });
           break;
+        // shouldn't be needed any longer
         case 'list_today':
           BusinessModel.getAllCollectionsForToday(clientId, function(err, model) {
             if (err) {
@@ -54,6 +53,59 @@ exports.list_all = function(req, res) {
           break;
         case 'list_today':
           ConsumerModel.getAllCollectionsForToday(clientId, function(err, model) {
+            if (err) {
+              console.log('ConsumerModel.getAllCollectionsForToday controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        default:
+          console.log('task not found: ', task);
+          res.send(task);
+          break;
+      }
+    default:
+      console.log('type not found: ', type);
+      res.send(type);
+      break;
+    }
+}
+
+// List all records
+exports.list_today = function(req, res) {
+  console.log('list_today req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
+  const user = req.params.user;
+
+  // Determine which type
+  switch (type) {
+    case 'business':
+      console.log('business');
+      switch (task) {
+        case 'list_today':
+          BusinessModel.getAllCollectionsForToday(clientId, user, function(err, model) {
+            if (err) {
+              console.log('BusinessModel.getAllCollectionsForToday controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        default:
+          console.log('task not found: ', task);
+          res.send(task);
+          break;
+      }
+      break;
+    case 'consumer':
+      console.log('consumer');
+      switch (task) {
+        case 'list_today':
+          ConsumerModel.getAllCollectionsForToday(clientId, user, function(err, model) {
             if (err) {
               console.log('ConsumerModel.getAllCollectionsForToday controller error: ', err);
             } else {
