@@ -23,12 +23,11 @@ Model.getAllCollections = function(clientId, result) {
 
 Model.getAllCollectionsForToday = function(clientId, user, result) {
   console.log('Running getAllCollectionsForToday');
-  sql.query(`SELECT * FROM customers, accounts, cases, outcomes
+  sql.query(`SELECT * FROM customers, accounts, cases
     WHERE  customers.customerRefNo = accounts.f_customerId
     AND accounts.accountNumber = cases.f_accountNumber
-    AND cases.caseNumber = outcomes.f_caseNumber
-    AND outcomes.nextVisitDateTime > (Now() - interval 3000 minute)
-    AND outcomes.nextVisitDateTime IS NOT NULL
+    AND cases.nextVisitDateTime > (Now() - interval 1440 minute)
+    AND cases.nextVisitDateTime IS NOT NULL
     AND cases.currentAssignment = "${user}"
     AND customers.f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
