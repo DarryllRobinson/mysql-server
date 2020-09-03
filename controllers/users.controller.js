@@ -13,3 +13,16 @@ exports.list_all_users = function(req, res) {
     }
   });
 }
+
+// delete a user
+exports.delete_user = function(req, res) {
+  console.log('delete_user req.params: ', req.params);
+  //const userId =
+  UserModel.deleteUser(req.params.userId, function(err, user) {
+    if (err) {
+      console.log('deleteUser controller error: ', err);
+    } else {
+      res.send(user);
+    }
+  });
+}

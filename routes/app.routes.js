@@ -95,6 +95,9 @@ module.exports = function(app) {
   app.route('/api/admin/user')
     .post(sessions.create_user);
 
+  app.route('/api/admin/user/:userId')
+    .delete(users.delete_user);
+
   app.route('/api/admin/users')
     .get(users.list_all_users);
 
