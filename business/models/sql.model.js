@@ -35,7 +35,7 @@ Model.getAllCollectionsForToday = function(clientId, user, result) {
       result(null, err);
     } else {
       console.log('getAllCollectionsForToday res: ', res);
-      result(null, res);
+      if (res.length > 0) result(null, res);
     }
   });
 }

@@ -4,6 +4,7 @@ module.exports = function(app) {
   const sessions = require('../controllers/sessions.controller');
   const coll = require('../controllers/collections.controller');
   const storage = require('../controllers/storage.controller');
+  const users = require('../controllers/users.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -93,6 +94,9 @@ module.exports = function(app) {
 
   app.route('/api/admin/user')
     .post(sessions.create_user);
+
+  app.route('/api/admin/users')
+    .get(users.list_all_users);
 
   // Clients
   app.route('/api/admin/clients')
