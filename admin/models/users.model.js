@@ -45,11 +45,41 @@ User.resetPassword = function(user, result) {
     } else {
       console.log('resetPassword res: ', res);
       if (res.length > 0) {
-        Emailer.sendEmail(email, 'The System User');
+        Emailer.sendEmail(
+          'reset',
+          email,
+          'The System password reset request',
+          'You requested a password reset',
+          `
+            <p>We received a request to reset your password on The System.</p>
+            <p>Please click <a href="https://thesystem.co.za/reset" target="_blank">here</a> to be taken to the password reset page.</p>
+            <br /><br />
+            <p>The System Team</p>
+          `,
+          'The System User'
+        );
         result(null, res);
       } else {
         result(null, 'User not found');
       }
+    }
+  });
+}
+
+// Change a password
+User.changePassword = async function(email, change, result) {
+  console.log('changePassword change object: ', change);
+  const id = email;
+  const password = change.password;
+  let arr = [];
+  arr.push(change);
+
+  await bulkUpdate('users', arr, id, function(err, res) {
+    if (err) {
+      console.log('changePassword error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
     }
   });
 }
@@ -85,7 +115,7 @@ async function bulkUpdate(table, objectArray, id, callback) {
   }));
 
   // UPDATE {table} SET colname = ?, ...    WHERE id = ?;
-  let sqlstatement = `UPDATE ${table} SET${values} WHERE id = ${id};`;
+  let sqlstatement = `UPDATE ${table} SET${values} WHERE email = "${id}";`;
   await sql.query(sqlstatement, function(error, results, fields) {
     if (error) return callback(error);
     callback(null, results);

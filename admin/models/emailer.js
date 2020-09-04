@@ -7,7 +7,7 @@ const Emailer = async function(email) {
   console.log('email in const: ', email);
 };
 
-Emailer.sendEmail = async function(email, firstName) {
+Emailer.sendEmail = async function(purpose, to, subject, text, html, firstName) {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
@@ -23,15 +23,10 @@ Emailer.sendEmail = async function(email, firstName) {
   // send mail with defined transport object
   let info = await transporter.sendMail({
     from: "robot@thesystem.co.za", // sender address
-    to: email, // list of receivers
-    subject: "Welcome to The System", // Subject line
-    text: "Welcome to The System", // plain text body
-    html: `
-          <p>${firstName}, you have been registered as a new user on The System.</p>
-          <p>Please click <a href="https://thesystem.co.za" target="_blank">here</a> to be taken to the login page. Your password will be sent to you by your supervisor.</p>
-          <br /><br />
-          <p>The System Team</p>
-          `, // html body
+    to: to, // list of receivers
+    subject: subject, // Subject line
+    text: text, // plain text body
+    html: html, // html body
   });
 
   //console.log("Message sent: %s", info.messageId);

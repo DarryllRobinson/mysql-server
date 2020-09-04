@@ -98,6 +98,9 @@ module.exports = function(app) {
   app.route('/api/admin/user/reset')
     .post(users.reset_password);
 
+  app.route('/api/admin/user/change/:email')
+    .post(users.change_password);
+
   app.route('/api/admin/user/:userId')
     .post(users.update_user)
     .delete(users.delete_user);

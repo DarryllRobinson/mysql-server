@@ -39,6 +39,19 @@ exports.update_user = function(req, res) {
   });
 }
 
+// change a password
+exports.change_password = function(req, res) {
+  console.log('change_password req.params: ', req.params);
+  console.log('change_password req.body: ', req.body);
+  UserModel.changePassword(req.params.email, req.body, function(err, user) {
+    if (err) {
+      console.log('changePassword controller error: ', err);
+    } else {
+      res.send(user);
+    }
+  });
+}
+
 // reset a password
 exports.reset_password = function(req, res) {
   console.log('reset_password req.body: ', req.body);

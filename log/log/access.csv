@@ -23,3 +23,14 @@
 [2020-09-04T05:23:39.545Z] ::1 [object Object] POST /api/admin/user/reset - {"email":"test@email.com"} - ms
 [2020-09-04T05:25:00.464Z] ::1 [object Object] POST /api/admin/user/reset - {"email":"test@email.com"} - ms
 [2020-09-04T05:27:46.196Z] ::1 [object Object] POST /api/admin/user/reset - {"email":"darryllrobinson@icloud.com"} - ms
+[2020-09-04T07:05:58.031Z] ::1 [object Object] POST /api/admin/user/reset - {"email":"darryllrobinson@icloud.com"} - ms
+[2020-09-04T07:11:42.470Z] ::1 [object Object] GET /api/admin/clients 200 {} 6.899 ms
+[2020-09-04T07:32:04.919Z] ::1 [object Object] POST /api/admin/user/change 500 {"email":"darryllrobinson@icloud.com","password":"$2a$10$.BjFtOR66j12sj6PjXjSo.tSd2LbIVC.Li9LFThM2mHyOAgEY734e","updatedDate":"2020-09-04 17:32:04","updatedBy":"darryllrobinson@icloud.com"} 6.822 ms
+[2020-09-04T09:23:02.923Z] ::1 [object Object] POST /api/admin/user/reset - {"email":"darryllrobinson@icloud.com"} - ms
+[2020-09-04T09:24:52.417Z] ::1 [object Object] POST /api/admin/user/change - {"email":"darryllrobinson@icloud.com","password":"$2a$10$gnf3txlVs86iydszxp2FMuM75LGTmqym4Kgz5hbhzR7oLwbHzCeOS","updatedDate":"2020-09-04 19:24:52","updatedBy":"darryllrobinson@icloud.com"} - ms
+[2020-09-04T09:40:43.590Z] ::1 [object Object] POST /api/admin/user/change/darryllrobinson@icloud.com - {"password":" password = '$2a$10$UZbTiOxz/MIqy6wMyq7iKeBcnGtORDB0O5ik.vO5JVPPwrpMLN6V2'","updatedDate":" updatedDate = '2020-09-04 19:40:43'","updatedBy":" updatedBy = 'darryllrobinson@icloud.com'"} - ms
+[2020-09-04T09:44:15.470Z] ::1 [object Object] POST /api/admin/user/change/darryllrobinson@icloud.com 200 {"password":" password = '$2a$10$QYYl6fB1U4H3aSntaoruvOB5n5VzWv9mmaGR1f11vlo4UANZU2ZnS'","updatedDate":" updatedDate = '2020-09-04 19:44:15'","updatedBy":" updatedBy = 'darryllrobinson@icloud.com'"} 10.543 ms
+[2020-09-04T09:45:10.851Z] ::1 [object Object] POST /api/admin/user/change/darryllrobinson@icloud.com - {"password":" password = '$2a$10$BxDcol56e1x0p2N.AF.ozewzoFsUbDlQTio4RVK3Xi1zEDQwnhD36'","updatedDate":" updatedDate = '2020-09-04 19:45:10'","updatedBy":" updatedBy = 'darryllrobinson@icloud.com'"} - ms
+[2020-09-04T09:46:17.746Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryllrobinson@icloud.com","password":"fghjk","loginDate":"2020-09-04 19:46:17"} 265.632 ms
+[2020-09-04T09:46:18.055Z] ::1 darryllrobinson@icloud.com GET /api/admin/clientservices/1 304 {} 19.838 ms
+[2020-09-04T09:46:18.094Z] ::1 darryllrobinson@icloud.com GET /api/business/[object%20Object]/list_all/1 304 {} 26.272 ms
