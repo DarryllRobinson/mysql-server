@@ -26,3 +26,27 @@ exports.delete_user = function(req, res) {
     }
   });
 }
+
+// update a user
+exports.update_user = function(req, res) {
+  console.log('update_user req.body: ', req.body);
+  UserModel.updateUser(req.body, function(err, user) {
+    if (err) {
+      console.log('updateUser controller error: ', err);
+    } else {
+      res.send(user);
+    }
+  });
+}
+
+// reset a password
+exports.reset_password = function(req, res) {
+  console.log('reset_password req.body: ', req.body);
+  UserModel.resetPassword(req.body, function(err, user) {
+    if (err) {
+      console.log('resetPassword controller error: ', err);
+    } else {
+      res.send(user);
+    }
+  });
+}
