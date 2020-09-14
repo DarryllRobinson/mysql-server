@@ -1,0 +1,124 @@
+[2020-09-07T01:42:44.399Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-07 11:42:44"} 326.220 ms
+[2020-09-07T01:42:44.609Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 48.214 ms
+[2020-09-07T01:42:44.645Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 24.170 ms
+[2020-09-07T01:42:59.222Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 61.112 ms
+[2020-09-07T01:42:59.266Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 12.395 ms
+[2020-09-07T01:42:59.295Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 7.896 ms
+[2020-09-07T01:42:59.308Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 1.763 ms
+[2020-09-07T01:42:59.323Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.595 ms
+[2020-09-07T01:42:59.340Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 3.751 ms
+[2020-09-07T01:42:59.373Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 4.954 ms
+[2020-09-07T01:42:59.389Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.264 ms
+[2020-09-07T01:42:59.652Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 11:42:59\""} 15.730 ms
+[2020-09-07T02:05:56.713Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 91.259 ms
+[2020-09-07T02:05:56.872Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 70.752 ms
+[2020-09-07T02:05:56.934Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 6.697 ms
+[2020-09-07T02:05:56.993Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 3.102 ms
+[2020-09-07T02:05:57.068Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 0.735 ms
+[2020-09-07T02:05:57.457Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 1.874 ms
+[2020-09-07T02:05:57.556Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 29.775 ms
+[2020-09-07T02:05:57.666Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 17.933 ms
+[2020-09-07T02:05:58.205Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 12:05:57\""} 169.760 ms
+[2020-09-07T02:06:01.417Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.229 ms
+[2020-09-07T02:06:01.530Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 18.439 ms
+[2020-09-07T03:15:47.751Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-07 13:15:47"} 300.461 ms
+[2020-09-07T03:15:47.926Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 9.346 ms
+[2020-09-07T03:15:48.000Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 61.808 ms
+[2020-09-07T03:15:51.273Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 13.574 ms
+[2020-09-07T03:15:51.322Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 24.208 ms
+[2020-09-07T03:15:51.348Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 4.403 ms
+[2020-09-07T03:15:51.363Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 0.943 ms
+[2020-09-07T03:15:51.380Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 2.011 ms
+[2020-09-07T03:15:51.396Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 1.167 ms
+[2020-09-07T03:15:51.409Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.236 ms
+[2020-09-07T03:15:51.427Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.491 ms
+[2020-09-07T03:15:51.655Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 13:15:51\""} 68.104 ms
+[2020-09-07T03:27:32.607Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 176.671 ms
+[2020-09-07T03:27:32.925Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 231.356 ms
+[2020-09-07T03:27:33.168Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 5.164 ms
+[2020-09-07T03:27:33.256Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 9.763 ms
+[2020-09-07T03:27:33.364Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.319 ms
+[2020-09-07T03:27:33.570Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 15.353 ms
+[2020-09-07T03:27:33.614Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 2.259 ms
+[2020-09-07T03:27:33.629Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.028 ms
+[2020-09-07T03:27:33.848Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 13:27:33\""} 47.428 ms
+[2020-09-07T03:29:25.101Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 561.150 ms
+[2020-09-07T03:29:25.420Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 55.684 ms
+[2020-09-07T03:29:25.510Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 62.576 ms
+[2020-09-07T03:29:25.745Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 71.563 ms
+[2020-09-07T03:29:25.825Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 19.112 ms
+[2020-09-07T03:29:25.876Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 0.984 ms
+[2020-09-07T03:29:25.886Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 0.890 ms
+[2020-09-07T03:29:25.897Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.245 ms
+[2020-09-07T03:29:26.340Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 13:29:26\""} 232.581 ms
+[2020-09-07T03:45:48.623Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 145.312 ms
+[2020-09-07T03:45:48.877Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 165.536 ms
+[2020-09-07T03:45:49.171Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 2.688 ms
+[2020-09-07T03:45:49.203Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 4.767 ms
+[2020-09-07T03:45:49.333Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 10.884 ms
+[2020-09-07T03:45:49.444Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 4.391 ms
+[2020-09-07T03:45:49.500Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 10.282 ms
+[2020-09-07T03:45:49.661Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 2.810 ms
+[2020-09-07T03:45:50.095Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 13:45:49\""} 227.927 ms
+[2020-09-07T03:46:52.934Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 228.245 ms
+[2020-09-07T03:46:53.094Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 68.507 ms
+[2020-09-07T03:46:53.426Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 27.156 ms
+[2020-09-07T03:46:53.476Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 11.039 ms
+[2020-09-07T03:46:53.509Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 5.936 ms
+[2020-09-07T03:46:53.759Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 47.321 ms
+[2020-09-07T03:46:53.785Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 8.662 ms
+[2020-09-07T03:46:53.822Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 8.046 ms
+[2020-09-07T03:46:54.092Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 13:46:53\""} 117.263 ms
+[2020-09-07T04:17:19.211Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 87.302 ms
+[2020-09-07T04:17:19.399Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 71.129 ms
+[2020-09-07T04:17:19.493Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 14.179 ms
+[2020-09-07T04:17:19.788Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 6.358 ms
+[2020-09-07T04:17:19.813Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.311 ms
+[2020-09-07T04:17:19.832Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 1.829 ms
+[2020-09-07T04:17:19.854Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 1.753 ms
+[2020-09-07T04:17:20.041Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 10.969 ms
+[2020-09-07T04:17:20.488Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 14:17:20\""} 180.438 ms
+[2020-09-07T04:17:52.901Z] ::1 email@email.com GET /api/business/collections/read_item/1/1 200 {} 6.101 ms
+[2020-09-07T04:17:53.027Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/1 200 {} 34.625 ms
+[2020-09-07T04:17:53.215Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/1 304 {} 10.825 ms
+[2020-09-07T04:17:53.362Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 36.048 ms
+[2020-09-07T04:17:53.672Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 4.204 ms
+[2020-09-07T04:17:53.787Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 44.930 ms
+[2020-09-07T04:17:54.025Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 12.732 ms
+[2020-09-07T04:17:54.050Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.055 ms
+[2020-09-07T04:17:54.297Z] ::1 email@email.com PUT /api/business/cases/update_item/1/1 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-07 14:17:54\""} 70.816 ms
+[2020-09-07T04:30:04.680Z] ::1 [object Object] POST /api/admin/user/change/test123@email.com - {"password":" password = '$2a$10$g2jQRmn3FToQKX3aYR6SGuihJ64R3MGUV7qE9dUcGXtwVXdjwD2Im'","updatedDate":" updatedDate = '2020-09-07 14:30:04'","updatedBy":" updatedBy = 'test123@email.com'"} - ms
+[2020-09-07T04:48:44.233Z] ::1 [object Object] POST /api/admin/user/change/dff@ff - {"password":" password = '$2a$10$md1kjd5efugS2Ukexft0gudRwXgMkN0YuZeYrVZymeXjC.PNXjJyq'","updatedDate":" updatedDate = '2020-09-07 14:48:44'","updatedBy":" updatedBy = 'dff@ff'"} - ms
+[2020-09-07T04:55:55.629Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$T/FQcujO8be3J0mSztifLeokvjQJAu9GciALvSMoDm2ntXrc3KFNq","updatedDate":"2020-09-07 14:55:55","updatedBy":"a@a.com"} - ms
+[2020-09-07T04:57:29.687Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$sKMaWmKgxnN39GchI29UEO65X6ub6RenIvmXxhIDZFbNW8M1HZCxO","updatedDate":"2020-09-07 14:57:29","updatedBy":"a@a.com"} - ms
+[2020-09-07T05:30:02.878Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$KmJdiUlhGNLK01uCILFHiOXh9q2.erBgPTCEXiWtsXku8gcfe//Oq","updatedDate":"2020-09-07 15:30:02","updatedBy":"a@a.com"} - ms
+[2020-09-07T05:35:07.584Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$E2rVDUbx8ohBfJ47eLW61eda1nPZqiwpC.i2A/TNkVO8UW2mfuykS","updatedDate":"2020-09-07 15:35:07","updatedBy":"a@a.com"} - ms
+[2020-09-07T05:36:56.547Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$1vZvXoiPkPrLnnxhMDNgTORKqIJJqc6b4nqBLdM63KKB8PjKAETNq","updatedDate":"2020-09-07 15:36:56","updatedBy":"a@a.com"} - ms
+[2020-09-07T05:38:35.454Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$fUTmRHIf8e3E3Pc/cqH8qePHmC9Kaz20unaKOLmt6i895UusaSqr.","updatedDate":"2020-09-07 15:38:35","updatedBy":"a@a.com"} - ms
+[2020-09-07T05:41:44.506Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$J7Y3iiCEryTgUYjT1X4tcuB9LK7134aM3kqZxaTP0jPAZCpsL9T/G","updatedDate":"2020-09-07 15:41:44","updatedBy":"a@a.com"} - ms
+[2020-09-07T05:46:02.444Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$XWUCKEQQQpRc1sX5IlkdUe42L.mJpj2H76/MKJT5y/LNjzukvvyhO","updatedDate":"2020-09-07 15:46:02","updatedBy":"a@a.com"} - ms
+[2020-09-07T05:47:58.872Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-07 15:47:58"} 293.545 ms
+[2020-09-07T05:47:58.911Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 21.406 ms
+[2020-09-07T05:47:58.979Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 58.779 ms
+[2020-09-07T05:48:02.226Z] ::1 email@email.com GET /api/admin/users/1 200 {} 2.695 ms
+[2020-09-07T05:48:02.497Z] ::1 email@email.com GET /api/admin/clients 304 {} 8.955 ms
+[2020-09-07T05:48:35.202Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Darryll","surname":"Robinson","email":"darryllrobinson@icloud.com","phone":"0421853016","password":"$2a$10$RFaIdykfx3PVdSFF7zm8pOeGkCQWWD4HN4WBZ2UJMEoLEDlOz1nT2","role":"kam","storeId":"1","type":"business","f_clientId":"1","createdDate":"2020-09-07 15:48:35"} 178.441 ms
+[2020-09-07T05:57:47.991Z] ::1 - POST /api/admin/user/change/a@a.com 200 {} 26.607 ms
+[2020-09-07T05:58:27.193Z] ::1 - POST /api/admin/user/change/a@a.com 200 {} 12.136 ms
+[2020-09-07T05:58:34.876Z] ::1 - POST /api/admin/user/change/a@a.com 200 {} 29.815 ms
+[2020-09-07T06:44:57.709Z] ::1 - POST /api/admin/user/change/a@a.com 200 {} 11.207 ms
+[2020-09-07T06:45:22.989Z] ::1 [object Object] GET /api/admin/users/1 304 {} 9.685 ms
+[2020-09-07T06:45:46.108Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$/7tnvaLL/fjgNbY2RMrnIub44AvvI/9WA9Z2RPrzd7h9m9J9dDZqi","updatedDate":"2020-09-07 16:45:46","updatedBy":"a@a.com"} - ms
+[2020-09-07T06:46:35.331Z] ::1 [object Object] POST /api/admin/user/change/a@a.com 200 {"password":"$2a$10$M6uhAw75BIbNpxSwL71bqOZQud1fgzBzOxqZSBnjWxW5UpM94Ktfy","updatedDate":"2020-09-07 16:46:35","updatedBy":"a@a.com"} 2.338 ms
+[2020-09-07T06:48:57.225Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$e6h8L8umxzdhZcVO3h2qxezdO68fuSbiqRhWnGEku8x9Al7nT4Ipi","updatedDate":"2020-09-07 16:48:57","updatedBy":"a@a.com"} - ms
+[2020-09-07T06:57:09.751Z] ::1 [object Object] POST /api/admin/user/reset - {"email":"darryllrobinson@icloud.com"} - ms
+[2020-09-07T06:57:56.918Z] ::1 [object Object] POST /api/admin/user/change/a@a.com 200 {"password":"$2a$10$iq6rkjNzx6oFt7j7.l7vFOGtexhMqtwMbyHKNQ/0MM4EggCNZ7D6.","updatedDate":"2020-09-07 16:57:56","updatedBy":"a@a.com"} 10.622 ms
+[2020-09-07T06:59:49.432Z] ::1 [object Object] POST /api/admin/user/change/a@a.com 200 {"password":"$2a$10$iaJ5BySRG/hHfgJKYRT3Me9LbjcQObdGKMtJCxPwVuH/hN6OD1W/G","updatedDate":"2020-09-07 16:59:49","updatedBy":"a@a.com"} 1.517 ms
+[2020-09-07T07:37:23.633Z] ::1 [object Object] POST /api/admin/user/change/a@a.com - {"password":"$2a$10$gMGRkYD0BgZSv9.6f2E7d.dpgQJBH1QujFI2mcM3T9Tx767nMyDd.","updatedDate":"2020-09-07 17:37:23","updatedBy":"a@a.com"} - ms
+[2020-09-07T07:41:59.983Z] ::1 [object Object] POST /api/admin/user/change/a@a.com 200 {"password":"$2a$10$ZY0ADrGyYdv0Y6zOoK.YnORC18gKhNy4Y/HWXONFMzvxNyxrg4Bxa","updatedDate":"2020-09-07 17:41:59","updatedBy":"a@a.com"} 5.451 ms
+[2020-09-07T07:42:44.413Z] ::1 [object Object] POST /api/admin/user/change/a@a.com 200 {"password":"$2a$10$reuvmqnZm3iD8wPKHjJZHOYxBdOOd9XkMS88ntBjJbsKy0zYspkcS","updatedDate":"2020-09-07 17:42:44","updatedBy":"a@a.com"} 4.470 ms
+[2020-09-07T07:43:47.203Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$CvHl88vhlbHIreiLU8HeY.CKduh8qYfc6UwsolCwtCVyrcc4uIhYe","updatedDate":"2020-09-07 17:43:47","updatedBy":"a@a.com"} - ms
+[2020-09-07T07:48:27.463Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$E5OYQhUVv1rcdgBZ018HYeGhMox7tIjQkpiSJQ/1JNGRHP0gnzXS.","updatedDate":"2020-09-07 17:48:27","updatedBy":"a@a.com"} - ms
+[2020-09-07T07:49:31.504Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$tHv7XAwi6mLbbNUIdXCiF.7wHKW3XFg2xOsqD9KR4ssEoCA75yuIy","updatedDate":"2020-09-07 17:49:31","updatedBy":"a@a.com"} - ms
+[2020-09-07T11:01:04.394Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$ylNhwcxXJQhy6Y6mZUNZOeqe9B4OpXIKxwRG6XgExUdHoJKheW2WK","updatedDate":"2020-09-07 21:01:04","updatedBy":"a@a.com"} - ms
+[2020-09-07T11:35:18.715Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$afg.rmcU5jfme8Y7IrKs9uOJKJ8tLuSgeAUfOBpk83CsoB/IR/DMS","updatedDate":"2020-09-07 21:35:18","updatedBy":"a@a.com"} - ms

@@ -62,7 +62,39 @@ Session.createUser = function(newUser, result) {
             result(null, err);
           } else {
             console.log('createUser res: ', res);
-            Emailer.sendEmail(email, newUser.firstName);
+            if (res.length > 0) {
+              let href = "";
+              switch (process.env.REACT_APP_STAGE) {
+                case 'development':
+                  href = "http://localhost:3000/";
+                  break;
+                case 'production':
+                  href = "https://thesystem.co.za/";
+                  break;
+                case 'sit':
+                  href = "https://sit.thesystem.co.za/";
+                  break;
+                case 'uat':
+                  href = "https://uat.thesystem.co.za/";
+                  break;
+                default:
+                  port = 0;
+                  break;
+              }
+
+              Emailer.sendEmail(
+                'creation',
+                email,
+                'Welcome to The System',
+                'Welcome to The System',
+                `
+                  <p>${newUser.firstName}, you have been registered as a new user on The System.</p>
+                  <p>Please click <a href=${href} target="_blank">here</a> to be taken to the login page. Your password will be sent to you by your supervisor.</p>
+                  <br /><br />
+                  <p>The System Team</p>
+                `
+              );
+            }
             result(null, res);
           }
         });

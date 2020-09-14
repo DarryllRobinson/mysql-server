@@ -45,6 +45,24 @@ User.resetPassword = function(user, result) {
     } else {
       console.log('resetPassword res: ', res);
       if (res.length > 0) {
+        let href = "";
+        switch (process.env.REACT_APP_STAGE) {
+          case 'development':
+            href = "http://localhost:3000/reset";
+            break;
+          case 'production':
+            href = "https://thesystem.co.za/reset";
+            break;
+          case 'sit':
+            href = "https://sit.thesystem.co.za/reset";
+            break;
+          case 'uat':
+            href = "https://uat.thesystem.co.za/reset";
+            break;
+          default:
+            port = 0;
+            break;
+        }
         Emailer.sendEmail(
           'reset',
           email,
@@ -52,11 +70,10 @@ User.resetPassword = function(user, result) {
           'You requested a password reset',
           `
             <p>We received a request to reset your password on The System.</p>
-            <p>Please click <a href="https://thesystem.co.za/reset" target="_blank">here</a> to be taken to the password reset page.</p>
+            <p>Please click <a href=${href} target="_blank">here</a> to be taken to the password reset page.</p>
             <br /><br />
             <p>The System Team</p>
-          `,
-          'The System User'
+          `
         );
         result(null, res);
       } else {
@@ -67,19 +84,44 @@ User.resetPassword = function(user, result) {
 }
 
 // Change a password
-User.changePassword = async function(email, change, result) {
+User.changePassword = function(email, change, result) {
+  console.log('changePassword change email: ', email);
   console.log('changePassword change object: ', change);
   const id = email;
-  const password = change.password;
-  let arr = [];
-  arr.push(change);
-
-  await bulkUpdate('users', arr, id, function(err, res) {
+  sql.query(`SELECT email FROM cws_admin.users WHERE email = ?;`, email, function(err, res) {
     if (err) {
       console.log('changePassword error: ', err);
       result(null, err);
+    } else if (res.length === 0) {
+      console.log('changePassword User not found');
+      result(null, 'User not found');
     } else {
-      result(null, res);
+      console.log('changePassword res: ', res);
+      const password = change.password;
+      console.log('changePassword password: ', password);
+      let arr = [];
+      arr.push(change);
+
+      bulkUpdate('users', arr, id, function(err, res) {
+        if (err) {
+          console.log('changePassword error: ', err);
+          result(null, err);
+        } else {
+          Emailer.sendEmail(
+            'reset_confirmation',
+            email,
+            'The System password reset complete',
+            'The System password reset complete',
+            `
+              <p>Your password on The System has been successfully changed.</p>
+              <p>Please contact your supervisor immediately if you did not request the change.</p>
+              <br /><br />
+              <p>The System Team</p>
+            `
+          );
+          result(null, res);
+        }
+      });
     }
   });
 }

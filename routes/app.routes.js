@@ -5,6 +5,7 @@ module.exports = function(app) {
   const coll = require('../controllers/collections.controller');
   const storage = require('../controllers/storage.controller');
   const users = require('../controllers/users.controller');
+  const clients = require('../controllers/clients.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -98,7 +99,7 @@ module.exports = function(app) {
   app.route('/api/admin/user/reset')
     .post(users.reset_password);
 
-  app.route('/api/admin/user/change/:email')
+  app.route('/api/admin/user/change')
     .post(users.change_password);
 
   app.route('/api/admin/user/:userId')
@@ -107,6 +108,10 @@ module.exports = function(app) {
 
   app.route('/api/admin/users')
     .get(users.list_all_users);
+
+  // Client dashboard route
+  app.route('/api/client/:workspace/:task/:clientId')
+    .get(clients.list_all);
 
   // Clients
   app.route('/api/admin/clients')

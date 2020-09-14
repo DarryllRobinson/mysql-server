@@ -1,15 +1,15 @@
-const UserModel = require('../admin/models/users.model');
+const Client = require('../business/models/clients.model');
 
-// List all users
-exports.list_all_users = function(req, res) {
-  console.log('list_all_users req.params: ', req.params);
+// List all
+exports.list_all = function(req, res) {
+  console.log('Client list_all req.params: ', req.params);
   const clientId = req.params.clientId;
 
-  UserModel.getAllUsers(clientId, function(err, users) {
+  Client.getAll(clientId, function(err, clients) {
     if (err) {
-      console.log('UserModel.getAllUsers controller error: ', err);
+      console.log('Client.getAll controller error: ', err);
     } else {
-      res.send(users);
+      res.send(clients);
     }
   });
 }
@@ -18,7 +18,7 @@ exports.list_all_users = function(req, res) {
 exports.delete_user = function(req, res) {
   console.log('delete_user req.params: ', req.params);
   //const userId =
-  UserModel.deleteUser(req.params.userId, function(err, user) {
+  Client.deleteUser(req.params.userId, function(err, user) {
     if (err) {
       console.log('deleteUser controller error: ', err);
     } else {
@@ -30,7 +30,7 @@ exports.delete_user = function(req, res) {
 // update a user
 exports.update_user = function(req, res) {
   console.log('update_user req.body: ', req.body);
-  UserModel.updateUser(req.body, function(err, user) {
+  Client.updateUser(req.body, function(err, user) {
     if (err) {
       console.log('updateUser controller error: ', err);
     } else {
@@ -43,15 +43,17 @@ exports.update_user = function(req, res) {
 exports.change_password = function(req, res) {
   //console.log('change_password req.params: ', req.params);
   console.log('change_password req.body: ', req.body);
-  UserModel.changePassword(req.body.email, req.body, function(err, user) {
+  Client.changePassword(req.body.email, req.body, function(err, user) {
     if (err) {
       console.log('changePassword controller error: ', err);
-    } else if (user === 'User not found') {
-      console.log('users.controller.change_password: ', user);
-      res.send('User not found');
     } else {
-      console.log('changePassword controller user: ', user);
-      res.send(user);
+      if (user === 'User not found') {
+        console.log('users.controller.change_password: ', user);
+        res.send('User not found');
+      } else {
+        console.log('changePassword controller user: ', user);
+        res.send(user);
+      }
     }
   });
 }
@@ -59,7 +61,7 @@ exports.change_password = function(req, res) {
 // reset a password
 exports.reset_password = function(req, res) {
   console.log('reset_password req.body: ', req.body);
-  UserModel.resetPassword(req.body, function(err, user) {
+  Client.resetPassword(req.body, function(err, user) {
     if (err) {
       console.log('resetPassword controller error: ', err);
     } else {

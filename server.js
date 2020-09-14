@@ -279,9 +279,10 @@ cron.schedule('*/1 * * * *', () => {
       res.forEach(record => {
         let customer = {
           customerRefNo: record.customerRefNo,
-          companyName: record.companyName,
-          regNumber: record.regNumber,
-          customerType: record.customerType,
+          customerName: record.customerName,
+          customerEntity: record.customerEntity,
+          regIdNumber: record.regNumber,
+          customerType: record.regIdNumber,
           productType: record.productType,
           address1: record.address1,
           address2: record.address2,

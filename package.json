@@ -2,7 +2,7 @@
   "name": "mysql-server",
   "version": "1.0.0",
   "description": "MySQL server for all The System requests",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,301 @@
+[2020-09-08T02:11:50.629Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$t4VOKBAXdnIa5JTV5xodbeZXxYLp4mNAh0LlhOYhk12Y2FHYpZFWW","updatedDate":"2020-09-08 12:11:50","updatedBy":"a@a.com"} - ms
+[2020-09-08T02:28:43.451Z] ::1 [object Object] POST /api/admin/user/change 200 {"password":"$2a$10$dhfV617CRxQNPcsS/OT1a.B1I5MaSfDCvqewjskEGjVEPZiWnwhTm","updatedDate":"2020-09-08 12:28:43","updatedBy":"a@a.com"} 4.195 ms
+[2020-09-08T02:30:19.586Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-08 12:30:19"} 353.272 ms
+[2020-09-08T02:30:19.906Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 58.968 ms
+[2020-09-08T02:30:20.022Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 91.172 ms
+[2020-09-08T02:30:37.621Z] ::1 email@email.com POST /api/admin/user/change 200 {"password":"$2a$10$3AjtoOthDmnIthziYsetZ.Uj1lz/0e.osGpfEIwkTKb.a1Fj5R2rq","updatedDate":"2020-09-08 12:30:37","updatedBy":"a@a.com"} 15.274 ms
+[2020-09-08T02:33:30.692Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$YxfZcQo02GBrWzu9NsH0U.abrv8JIhgv5AlHxBsKY/16CyrsjotRa","updatedDate":"2020-09-08 12:33:30","updatedBy":"a@a.com"} - ms
+[2020-09-08T02:35:49.833Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$4OeIBIH7ce7OHovVFbpg0.ygtCCIABXWHNx/pM7WMrZxkf7v8wG5W","updatedDate":"2020-09-08 12:35:49","updatedBy":"a@a.com"} - ms
+[2020-09-08T02:42:13.439Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$3o67LpYiBnglLkb79VS0YeGIWNKNVa8fNYCzFQL.mUiTUxFoY/dSS","updatedDate":"2020-09-08 12:42:13","updatedBy":"a@a.com"} - ms
+[2020-09-08T02:43:39.978Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$XeFCpp10YpRmy30IVw7fMe9RsHKyurRZL.kOlX/xb70ZafGg96u/i","updatedDate":"2020-09-08 12:43:39","updatedBy":"a@a.com"} - ms
+[2020-09-08T02:45:31.643Z] ::1 [object Object] POST /api/admin/user/change 200 {"password":"$2a$10$LkGYmfURFlao6ZudDmpUj.BWYe19.LKatFmJKHSgLYyEsQDgE9DhO","updatedDate":"2020-09-08 12:45:31","updatedBy":"a@a.com"} 1.648 ms
+[2020-09-08T02:46:28.648Z] ::1 [object Object] POST /api/admin/user/change 200 {"password":"$2a$10$4wVe9Frtn2N.Yd747dYke.qT0G0LZM8NTjY/viiSL3eTHLxFILXfm","updatedDate":"2020-09-08 12:46:28","updatedBy":"a@a.com"} 2.313 ms
+[2020-09-08T02:47:45.423Z] ::1 [object Object] POST /api/admin/user/change 200 {"password":"$2a$10$QPRkHu8p/H7snXCQOlriOe52mOIx7d4EnYlqC4zkWg5kFQv3VGXRe","updatedDate":"2020-09-08 12:47:45","updatedBy":"a@a.com"} 10.465 ms
+[2020-09-08T03:01:04.870Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$ct5QOGRRH.qkEEykufKbBO/PafV9/862ZFgDUYwg//EOe8bpGHF6y","updatedDate":"2020-09-08 13:01:04","updatedBy":"a@a.com"} - ms
+[2020-09-08T03:04:23.856Z] ::1 [object Object] POST /api/admin/user/change 200 {"password":"$2a$10$mRHrrxUzVqV29sbLjbYyLu9pf7cpHnPmay24Mq2LiB9CqvOlB5xjq","updatedDate":"2020-09-08 13:04:23","updatedBy":"a@a.com"} 18.752 ms
+[2020-09-08T03:07:00.129Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$takLdOXmvWjDQSFQd4uqt.on0PqmJ/hbTfw2ULivHH1lhb3XaS.YK","updatedDate":"2020-09-08 13:07:00","updatedBy":"a@a.com"} - ms
+[2020-09-08T03:09:05.553Z] ::1 [object Object] POST /api/admin/user/change 200 {"password":"$2a$10$8vclyNvsJv5.GQ5g8jx1cOQPmQj8/1DWK.rFPxaIwowatdWC9XGf.","updatedDate":"2020-09-08 13:09:05","updatedBy":"a@a.com"} 9.349 ms
+[2020-09-08T03:10:12.083Z] ::1 [object Object] POST /api/admin/user/change/a@a.com 200 {"password":"$2a$10$bJrXWOUzgXNCt.5KzRb.OuRRxsZFPpfioo2V2llFrvE.sixwiQFG6","updatedDate":"2020-09-08 13:10:12","updatedBy":"a@a.com"} 2.762 ms
+[2020-09-08T03:10:56.253Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$mHmcvwf94Ijr27SA6iY8LOGGOZZ6Fy95U2vLR0DDu6Oz4YomPOhyC","updatedDate":"2020-09-08 13:10:56","updatedBy":"a@a.com"} - ms
+[2020-09-08T03:13:00.117Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$gDKSGpLFETE7A7kzj82tA.oXzjzz5nY.H4q4IMFJaQ7pUcXN8jX7.","updatedDate":"2020-09-08 13:13:00","updatedBy":"a@a.com"} - ms
+[2020-09-08T03:16:06.110Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$WHTmpg9mIUiKPdrYIL.0AOmBkzYVPH1MU8O5GE8vnrxZAlaN1j5ju","updatedDate":"2020-09-08 13:16:06","updatedBy":"a@a.com"} - ms
+[2020-09-08T03:16:50.738Z] ::1 [object Object] POST /api/admin/user/change/a@a.com 200 {"password":"$2a$10$nhWjCY0TLjpTcW85bvNc.em3zTqGODvj/Jc.AiZhnNCl/CNGQnpBy","updatedDate":"2020-09-08 13:16:50","updatedBy":"a@a.com"} 0.957 ms
+[2020-09-08T03:17:37.477Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$Ol7sDH4lIlWnlv6XrbZDDedy12PalEb1EpbbD7KpbK2R/2KGFtIDq","updatedDate":"2020-09-08 13:17:37","updatedBy":"a@a.com"} - ms
+[2020-09-08T03:18:31.400Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$l0yfM42U1Azxy1H9/cjuS.VBkpBE.od7AyktEkwmKeNwv5Nxv8eHi","updatedDate":"2020-09-08 13:18:31","updatedBy":"a@a.com"} - ms
+[2020-09-08T03:23:01.245Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$/vUn31QnXYHIWsqLPPjEGeUac1UafHxRxbT9fMfnxKM/21.sFNnSa","updatedDate":"2020-09-08 13:23:01","updatedBy":"a@a.com"} - ms
+[2020-09-08T03:26:39.431Z] ::1 [object Object] POST /api/admin/user/change 200 {"password":"$2a$10$iNme9KH2UwrlfZEcMv5gGOJmuTgWE8lA4p2vwVJbQ0gx7oNn4LY3a","updatedDate":"2020-09-08 13:26:36","updatedBy":"a@a.com"} 6.604 ms
+[2020-09-08T04:02:31.184Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$m.j/720.I43VrMfUOILjseZ9HFoozCI/nz9abuDx/KnbN8U1Favsq","updatedDate":"2020-09-08 14:02:31","updatedBy":"darryllrobinson@icloud.com"} - ms
+[2020-09-08T04:04:18.996Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$YQCv6ydHG6zIUSVovni3UuMxLRDQGhAnoAhywbfGSCVx0Umgh87BG","updatedDate":"2020-09-08 14:04:18","updatedBy":"test@email.com"} - ms
+[2020-09-08T04:09:22.323Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$Fyf7AXXKnSY7JWXX/03V/.2FMbZbD9/0.irwz1bf7jsgcWjF9F6R2","updatedDate":"2020-09-08 14:09:22","updatedBy":"tet@isscloud.com"} - ms
+[2020-09-08T04:13:14.488Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$14WxSAQU.za61QhJPDZKOOwwibsFt3kyular3NipRh1V.ddh6sjeG","updatedDate":"2020-09-08 14:13:14","updatedBy":"tet@isscloud.com"} - ms
+[2020-09-08T04:14:12.902Z] ::1 [object Object] POST /api/admin/user/change - {"password":"$2a$10$ggvWUzLOtOyEAYspQuQU4.3BSL0fSWaIAsh0.d6fzlb6/yDa0MFSW","updatedDate":"2020-09-08 14:14:12","updatedBy":"tet@isscloud.com"} - ms
+[2020-09-08T04:15:55.457Z] ::1 [object Object] POST /api/admin/user/change - {"email":"tet@isscloud.com","password":"$2a$10$ed20TciDmUByKcQKggRyR.hrJwIDI7DTpBnpmf2J0aUVbeyMqP2bS","updatedDate":"2020-09-08 14:15:55","updatedBy":"tet@isscloud.com"} - ms
+[2020-09-08T04:16:49.786Z] ::1 [object Object] POST /api/admin/user/change - {"email":"tet@isscloud.com","password":"$2a$10$vXSmL7pJx/1oSokn6f1Bdudt2oWCK7.4BOYBQgEsIu.u9D4T2WioW","updatedDate":"2020-09-08 14:16:49","updatedBy":"tet@isscloud.com"} - ms
+[2020-09-08T04:30:41.220Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-08 14:30:41"} 136.988 ms
+[2020-09-08T04:30:41.367Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 27.552 ms
+[2020-09-08T04:30:41.435Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 46.607 ms
+[2020-09-08T04:40:25.012Z] ::1 [object Object] POST /api/admin/user/change - {"email":"tet@isscloud.com","password":"$2a$10$xVyOSv4JGtWtJSTJAwL88.Ue20e7hTTUM/ez0sJIwKZ7gh2ogFnbe","updatedDate":"2020-09-08 14:40:24","updatedBy":"tet@isscloud.com"} - ms
+[2020-09-08T04:59:31.886Z] ::1 [object Object] POST /api/admin/user/change - {"email":"tet@isscloud.com","password":"$2a$10$uwikwkux3Q0mrjV1.7fmje5gAIE4hBgKD1UxQrgrJEgyNXTJuLqQq","updatedDate":"2020-09-08 14:59:31","updatedBy":"tet@isscloud.com"} - ms
+[2020-09-08T05:01:21.863Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-08 15:01:21"} 100.917 ms
+[2020-09-08T05:01:21.965Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 7.950 ms
+[2020-09-08T05:01:22.016Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 20.896 ms
+[2020-09-08T05:01:25.786Z] ::1 email@email.com GET /api/admin/users/1 200 {} 4.356 ms
+[2020-09-08T05:01:25.979Z] ::1 email@email.com GET /api/admin/clients 200 {} 60.826 ms
+[2020-09-08T05:03:26.642Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"Client","email":"darryll@stillproud.com","phone":"01111","password":"$2a$10$F/HGaRbQFhUgoJy.QTZB2eLXFXF9U0h6iZGctl8/klC3iThBBKA46","role":"client","storeId":"1","type":"business","f_clientId":"1","createdDate":"2020-09-08 15:03:26"} 35.679 ms
+[2020-09-08T05:03:45.041Z] ::1 email@email.com POST /api/admin/user 200 {"firstName":"Test","surname":"Client","email":"darryll1@stillproud.com","phone":"01111","password":"$2a$10$3G8vvG/LDNFcv6A/0rK2cu6FVcE/kjvivUvFwGkXbqKUihpNGNT6G","role":"client","storeId":"1","type":"business","f_clientId":"1","createdDate":"2020-09-08 15:03:44"} 59.309 ms
+[2020-09-08T05:03:45.091Z] ::1 email@email.com GET /api/admin/users/1 200 {} 12.029 ms
+[2020-09-08T05:03:51.196Z] ::1 email@email.com DELETE /api/admin/user/53 200 {} 162.170 ms
+[2020-09-08T05:03:51.217Z] ::1 email@email.com GET /api/admin/users/1 200 {} 2.574 ms
+[2020-09-08T05:04:11.786Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-08 15:04:11"} 119.407 ms
+[2020-09-08T05:06:39.540Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 20.153 ms
+[2020-09-08T05:06:39.731Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 47.156 ms
+[2020-09-08T05:11:28.105Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 93.724 ms
+[2020-09-08T05:11:28.313Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 21.052 ms
+[2020-09-08T05:13:03.440Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.118 ms
+[2020-09-08T05:13:03.586Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 31.151 ms
+[2020-09-08T05:13:33.838Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.095 ms
+[2020-09-08T05:13:33.984Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 32.611 ms
+[2020-09-08T05:13:59.143Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-08 15:13:59"} 101.647 ms
+[2020-09-08T05:13:59.220Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 200 {} 17.732 ms
+[2020-09-08T05:14:30.883Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 7.267 ms
+[2020-09-08T05:15:28.382Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 0.824 ms
+[2020-09-08T05:15:51.906Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 12.731 ms
+[2020-09-08T05:17:08.719Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 0.831 ms
+[2020-09-08T05:18:04.055Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 0.949 ms
+[2020-09-08T05:18:11.484Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 1.139 ms
+[2020-09-08T05:19:10.721Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 0.910 ms
+[2020-09-08T05:19:47.140Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 66.628 ms
+[2020-09-08T05:20:02.150Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 63.444 ms
+[2020-09-08T05:20:40.106Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 21.554 ms
+[2020-09-08T05:21:19.905Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 17.018 ms
+[2020-09-08T05:21:59.337Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 116.855 ms
+[2020-09-08T05:38:24.379Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 15.918 ms
+[2020-09-08T05:38:36.502Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 60.980 ms
+[2020-09-08T05:39:20.642Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/6 304 {} 21.017 ms
+[2020-09-08T05:40:29.492Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 74.969 ms
+[2020-09-08T05:40:35.090Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 20.887 ms
+[2020-09-08T05:40:58.401Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 81.842 ms
+[2020-09-08T05:42:11.138Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-08 15:42:11"} 105.418 ms
+[2020-09-08T05:42:11.248Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.153 ms
+[2020-09-08T05:42:11.271Z] ::1 darryll@stillproud.com GET /api/client/[object%20Object]/list_all/1 200 {} 0.448 ms
+[2020-09-08T05:52:13.834Z] ::1 - GET //api/client/collections/list_all/1 404 {} 2.387 ms
+[2020-09-08T05:52:21.313Z] ::1 - GET /api/client/collections/list_all/1 200 {} 64.992 ms
+[2020-09-08T05:52:29.748Z] ::1 - GET /api/client/collections/list_all/1 200 {} 18.396 ms
+[2020-09-08T05:57:39.156Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 43.900 ms
+[2020-09-08T05:57:39.481Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 84.002 ms
+[2020-09-08T05:59:35.414Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 12.926 ms
+[2020-09-08T05:59:35.722Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 19.219 ms
+[2020-09-08T06:00:07.274Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 8.964 ms
+[2020-09-08T06:00:07.483Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 32.120 ms
+[2020-09-08T06:02:35.509Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 113.563 ms
+[2020-09-08T06:02:35.621Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 7.841 ms
+[2020-09-08T06:08:19.382Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.627 ms
+[2020-09-08T06:08:19.482Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 9.512 ms
+[2020-09-08T06:08:45.637Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 124.517 ms
+[2020-09-08T06:08:46.001Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 194.815 ms
+[2020-09-08T06:09:07.398Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 116.174 ms
+[2020-09-08T06:09:07.687Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 55.167 ms
+[2020-09-08T06:09:55.407Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 0.996 ms
+[2020-09-08T06:09:55.532Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 10.374 ms
+[2020-09-08T06:12:49.759Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.019 ms
+[2020-09-08T06:12:49.890Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 8.930 ms
+[2020-09-08T06:13:00.777Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 106.599 ms
+[2020-09-08T06:13:01.127Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 103.309 ms
+[2020-09-08T06:14:48.252Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 0.913 ms
+[2020-09-08T06:14:48.367Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 21.998 ms
+[2020-09-08T06:14:59.744Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-08 16:14:59"} 156.590 ms
+[2020-09-08T06:14:59.906Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 30.682 ms
+[2020-09-08T06:14:59.934Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 15.322 ms
+[2020-09-08T06:15:24.752Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 63.201 ms
+[2020-09-08T06:15:24.902Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 70.544 ms
+[2020-09-08T06:15:32.086Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-08 16:15:31"} 117.790 ms
+[2020-09-08T06:15:32.182Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.343 ms
+[2020-09-08T06:15:32.223Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 13.192 ms
+[2020-09-08T06:16:37.248Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 44.619 ms
+[2020-09-08T06:16:37.343Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 12.184 ms
+[2020-09-08T06:33:44.200Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 61.784 ms
+[2020-09-08T06:33:44.586Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 130.113 ms
+[2020-09-08T06:34:06.754Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 113.460 ms
+[2020-09-08T06:34:06.858Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 11.134 ms
+[2020-09-08T06:34:37.735Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-08 16:34:37"} 120.494 ms
+[2020-09-08T06:40:50.654Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-08 16:40:50"} 138.850 ms
+[2020-09-08T06:40:50.783Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 19.872 ms
+[2020-09-08T06:40:50.967Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 151.226 ms
+[2020-09-08T06:40:58.659Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-08 16:40:58"} 153.991 ms
+[2020-09-08T06:43:27.611Z] ::1 darryll@stillproud.com GET /api/business/collections/list_all/1 200 {} 17.017 ms
+[2020-09-08T06:45:44.342Z] ::1 darryll@stillproud.com GET /api/business/collections/list_all/1 304 {} 74.045 ms
+[2020-09-08T06:45:52.982Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-08 16:45:52"} 99.928 ms
+[2020-09-08T06:45:53.155Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 2.045 ms
+[2020-09-08T06:45:53.177Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 8.622 ms
+[2020-09-08T06:46:05.809Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"clint","loginDate":"2020-09-08 16:46:05"} 101.310 ms
+[2020-09-08T06:46:11.253Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"","password":"client","loginDate":"2020-09-08 16:46:11"} 2.284 ms
+[2020-09-08T06:46:15.890Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"","password":"client","loginDate":"2020-09-08 16:46:15"} 3.672 ms
+[2020-09-08T06:46:22.053Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"","password":"client","loginDate":"2020-09-08 16:46:22"} 3.084 ms
+[2020-09-08T06:46:37.374Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-08 16:46:37"} 104.503 ms
+[2020-09-08T06:46:37.452Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 2.528 ms
+[2020-09-08T06:46:37.541Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 16.647 ms
+[2020-09-08T06:46:45.604Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-08 16:46:45"} 98.146 ms
+[2020-09-08T06:46:45.690Z] ::1 darryll@stillproud.com GET /api/business/collections/list_all/1 304 {} 14.591 ms
+[2020-09-08T06:47:30.482Z] ::1 darryll@stillproud.com GET /api/business/collections/list_all/1 304 {} 237.877 ms
+[2020-09-08T06:48:54.862Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.107 ms
+[2020-09-08T06:48:55.231Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 76.708 ms
+[2020-09-08T06:49:44.537Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 0.937 ms
+[2020-09-08T06:49:44.629Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 8.759 ms
+[2020-09-08T06:50:06.190Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 5.601 ms
+[2020-09-08T06:50:06.464Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 74.281 ms
+[2020-09-08T07:03:27.845Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 103.384 ms
+[2020-09-08T07:03:28.270Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 46.432 ms
+[2020-09-08T07:03:49.169Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.045 ms
+[2020-09-08T07:03:49.420Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 32.931 ms
+[2020-09-08T07:04:01.420Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.868 ms
+[2020-09-08T07:04:01.551Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 10.753 ms
+[2020-09-08T07:05:35.854Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 19.052 ms
+[2020-09-08T07:05:36.024Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 19.174 ms
+[2020-09-08T07:05:42.707Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 108.065 ms
+[2020-09-08T07:05:43.080Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 30.529 ms
+[2020-09-08T07:12:56.664Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.140 ms
+[2020-09-08T07:12:56.821Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 12.674 ms
+[2020-09-08T07:13:18.966Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 22.833 ms
+[2020-09-08T07:13:19.438Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 35.195 ms
+[2020-09-08T07:13:45.086Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 0.898 ms
+[2020-09-08T07:13:45.190Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 11.381 ms
+[2020-09-08T07:14:08.163Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 13.440 ms
+[2020-09-08T07:14:08.320Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 84.320 ms
+[2020-09-08T07:14:24.908Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 3.713 ms
+[2020-09-08T07:14:25.065Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 50.219 ms
+[2020-09-08T07:19:44.548Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.429 ms
+[2020-09-08T07:19:44.768Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 86.997 ms
+[2020-09-08T07:20:11.518Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.334 ms
+[2020-09-08T07:20:11.632Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 10.325 ms
+[2020-09-08T07:21:30.675Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 5.564 ms
+[2020-09-08T07:21:30.869Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 13.393 ms
+[2020-09-08T07:25:22.029Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 22.304 ms
+[2020-09-08T07:25:22.252Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 37.359 ms
+[2020-09-08T07:43:10.234Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 87.075 ms
+[2020-09-08T07:43:10.542Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 95.510 ms
+[2020-09-08T07:44:37.143Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 53.035 ms
+[2020-09-08T07:44:37.410Z] ::1 darryll@stillproud.com GET /api/business/[object%20Object]/list_all/1 304 {} 164.137 ms
+[2020-09-08T07:46:27.527Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 18.324 ms
+[2020-09-08T07:46:27.732Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 200 {} 59.407 ms
+[2020-09-08T07:46:39.159Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 107.077 ms
+[2020-09-08T07:46:39.538Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 10.070 ms
+[2020-09-08T07:49:09.421Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 36.061 ms
+[2020-09-08T07:49:09.859Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 200 {} 95.926 ms
+[2020-09-08T07:56:13.403Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.285 ms
+[2020-09-08T07:56:13.519Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 29.797 ms
+[2020-09-08T07:57:09.780Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.229 ms
+[2020-09-08T07:57:10.111Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 36.730 ms
+[2020-09-08T07:57:32.975Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 25.317 ms
+[2020-09-08T07:57:33.174Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 70.557 ms
+[2020-09-08T07:58:06.465Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 0.990 ms
+[2020-09-08T07:58:06.703Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 52.386 ms
+[2020-09-08T07:58:40.151Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.265 ms
+[2020-09-08T07:58:40.400Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 13.539 ms
+[2020-09-08T07:59:32.175Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 55.727 ms
+[2020-09-08T07:59:32.597Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 155.812 ms
+[2020-09-08T08:01:01.588Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 3.214 ms
+[2020-09-08T08:01:01.911Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 42.843 ms
+[2020-09-08T08:01:14.358Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-08 18:01:14"} 255.430 ms
+[2020-09-08T08:01:14.534Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.452 ms
+[2020-09-08T08:01:14.651Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 23.535 ms
+[2020-09-08T09:31:10.449Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-08 19:31:10"} 105.278 ms
+[2020-09-08T09:31:10.598Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 7.473 ms
+[2020-09-08T09:31:10.707Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 19.784 ms
+[2020-09-08T09:31:29.708Z] ::1 email@email.com GET /api/business/collections/read_item/1/4 200 {} 62.227 ms
+[2020-09-08T09:31:29.790Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/4 200 {} 60.760 ms
+[2020-09-08T09:31:29.823Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/4 200 {} 13.526 ms
+[2020-09-08T09:31:29.857Z] ::1 email@email.com GET /api/admin/resolutions/list_all 200 {} 21.355 ms
+[2020-09-08T09:31:29.876Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 200 {} 7.406 ms
+[2020-09-08T09:31:29.894Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 200 {} 7.400 ms
+[2020-09-08T09:31:29.923Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 200 {} 20.052 ms
+[2020-09-08T09:31:29.958Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 200 {} 24.548 ms
+[2020-09-08T09:31:30.195Z] ::1 email@email.com PUT /api/business/cases/update_item/1/4 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-08 19:31:30\""} 114.307 ms
+[2020-09-08T09:35:33.963Z] ::1 email@email.com PUT /api/business/customers/update_item/1/AIM101 200 {"cipcStatus":" cipcStatus = \"null\"","updatedBy":" updatedBy = \"email@email.com\"","updatedDate":" updatedDate = \"2020-09-08 19:35:33\""} 8.271 ms
+[2020-09-08T09:35:34.077Z] ::1 email@email.com PUT /api/business/accounts/update_item/1/AIM101 200 {"accountStatus":" accountStatus = \"Open\"","lastPTPDate":" lastPTPDate = \"2020-09-30\"","lastPTPAmount":" lastPTPAmount = \"56234\"","updatedBy":" updatedBy = \"email@email.com\"","updatedDate":" updatedDate = \"2020-09-08 19:35:33\""} 94.469 ms
+[2020-09-08T09:35:34.093Z] ::1 email@email.com PUT /api/business/cases/update_item/1/4 200 {"currentStatus":" currentStatus = \"Open\"","nextVisitDateTime":" nextVisitDateTime = \"2020-10-01 00:00:00\"","updatedBy":" updatedBy = \"email@email.com\"","updatedDate":" updatedDate = \"2020-09-08 19:35:33\""} 8.278 ms
+[2020-09-08T09:35:34.115Z] ::1 email@email.com POST /api/business/outcomes/create_item/1 200 {"createdBy":"email@email.com","outcomeStatus":"Closed","transactionType":"Call","numberCalled":"11111","emailUsed":null,"contactPerson":"xx","outcome":"Customer made PTP","outcomeNotes":"Customer made PTP","ptpDate":"2020-09-30 00:00:00","ptpAmount":56234,"nextSteps":"To follow up","closedDate":"2020-09-08 19:35:33","closedBy":"email@email.com","f_caseNumber":4} 13.933 ms
+[2020-09-08T09:35:34.299Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 30.013 ms
+[2020-09-08T09:35:42.792Z] ::1 email@email.com GET /api/business/collections/read_item/1/4 200 {} 12.487 ms
+[2020-09-08T09:35:42.846Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/4 200 {} 30.823 ms
+[2020-09-08T09:35:42.878Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/4 304 {} 2.566 ms
+[2020-09-08T09:35:42.896Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 0.942 ms
+[2020-09-08T09:35:42.916Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 2.868 ms
+[2020-09-08T09:35:42.938Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 3.735 ms
+[2020-09-08T09:35:42.968Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 3.585 ms
+[2020-09-08T09:35:42.986Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 1.249 ms
+[2020-09-08T09:35:43.177Z] ::1 email@email.com PUT /api/business/cases/update_item/1/4 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-08 19:35:43\""} 103.998 ms
+[2020-09-09T01:51:08.806Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-09 11:51:08"} 204.689 ms
+[2020-09-09T01:51:09.062Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 119.549 ms
+[2020-09-09T01:51:09.173Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 96.224 ms
+[2020-09-09T02:27:28.370Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-09 12:27:28"} 107.879 ms
+[2020-09-09T02:27:28.455Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 2.645 ms
+[2020-09-09T02:27:28.545Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 37.875 ms
+[2020-09-09T04:37:32.129Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"darryll@stillproud.com","password":"client","loginDate":"2020-09-09 14:37:31"} 221.737 ms
+[2020-09-09T04:37:32.302Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 200 {} 76.211 ms
+[2020-09-09T04:37:32.399Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 200 {} 84.859 ms
+[2020-09-09T04:43:24.370Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 6.979 ms
+[2020-09-09T04:43:24.662Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 26.160 ms
+[2020-09-09T04:52:25.110Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 7.743 ms
+[2020-09-09T04:52:25.489Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 127.543 ms
+[2020-09-09T04:52:53.999Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 6.188 ms
+[2020-09-09T04:52:54.366Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 126.525 ms
+[2020-09-09T04:52:58.387Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.245 ms
+[2020-09-09T04:52:58.751Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 13.717 ms
+[2020-09-09T04:53:34.091Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 13.419 ms
+[2020-09-09T04:53:34.498Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 185.603 ms
+[2020-09-09T04:53:46.601Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.541 ms
+[2020-09-09T04:53:46.954Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 29.915 ms
+[2020-09-09T04:54:19.160Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 0.992 ms
+[2020-09-09T04:54:19.658Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 300.857 ms
+[2020-09-09T04:57:30.678Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.161 ms
+[2020-09-09T04:57:31.110Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 195.184 ms
+[2020-09-09T04:58:08.034Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 5.957 ms
+[2020-09-09T04:58:08.303Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 78.144 ms
+[2020-09-09T04:58:48.649Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.592 ms
+[2020-09-09T04:58:49.000Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 83.166 ms
+[2020-09-09T05:00:23.242Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 8.644 ms
+[2020-09-09T05:00:23.529Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 79.296 ms
+[2020-09-09T05:02:08.403Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 24.504 ms
+[2020-09-09T05:02:08.756Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 10.284 ms
+[2020-09-09T05:11:44.981Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 3.505 ms
+[2020-09-09T05:11:45.212Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 19.991 ms
+[2020-09-09T05:15:01.357Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 16.944 ms
+[2020-09-09T05:15:01.669Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 98.025 ms
+[2020-09-09T05:16:13.022Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.078 ms
+[2020-09-09T05:16:13.313Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 12.377 ms
+[2020-09-09T05:18:59.876Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 5.312 ms
+[2020-09-09T05:19:00.157Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 22.429 ms
+[2020-09-09T05:21:01.167Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.144 ms
+[2020-09-09T05:21:01.448Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 27.343 ms
+[2020-09-09T05:24:03.266Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.298 ms
+[2020-09-09T05:24:03.669Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 108.406 ms
+[2020-09-09T05:25:30.851Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 3.904 ms
+[2020-09-09T05:25:31.279Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 201.886 ms
+[2020-09-09T05:30:29.941Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 21.275 ms
+[2020-09-09T05:30:30.252Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 104.047 ms
+[2020-09-09T05:31:20.745Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 77.119 ms
+[2020-09-09T05:31:20.988Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 57.192 ms
+[2020-09-09T05:36:31.578Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 0.903 ms
+[2020-09-09T05:36:31.989Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 161.576 ms
+[2020-09-09T05:37:36.296Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 3.018 ms
+[2020-09-09T05:37:36.618Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 83.051 ms
+[2020-09-09T05:38:04.871Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.125 ms
+[2020-09-09T05:38:05.074Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 19.880 ms
+[2020-09-09T05:38:33.367Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 28.500 ms
+[2020-09-09T05:38:33.545Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 19.208 ms
+[2020-09-09T05:39:41.026Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 12.404 ms
+[2020-09-09T05:39:41.307Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 75.167 ms
+[2020-09-09T05:40:17.668Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 3.223 ms
+[2020-09-09T05:40:17.935Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 20.539 ms
+[2020-09-09T05:41:16.402Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.330 ms
+[2020-09-09T05:41:16.745Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 17.006 ms
+[2020-09-09T05:44:30.226Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.982 ms
+[2020-09-09T05:44:30.575Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 122.721 ms
+[2020-09-09T05:44:58.441Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 1.056 ms
+[2020-09-09T05:44:58.813Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 86.162 ms
+[2020-09-09T05:47:00.489Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 2.013 ms
+[2020-09-09T05:47:00.716Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 20.233 ms
+[2020-09-09T05:47:55.901Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 36.820 ms
+[2020-09-09T05:47:55.998Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 15.095 ms
+[2020-09-09T05:49:10.589Z] ::1 darryll@stillproud.com GET /api/admin/clientservices/1 304 {} 13.707 ms
+[2020-09-09T05:49:10.978Z] ::1 darryll@stillproud.com GET /api/client/collections/list_all/1 304 {} 185.100 ms

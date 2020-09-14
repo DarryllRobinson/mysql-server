@@ -7,7 +7,7 @@ const Emailer = async function(email) {
   console.log('email in const: ', email);
 };
 
-Emailer.sendEmail = async function(purpose, to, subject, text, html, firstName) {
+Emailer.sendEmail = async function(purpose, to, subject, text, html) {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
