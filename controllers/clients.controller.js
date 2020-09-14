@@ -17,7 +17,7 @@ exports.list_all = function(req, res) {
 // Add a client
 exports.create_client = function(req, res) {
   console.log('create_client req.body: ', req.body);
-  //const userId =
+  //const clientId =
   Client.addClient(req.body, function(err, client) {
     if (err) {
       console.log('addClient controller error: ', err);
@@ -27,27 +27,27 @@ exports.create_client = function(req, res) {
   });
 }
 
-// delete a user
-exports.delete_user = function(req, res) {
-  console.log('delete_user req.params: ', req.params);
-  //const userId =
-  Client.deleteUser(req.params.userId, function(err, user) {
+// delete a client
+exports.delete_client = function(req, res) {
+  console.log('delete_client req.params: ', req.params);
+  //const clientId =
+  Client.deleteClient(req.params.clientId, function(err, client) {
     if (err) {
-      console.log('deleteUser controller error: ', err);
+      console.log('deleteClient controller error: ', err);
     } else {
-      res.send(user);
+      res.send(client);
     }
   });
 }
 
-// update a user
-exports.update_user = function(req, res) {
-  console.log('update_user req.body: ', req.body);
-  Client.updateUser(req.body, function(err, user) {
+// update a client
+exports.update_client = function(req, res) {
+  console.log('update_client req.body: ', req.body);
+  Client.updateClient(req.body, function(err, client) {
     if (err) {
-      console.log('updateUser controller error: ', err);
+      console.log('updateClient controller error: ', err);
     } else {
-      res.send(user);
+      res.send(client);
     }
   });
 }
@@ -56,16 +56,16 @@ exports.update_user = function(req, res) {
 exports.change_password = function(req, res) {
   //console.log('change_password req.params: ', req.params);
   console.log('change_password req.body: ', req.body);
-  Client.changePassword(req.body.email, req.body, function(err, user) {
+  Client.changePassword(req.body.email, req.body, function(err, client) {
     if (err) {
       console.log('changePassword controller error: ', err);
     } else {
-      if (user === 'User not found') {
-        console.log('users.controller.change_password: ', user);
-        res.send('User not found');
+      if (client === 'Client not found') {
+        console.log('clients.controller.change_password: ', client);
+        res.send('Client not found');
       } else {
-        console.log('changePassword controller user: ', user);
-        res.send(user);
+        console.log('changePassword controller client: ', client);
+        res.send(client);
       }
     }
   });
@@ -74,11 +74,11 @@ exports.change_password = function(req, res) {
 // reset a password
 exports.reset_password = function(req, res) {
   console.log('reset_password req.body: ', req.body);
-  Client.resetPassword(req.body, function(err, user) {
+  Client.resetPassword(req.body, function(err, client) {
     if (err) {
       console.log('resetPassword controller error: ', err);
     } else {
-      res.send(user);
+      res.send(client);
     }
   });
 }
