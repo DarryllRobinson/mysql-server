@@ -1,4 +1,4 @@
-const Client = require('../business/models/clients.model');
+const Client = require('../admin/models/clients.model');
 
 // List all
 exports.list_all = function(req, res) {
@@ -10,6 +10,19 @@ exports.list_all = function(req, res) {
       console.log('Client.getAll controller error: ', err);
     } else {
       res.send(clients);
+    }
+  });
+}
+
+// Add a client
+exports.create_client = function(req, res) {
+  console.log('create_client req.body: ', req.body);
+  //const userId =
+  Client.addClient(req.body, function(err, client) {
+    if (err) {
+      console.log('addClient controller error: ', err);
+    } else {
+      res.send(client);
     }
   });
 }

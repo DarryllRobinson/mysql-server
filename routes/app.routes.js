@@ -115,7 +115,8 @@ module.exports = function(app) {
 
   // Clients
   app.route('/api/admin/clients')
-    .get(sessions.list_all_clients);
+    .get(sessions.list_all_clients)
+    .post(clients.create_client);
 
   // Services
   app.route('/api/admin/clientservices/:clientId')
