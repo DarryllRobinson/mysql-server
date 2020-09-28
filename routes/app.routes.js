@@ -109,6 +109,12 @@ module.exports = function(app) {
   app.route('/api/admin/users')
     .get(users.list_all_users);
 
+  app.route('/api/admin/users/deactivate/:userId')
+    .put(users.deactivate_user);
+
+  app.route('/api/admin/users/reactivate/:userId')
+    .put(users.reactivate_user);
+
   // Client dashboard route
   app.route('/api/client/:workspace/:task/:clientId')
     .get(clients.list_all);
@@ -121,9 +127,18 @@ module.exports = function(app) {
   app.route('/api/admin/clients/:clientId')
     .delete(clients.delete_client);
 
+  app.route('/api/admin/clients/deactivate/:clientId')
+    .put(clients.deactivate_client);
+
+  app.route('/api/admin/clients/reactivate/:clientId')
+    .put(clients.reactivate_client);
+
   // Services
   app.route('/api/admin/clientservices/:clientId')
     .get(sessions.list_all_by_clientId);
+
+  app.route('/api/admin/clientservices')
+    .post(clients.create_clientservices);
 
   // Resolutions etc.
   app.route('/api/admin/:workspace/:task')

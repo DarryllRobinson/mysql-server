@@ -1,0 +1,4 @@
+[2020-09-24T02:20:48.029Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"","password":"","loginDate":"2020-09-24 12:20:47"} 381.967 ms
+[2020-09-24T02:21:29.259Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-24 12:21:29"} 149.331 ms
+[2020-09-24T02:21:29.454Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 75.359 ms
+[2020-09-24T02:21:29.664Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 197.974 ms

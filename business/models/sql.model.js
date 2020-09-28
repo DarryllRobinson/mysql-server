@@ -117,7 +117,7 @@ Model.getOneCase = function(table, clientId, recordId, result) {
      AND accounts.accountNumber = cases.f_accountNumber
      AND contacts.f_accountNumber = accounts.accountNumber
      AND customers.f_clientId = ${clientId}
-     AND cases.caseNumber = ?;`, recordId, function(err, res) {
+     AND cases.caseId = ?;`, recordId, function(err, res) {
     if (err) {
       console.log('getOneCase error: ', err);
       result(null, err);
@@ -134,9 +134,9 @@ Model.getOutcomesForCase = function(table, clientId, recordId, result) {
      WHERE customers.customerRefNo = accounts.f_customerId
      AND accounts.accountNumber = cases.f_accountNumber
      AND contacts.f_accountNumber = accounts.accountNumber
-     AND cases.caseNumber = outcomes.f_caseNumber
+     AND cases.caseId = outcomes.f_caseId
      AND customers.f_clientId = ${clientId}
-     AND cases.caseNumber = ?
+     AND cases.caseId = ?
      ORDER BY outcomes.closedDate DESC;`, recordId, function(err, res) {
     if (err) {
       console.log('getOutcomesForCase error: ', err);
@@ -159,7 +159,7 @@ Model.getContactsForCase = function(table, clientId, recordId, result) {
       AND contacts.f_accountNumber = accounts.accountNumber
       AND accounts.accountNumber = cases.f_accountNumber
       AND customers.f_clientId = ${clientId}
-      AND cases.caseNumber = ?;`, recordId, function(err, res) {
+      AND cases.caseId = ?;`, recordId, function(err, res) {
     if (err) {
       console.log('getContactsForCase error: ', err);
       result(null, err);
@@ -213,8 +213,11 @@ async function bulkUpdate(table, objectArray, id, callback) {
     case 'accounts':
       identifier = 'accountNumber';
       break;
+    case 'contacts':
+      identifier = 'f_accountNumber';
+      break;
     case 'cases':
-      identifier = 'caseNumber';
+      identifier = 'caseId';
       break;
     default:
       identifier = 'id';
@@ -241,7 +244,7 @@ Model.getAllCollectionsByClientId = function(type, workspace, task, clientId, re
   sql.query(`SELECT * FROM accounts, customers, cases, outcomes
      WHERE accounts.f_customerId = customers.id
      AND cases.f_accountNumber = accounts.accountNumber
-     AND cases.id = outcomes.f_caseNumber
+     AND cases.id = outcomes.f_caseId
      AND f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
       console.log('getAllCollectionsByClientId error: ', err);
@@ -306,7 +309,7 @@ Model.getAllById = function(workspace, clientId, result, table) {
       sql.query(`SELECT * FROM accounts, customers, cases, outcomes
          WHERE accounts.f_customerId = customers.id
          AND cases.f_accountNumber = accounts.accountNumber
-         AND cases.id = outcomes.f_caseNumber
+         AND cases.id = outcomes.f_caseId
          AND f_clientId = ?;`, clientId, function(err, res) {
         if (err) {
           console.log('getAllById error: ', err);

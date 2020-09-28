@@ -41,7 +41,7 @@ connection.connect(function(err) {
   if (err) {
     return console.error('Connection error: ' + err.message);
   }
-  console.log('Connected to the cws_consumer MySQL server');
+  console.log(`Connected to the ${process.env.REACT_APP_STAGE} cws_consumer MySQL server`);
 });
 
 function keepalive() {

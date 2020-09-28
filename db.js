@@ -1,7 +1,7 @@
 'use strict'
 const mysql = require('mysql');
 const dbConfig = require('./.stuff.js');
-//console.log('dbConfig: ', dbConfig);
+console.log('dbConfig: ', dbConfig);
 
 //console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
 let config = '';
@@ -9,7 +9,7 @@ let config = '';
 switch (process.env.REACT_APP_STAGE) {
   case 'development':
     config = dbConfig.devConfig;
-    //console.log('config: ', config);
+    console.log('config: ', config);
     break;
   case 'production':
     config = dbConfig.prodConfig;
@@ -41,7 +41,7 @@ connection.connect(function(err) {
   if (err) {
     return console.error('Connection error: ' + err.message);
   }
-  console.log('Connected to the cws_admin MySQL server');
+  console.log(`Connected to the ${process.env.REACT_APP_STAGE} MySQL server`);
 });
 
 function keepalive() {

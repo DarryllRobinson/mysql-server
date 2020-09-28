@@ -1,78 +1,26 @@
-[2020-09-14T01:42:11.558Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-14 11:42:11"} 174.219 ms
-[2020-09-14T01:42:11.689Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 50.834 ms
-[2020-09-14T01:42:11.767Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 39.363 ms
-[2020-09-14T01:43:16.781Z] ::1 email@email.com GET /api/admin/users/1 200 {} 1.726 ms
-[2020-09-14T01:43:17.099Z] ::1 email@email.com GET /api/admin/clients 200 {} 52.882 ms
-[2020-09-14T01:50:12.239Z] ::1 email@email.com GET /api/admin/users/1 304 {} 59.817 ms
-[2020-09-14T01:50:12.339Z] ::1 email@email.com GET /api/admin/clients 304 {} 3.551 ms
-[2020-09-14T01:51:45.640Z] ::1 email@email.com GET /api/admin/users/1 304 {} 2.662 ms
-[2020-09-14T01:51:45.846Z] ::1 email@email.com GET /api/admin/clients 304 {} 3.624 ms
-[2020-09-14T01:52:13.468Z] ::1 email@email.com GET /api/admin/users/1 304 {} 20.474 ms
-[2020-09-14T01:52:13.710Z] ::1 email@email.com GET /api/admin/clients 304 {} 43.674 ms
-[2020-09-14T01:55:33.787Z] ::1 email@email.com GET /api/admin/users/1 304 {} 3.370 ms
-[2020-09-14T01:55:33.992Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.448 ms
-[2020-09-14T01:55:55.738Z] ::1 email@email.com GET /api/admin/users/1 304 {} 10.473 ms
-[2020-09-14T01:55:56.018Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.328 ms
-[2020-09-14T01:56:00.198Z] ::1 email@email.com GET /api/admin/users/1 304 {} 5.703 ms
-[2020-09-14T01:56:00.750Z] ::1 email@email.com GET /api/admin/clients 304 {} 19.908 ms
-[2020-09-14T01:56:15.197Z] ::1 email@email.com GET /api/admin/users/1 304 {} 10.266 ms
-[2020-09-14T01:56:15.776Z] ::1 email@email.com GET /api/admin/clients 304 {} 123.988 ms
-[2020-09-14T01:57:33.404Z] ::1 email@email.com GET /api/admin/clients/1 200 {} 5.252 ms
-[2020-09-14T01:57:33.643Z] ::1 email@email.com GET /api/admin/clients 304 {} 5.074 ms
-[2020-09-14T01:58:52.543Z] ::1 email@email.com GET /api/admin/clients 304 {} 6.554 ms
-[2020-09-14T01:58:52.745Z] ::1 email@email.com GET /api/admin/clients 304 {} 3.198 ms
-[2020-09-14T02:00:18.141Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.694 ms
-[2020-09-14T02:00:18.362Z] ::1 email@email.com GET /api/admin/clients 304 {} 18.522 ms
-[2020-09-14T02:00:48.472Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.499 ms
-[2020-09-14T02:00:48.710Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.235 ms
-[2020-09-14T02:10:53.494Z] ::1 email@email.com GET /api/admin/clients 304 {} 103.482 ms
-[2020-09-14T02:10:53.661Z] ::1 email@email.com GET /api/admin/clients 304 {} 5.445 ms
-[2020-09-14T02:41:01.525Z] ::1 [object Object] GET /api/admin/clients 304 {} 1.802 ms
-[2020-09-14T02:41:11.555Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-14 12:41:11"} 129.388 ms
-[2020-09-14T02:41:11.681Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 11.425 ms
-[2020-09-14T02:41:11.751Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 10.680 ms
-[2020-09-14T02:41:15.862Z] ::1 email@email.com GET /api/admin/users/1 304 {} 0.867 ms
-[2020-09-14T02:41:16.237Z] ::1 email@email.com GET /api/admin/clients 304 {} 28.990 ms
-[2020-09-14T02:41:21.389Z] ::1 email@email.com GET /api/admin/clients 304 {} 0.834 ms
-[2020-09-14T02:41:21.684Z] ::1 email@email.com GET /api/admin/clients 304 {} 3.882 ms
-[2020-09-14T02:45:50.665Z] ::1 email@email.com GET /api/admin/clients 200 {} 5.241 ms
-[2020-09-14T02:45:50.867Z] ::1 email@email.com GET /api/admin/clients 304 {} 3.418 ms
-[2020-09-14T02:46:31.621Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.134 ms
-[2020-09-14T02:46:31.816Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.605 ms
-[2020-09-14T02:46:54.367Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.268 ms
-[2020-09-14T02:46:54.739Z] ::1 email@email.com GET /api/admin/clients 304 {} 48.683 ms
-[2020-09-14T02:47:07.985Z] ::1 email@email.com GET /api/admin/clients 304 {} 6.201 ms
-[2020-09-14T02:47:08.386Z] ::1 email@email.com GET /api/admin/clients 304 {} 111.330 ms
-[2020-09-14T02:47:31.074Z] ::1 email@email.com GET /api/admin/clients 304 {} 4.542 ms
-[2020-09-14T02:47:31.284Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.870 ms
-[2020-09-14T02:48:47.534Z] ::1 email@email.com GET /api/admin/clients 304 {} 4.732 ms
-[2020-09-14T02:48:47.762Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.047 ms
-[2020-09-14T02:49:44.392Z] ::1 email@email.com GET /api/admin/clients 304 {} 8.538 ms
-[2020-09-14T02:49:44.586Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.247 ms
-[2020-09-14T02:50:24.686Z] ::1 email@email.com GET /api/admin/clients 304 {} 116.111 ms
-[2020-09-14T02:50:25.183Z] ::1 email@email.com GET /api/admin/clients 304 {} 83.491 ms
-[2020-09-14T02:51:24.989Z] ::1 email@email.com GET /api/admin/clients 304 {} 0.939 ms
-[2020-09-14T02:51:25.218Z] ::1 email@email.com GET /api/admin/clients 304 {} 5.324 ms
-[2020-09-14T02:58:58.332Z] ::1 email@email.com GET /api/admin/clients 200 {} 132.296 ms
-[2020-09-14T02:58:58.513Z] ::1 email@email.com GET /api/admin/clients 304 {} 101.307 ms
-[2020-09-14T03:06:50.122Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.404 ms
-[2020-09-14T03:06:50.418Z] ::1 email@email.com GET /api/admin/clients 304 {} 45.592 ms
-[2020-09-14T03:08:05.132Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.006 ms
-[2020-09-14T03:08:05.441Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.673 ms
-[2020-09-14T03:09:07.324Z] ::1 email@email.com GET /api/admin/clients 304 {} 4.038 ms
-[2020-09-14T03:09:07.604Z] ::1 email@email.com GET /api/admin/clients 304 {} 9.062 ms
-[2020-09-14T03:15:02.357Z] ::1 email@email.com GET /api/admin/clients 304 {} 6.944 ms
-[2020-09-14T03:15:02.599Z] ::1 email@email.com GET /api/admin/clients 304 {} 2.123 ms
-[2020-09-14T03:16:03.824Z] ::1 email@email.com GET /api/admin/clients 304 {} 121.642 ms
-[2020-09-14T03:16:03.971Z] ::1 email@email.com GET /api/admin/clients 304 {} 59.752 ms
-[2020-09-14T03:16:48.947Z] ::1 email@email.com POST /api/admin/clients 500 {"name":"test","regNum":"1111/315489/07","email":"a@a.com","phone":"1","mainContact":"a","hasPaid":1,"createdDate":"2020-09-14 13:16:48","createdBy":"email@email.com"} 3.893 ms
-[2020-09-14T03:17:57.251Z] ::1 email@email.com POST /api/admin/clients 200 {"name":"test","regNum":"1111/315489/07","email":"a@a.com","phone":"1","mainContact":"a","hasPaid":1,"createdDate":"2020-09-14 13:17:57","createdBy":"email@email.com"} 32.638 ms
-[2020-09-14T03:17:57.296Z] ::1 email@email.com GET /api/admin/clients 200 {} 25.758 ms
-[2020-09-14T03:20:25.796Z] ::1 email@email.com DELETE /api/admin/client/7 404 {} 2.533 ms
-[2020-09-14T03:21:39.301Z] ::1 email@email.com GET /api/admin/clients 304 {} 7.326 ms
-[2020-09-14T03:21:39.561Z] ::1 email@email.com GET /api/admin/clients 304 {} 62.711 ms
-[2020-09-14T03:21:42.569Z] ::1 email@email.com DELETE /api/admin/client/7 404 {} 2.540 ms
-[2020-09-14T03:22:14.340Z] ::1 email@email.com GET /api/admin/clients 304 {} 42.860 ms
-[2020-09-14T03:22:14.572Z] ::1 email@email.com GET /api/admin/clients 304 {} 1.904 ms
-[2020-09-14T03:22:17.778Z] ::1 email@email.com DELETE /api/admin/clients/7 200 {} 74.402 ms
-[2020-09-14T03:22:17.792Z] ::1 email@email.com GET /api/admin/clients 200 {} 2.023 ms
+[2020-09-28T05:21:11.864Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-09-28 15:21:11"} 179.603 ms
+[2020-09-28T05:21:12.061Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 63.001 ms
+[2020-09-28T05:21:12.255Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 174.451 ms
+[2020-09-28T05:21:18.831Z] ::1 email@email.com GET /api/business/collections/read_item/1/835 200 {} 130.326 ms
+[2020-09-28T05:21:19.018Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/835 200 {} 167.819 ms
+[2020-09-28T05:21:19.063Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/835 304 {} 30.156 ms
+[2020-09-28T05:21:19.082Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 0.936 ms
+[2020-09-28T05:21:19.105Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 12.224 ms
+[2020-09-28T05:21:19.121Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 7.114 ms
+[2020-09-28T05:21:19.134Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 0.783 ms
+[2020-09-28T05:21:19.146Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 0.903 ms
+[2020-09-28T05:21:19.484Z] ::1 email@email.com PUT /api/business/cases/update_item/1/835 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-28 15:21:19\""} 201.287 ms
+[2020-09-28T06:39:17.226Z] ::1 email@email.com PUT /api/business/contacts/update_item/undefined/undefined 200 {"primaryContactName":" primaryContactName = \"Donald Duck\"","primaryContactNumber":" primaryContactNumber = \"0113808099\"","primaryContactEmail":" primaryContactEmail = \"null\"","representativeName":" representativeName = \"RINA VAN DER WESTHUIZEN\"","representativeNumber":" representativeNumber = \"0745337046\"","representativeEmail":" representativeEmail = \"rina@bbkih.com\"","alternativeRepName":" alternativeRepName = \"null\"","alternativeRepNumber":" alternativeRepNumber = \"null\"","alternativeRepEmail":" alternativeRepEmail = \"null\"","otherNumber1":" otherNumber1 = \"null\"","otherNumber2":" otherNumber2 = \"null\"","otherNumber3":" otherNumber3 = \"null\"","otherNumber4":" otherNumber4 = \"null\"","otherNumber5":" otherNumber5 = \"null\"","otherEmail1":" otherEmail1 = \"noah@bbkih.com\"","otherEmail2":" otherEmail2 = \"null\"","otherEmail3":" otherEmail3 = \"null\"","otherEmail4":" otherEmail4 = \"null\"","otherEmail5":" otherEmail5 = \"null\"","dnc1":" dnc1 = \"null\"","dnc2":" dnc2 = \"null\"","dnc3":" dnc3 = \"null\"","dnc4":" dnc4 = \"null\"","dnc5":" dnc5 = \"null\"","updatedDate":" updatedDate = \"2020-09-28\"","updatedBy":" updatedBy = \"email@email.com\""} 18.450 ms
+[2020-09-28T06:41:33.591Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 4.122 ms
+[2020-09-28T06:41:34.286Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 157.183 ms
+[2020-09-28T06:41:37.731Z] ::1 email@email.com GET /api/business/collections/read_item/1/835 200 {} 103.615 ms
+[2020-09-28T06:41:37.815Z] ::1 email@email.com GET /api/business/collections/read_outcomes/1/835 200 {} 60.364 ms
+[2020-09-28T06:41:37.837Z] ::1 email@email.com GET /api/business/collections/read_contacts/1/835 304 {} 2.515 ms
+[2020-09-28T06:41:37.847Z] ::1 email@email.com GET /api/admin/resolutions/list_all 304 {} 0.842 ms
+[2020-09-28T06:41:37.858Z] ::1 email@email.com GET /api/admin/pendreasons/list_all 304 {} 1.140 ms
+[2020-09-28T06:41:37.870Z] ::1 email@email.com GET /api/admin/transactiontypes/list_all 304 {} 0.728 ms
+[2020-09-28T06:41:37.880Z] ::1 email@email.com GET /api/admin/accountstatuses/list_all 304 {} 0.921 ms
+[2020-09-28T06:41:37.890Z] ::1 email@email.com GET /api/admin/cipcstatuses/list_all 304 {} 0.739 ms
+[2020-09-28T06:41:38.081Z] ::1 email@email.com PUT /api/business/cases/update_item/1/835 200 {"currentStatus":" currentStatus = \"Locked\"","lockedDatetime":" lockedDatetime = \"2020-09-28 16:41:37\""} 73.490 ms
+[2020-09-28T06:42:04.732Z] ::1 email@email.com PUT /api/business/contacts/update_item/1/3RD101 200 {"primaryContactName":" primaryContactName = \"Donald Duck\"","primaryContactNumber":" primaryContactNumber = \"0113808099\"","primaryContactEmail":" primaryContactEmail = \"null\"","representativeName":" representativeName = \"RINA VAN DER WESTHUIZEN\"","representativeNumber":" representativeNumber = \"0745337046\"","representativeEmail":" representativeEmail = \"rina@bbkih.com\"","alternativeRepName":" alternativeRepName = \"null\"","alternativeRepNumber":" alternativeRepNumber = \"null\"","alternativeRepEmail":" alternativeRepEmail = \"null\"","otherNumber1":" otherNumber1 = \"null\"","otherNumber2":" otherNumber2 = \"null\"","otherNumber3":" otherNumber3 = \"null\"","otherNumber4":" otherNumber4 = \"null\"","otherNumber5":" otherNumber5 = \"null\"","otherEmail1":" otherEmail1 = \"noah@bbkih.com\"","otherEmail2":" otherEmail2 = \"null\"","otherEmail3":" otherEmail3 = \"null\"","otherEmail4":" otherEmail4 = \"null\"","otherEmail5":" otherEmail5 = \"null\"","dnc1":" dnc1 = \"null\"","dnc2":" dnc2 = \"null\"","dnc3":" dnc3 = \"null\"","dnc4":" dnc4 = \"null\"","dnc5":" dnc5 = \"null\"","updatedDate":" updatedDate = \"2020-09-28\"","updatedBy":" updatedBy = \"email@email.com\""} 3.525 ms
+[2020-09-28T06:51:07.440Z] ::1 email@email.com PUT /api/business/contacts/update_item/1/3RD101 200 {"primaryContactName":" primaryContactName = \"Donald Duck\"","primaryContactNumber":" primaryContactNumber = \"0113808099\"","primaryContactEmail":" primaryContactEmail = \"null\"","representativeName":" representativeName = \"RINA VAN DER WESTHUIZEN\"","representativeNumber":" representativeNumber = \"0745337046\"","representativeEmail":" representativeEmail = \"rina@bbkih.com\"","alternativeRepName":" alternativeRepName = \"null\"","alternativeRepNumber":" alternativeRepNumber = \"null\"","alternativeRepEmail":" alternativeRepEmail = \"null\"","otherNumber1":" otherNumber1 = \"null\"","otherNumber2":" otherNumber2 = \"null\"","otherNumber3":" otherNumber3 = \"null\"","otherNumber4":" otherNumber4 = \"null\"","otherNumber5":" otherNumber5 = \"null\"","otherEmail1":" otherEmail1 = \"noah@bbkih.com\"","otherEmail2":" otherEmail2 = \"null\"","otherEmail3":" otherEmail3 = \"null\"","otherEmail4":" otherEmail4 = \"null\"","otherEmail5":" otherEmail5 = \"null\"","dnc1":" dnc1 = \"null\"","dnc2":" dnc2 = \"null\"","dnc3":" dnc3 = \"null\"","dnc4":" dnc4 = \"null\"","dnc5":" dnc5 = \"null\"","updatedDate":" updatedDate = \"2020-09-28\"","updatedBy":" updatedBy = \"email@email.com\""} 121.274 ms

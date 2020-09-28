@@ -1,5 +1,7 @@
 'use strict'
 const sql = require('../config/db');
+const config = require('../config/config.json');
+const jwt = require('jsonwebtoken');
 const bcrypt = require ('bcryptjs');
 const Emailer = require('../models/emailer');
 
@@ -13,7 +15,7 @@ Session.getServicesByClientId = function(clientId, result) {
       console.log('getServicesByClientId error: ', err);
       result(null, err);
     } else {
-      console.log('getServicesByClientId res: ', res);
+      //console.log('getServicesByClientId res: ', res);
       result(null, res);
     }
   });
@@ -25,7 +27,7 @@ Session.getAllClients = function(result) {
       console.log('getAllClients error: ', err);
       result(null, err);
     } else {
-      console.log('getAllClients res: ', res);
+      //console.log('getAllClients res: ', res);
       result(null, res);
     }
   });
@@ -44,7 +46,7 @@ Session.getConfig = function(table, result) {
 }
 
 Session.createUser = function(newUser, result) {
-  console.log('starting createUser: ', newUser);
+  //console.log('starting createUser: ', newUser);
   const email = newUser.email;
   sql.query(`SELECT email FROM users WHERE email = ?;`, email, function(err, res) {
     if (err) {
@@ -61,7 +63,7 @@ Session.createUser = function(newUser, result) {
             console.log('createUser error: ', err);
             result(null, err);
           } else {
-            console.log('createUser res: ', res);
+            //console.log('createUser res: ', res);
             if (res.length > 0) {
               let href = "";
               switch (process.env.REACT_APP_STAGE) {
@@ -141,31 +143,41 @@ Session.createUser = function(newUser, result) {
 }*/
 
 Session.getUser = function(email, password, result) {
-  console.log('getUser email: ', email);
-  console.log('getUser password: ', password);
-  sql.query(`SELECT firstName, surname, email, role, type, storeId, password, f_clientId FROM users WHERE email = ?;`, email, function(err, res) {
+  //console.log('getUser email: ', email);
+  //console.log('getUser password: ', password);
+  sql.query(`SELECT firstName, surname, email, role, type, storeId, password, f_clientId, active FROM users WHERE email = ?;`, email, function(err, res) {
+    //console.log('------------------------------- res: ', res);
+    //console.log('------------------------------- res[0].active: ', res[0].active);
     if (err) {
       console.log('getUser SELECT error: ', err);
       result(null, err);
     } else if (res.length === 0) {
-      res.push({user: {}});
-      res.push({logged_in: false});
+      res.push({ user: {} });
+      res.push({ logged_in: false });
       console.log('Email user not found in sessions.model.js: ', res);
+      result(null, res);
+    } else if (res[0].active !== 1) {
+      res = [];
+      res.push({ user: {} });
+      res.push({ logged_in: false });
+      console.log('User is not active in sessions.model.js: ', res);
       result(null, res);
     } else {
       // comparing passwords
       bcrypt.compare(password, res[0].password, function(err, match) {
         if (match) {
           console.log('Passwords match');
+          const token = jwt.sign({ sub: res.id }, config.secret, { expiresIn: '7d' });
           res.match = match;
-          res.push({logged_in: true});
-          console.log('Matched res in sessions.model.js: ', res);
+          res.push({ logged_in: true });
+          res.push({ token: token });
+          //console.log('Matched res in sessions.model.js: ', res);
           result(null, res);
         } else {
           console.log('Passwords do not match in sessions.model.js: ', res);
           res = [];
-          res.push({user: {}});
-          res.push({logged_in: false});
+          res.push({ user: {} });
+          res.push({ logged_in: false });
           console.log('Failed authentication in sessions.model.js: ', res);
           result(null, res);
         }

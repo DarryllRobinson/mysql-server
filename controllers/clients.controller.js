@@ -27,6 +27,19 @@ exports.create_client = function(req, res) {
   });
 }
 
+// Add clientservices
+exports.create_clientservices = function(req, res) {
+  console.log('create_clientservices req.body: ', req.body);
+  //const clientId =
+  Client.addClientService(req.body, function(err, client) {
+    if (err) {
+      console.log('addClientService controller error: ', err);
+    } else {
+      res.send(client);
+    }
+  });
+}
+
 // delete a client
 exports.delete_client = function(req, res) {
   console.log('delete_client req.params: ', req.params);
@@ -34,6 +47,30 @@ exports.delete_client = function(req, res) {
   Client.deleteClient(req.params.clientId, function(err, client) {
     if (err) {
       console.log('deleteClient controller error: ', err);
+    } else {
+      res.send(client);
+    }
+  });
+}
+
+// deactivate a client
+exports.deactivate_client = function(req, res) {
+  console.log('deactivate_client req.params: ', req.params);
+  Client.deactivateClient(req.params, function(err, client) {
+    if (err) {
+      console.log('deactivateClient controller error: ', err);
+    } else {
+      res.send(client);
+    }
+  });
+}
+
+// reactivate a client
+exports.reactivate_client = function(req, res) {
+  console.log('reactivate_client req.params: ', req.params);
+  Client.reactivateClient(req.params, function(err, client) {
+    if (err) {
+      console.log('reactivateClient controller error: ', err);
     } else {
       res.send(client);
     }

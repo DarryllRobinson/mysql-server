@@ -34,12 +34,51 @@ Client.addClient = function(client, result) {
   });
 }
 
+// Create clientservices
+Client.addClientService = function(client, result) {
+  console.log('addClientService client: ', client);
+  sql.query(`INSERT INTO clientservices SET ?;`, client, function(err, res) {
+    if (err) {
+      console.log('addClientService error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+}
+
 // Delete
 Client.deleteClient = function(clientId, result) {
   console.log('deleteClient clientId: ', clientId);
   sql.query(`DELETE FROM clients WHERE id = ?;`, [clientId], function(err, res) {
     if (err) {
       console.log('deleteClient error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+}
+
+// Deactivate
+Client.deactivateClient = function(clientId, result) {
+  console.log('deactivateClient clientId: ', clientId);
+  sql.query(`UPDATE clients SET active = 0 WHERE id = ?;`, clientId.clientId, function(err, res) {
+    if (err) {
+      console.log('deactivateClient error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+}
+
+// Reactivate
+Client.reactivateClient = function(clientId, result) {
+  console.log('reactivateClient clientId: ', clientId);
+  sql.query(`UPDATE clients SET active = 1 WHERE id = ?;`, clientId.clientId, function(err, res) {
+    if (err) {
+      console.log('reactivateClient error: ', err);
       result(null, err);
     } else {
       result(null, res);

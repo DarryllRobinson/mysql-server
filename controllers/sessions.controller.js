@@ -9,7 +9,9 @@ exports.auth_user = function(req, res) {
       //console.log('Failed password authentication: ', session);
       res.send(session);
     } else {
-      //console.log('controller auth_user session: ', session);
+      //console.log('controller auth_user session[0]: ', session[0]);
+      //console.log('controller auth_user session[1]: ', session[1]);
+      //console.log('controller auth_user session[2].token: ', session[2].token);
       //console.log('finding the logged_in value: ', session[1].logged_in);
       let response = [];
       let user = {
@@ -19,7 +21,9 @@ exports.auth_user = function(req, res) {
         role: session[0].role,
         type: session[0].type,
         storeId: session[0].storeId,
-        clientId: session[0].f_clientId
+        clientId: session[0].f_clientId,
+        active: session[0].active,
+        token: session[2].token
       };
 
       response.push(user);
@@ -121,14 +125,14 @@ exports.xxxauth = function(req, res) {
     if (err) {
       console.log('createSession controller error: ', err);
     } else {
-      console.log('res.req.body.email: ', res.req.body.email);
+      //console.log('res.req.body.email: ', res.req.body.email);
       Session.getUser(res.req.body.email, function(err, user) {
         if (err) {
           console.log('getUser controller error: ', err);
         } else {
-          console.log('getUser response: ', user);
+          //console.log('getUser response: ', user);
           session = user;
-          console.log('Session session: ', session);
+          //console.log('Session session: ', session);
           res.send(session);
         }
       });
@@ -143,7 +147,7 @@ exports.authCheck = function(req, res) {
     if (err) {
       console.log('checkAuth controller error: ', err);
     } else {
-      console.log('checkAuth: ', session);
+      //console.log('checkAuth: ', session);
       res.send(session);
     }
   });

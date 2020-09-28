@@ -34,6 +34,32 @@ User.deleteUser = function(userId, result) {
   });
 }
 
+// Deactivate
+User.deactivateUser = function(userId, result) {
+  console.log('deactivateUser userId: ', userId);
+  sql.query(`UPDATE users SET active = 0 WHERE id = ?;`, userId.userId, function(err, res) {
+    if (err) {
+      console.log('deactivateUser error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+}
+
+// Reactivate
+User.reactivateUser = function(userId, result) {
+  console.log('reactivateUser userId: ', userId);
+  sql.query(`UPDATE users SET active = 1 WHERE id = ?;`, userId.userId, function(err, res) {
+    if (err) {
+      console.log('reactivateUser error: ', err);
+      result(null, err);
+    } else {
+      result(null, res);
+    }
+  });
+}
+
 // Reset a password
 User.resetPassword = function(user, result) {
   const email = user.email;
@@ -88,7 +114,7 @@ User.changePassword = function(email, change, result) {
   console.log('changePassword change email: ', email);
   console.log('changePassword change object: ', change);
   const id = email;
-  sql.query(`SELECT email FROM cws_admin.users WHERE email = ?;`, email, function(err, res) {
+  sql.query(`SELECT email FROM users WHERE email = ?;`, email, function(err, res) {
     if (err) {
       console.log('changePassword error: ', err);
       result(null, err);
