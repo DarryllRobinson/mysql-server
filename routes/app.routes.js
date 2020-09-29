@@ -6,6 +6,7 @@ module.exports = function(app) {
   const storage = require('../controllers/storage.controller');
   const users = require('../controllers/users.controller');
   const clients = require('../controllers/clients.controller');
+  const email = require('../controllers/email.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -157,6 +158,10 @@ module.exports = function(app) {
     .get(cont.read_item)
     .put(cont.update_item);
     /*.delete(cont.delete_item);*/
+
+  // email route
+  app.route('/api/admin/email')
+    .post(email.send_email);
 
 /*
   // Users
