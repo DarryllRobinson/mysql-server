@@ -12,6 +12,7 @@ const cron = require('node-cron');
 const business_sql = require('./business/config/db');
 const admin_sql = require('./admin/config/db');
 const moment = require('moment');
+const email = require('./controllers/email.controller');
 //const crons = require('./cron.jobs/cron.jobs');
 
 console.log('process.env.REACT_APP_STAGE: ', process.env.REACT_APP_STAGE);
@@ -174,6 +175,63 @@ cron.schedule('*/1 * * * *', () => {
   });
   console.log('business createCustomers complete');
 });
+
+// Cases due today or older email cron
+const taskEmail = cron.schedule('*/1 * * * *', () => {
+  console.log('running business_sql emailToday');
+  business_sql.query(`SELECT * FROM cases
+    WHERE cases.nextVisitDateTime > (Now() - interval 1440 minute)
+    AND cases.nextVisitDateTime IS NOT NULL;`, function(err, res) {
+      if (err) {
+        console.log('business_sql emailToday error: ', err);
+      } else {
+        let usersRaw = [];
+        res.forEach(record => {
+          // get list of users
+          usersRaw.push(record.currentAssignment);
+        });
+
+        const users = usersRaw.filter(onlyUnique);
+        //console.log('users: ', users);
+
+        users.forEach(user => {
+          let casesArray = [];
+          res.forEach((record, idx) => {
+            if (record.currentAssignment === user) {
+              casesArray[idx] = `<p>Case ID ${record.caseId} is due by ${record.nextVisitDateTime}. Click <a href="http://localhost:3000/workzone/collections/collection/${record.caseId}" >here</a> to be taken to the case.</p>`;
+            }
+          });
+          let cases = casesArray.join('\n');
+
+          // send email for each user
+          const emailObject = {
+            purpose: 'emailToday',
+            //to: user,
+            to: 'darryll@thesystem.co.za',
+            subject: 'The System - Cases for today',
+            text: 'Please go to your dashboard to see your work for today',
+            html: `
+              <p>Good morning. Below is your list of cases for today.</p>
+              ${cases}
+            `
+          }
+
+          email.send_today(emailObject);
+
+        });
+
+
+      }
+    });
+
+  console.log('business emailToday complete');
+}, {
+  scheduled: false
+});
+
+function onlyUnique(value, index, self) {
+  return self.indexOf(value) === index;
+}
 
 // Case and Outcome creation cron
 // Don't run now as it confuses things when uploading cases via Excel spreadsheets
