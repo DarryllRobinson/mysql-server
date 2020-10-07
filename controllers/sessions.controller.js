@@ -6,9 +6,10 @@ exports.auth_user = function(req, res) {
     if (err) {
       console.log('auth error: ', err);
     } else if (session[1].logged_in === false) {
-      //console.log('Failed password authentication: ', session);
+      console.log('Failed password authentication: ', session);
       res.send(session);
     } else {
+      console.log('controller auth_user session: ', session);
       //console.log('controller auth_user session[0]: ', session[0]);
       //console.log('controller auth_user session[1]: ', session[1]);
       //console.log('controller auth_user session[2].token: ', session[2].token);
@@ -27,7 +28,10 @@ exports.auth_user = function(req, res) {
       };
 
       response.push(user);
-      response.push({logged_in: true});
+      response.push({
+        logged_in: true,
+        ok: true
+      });
 
       //console.log('Session response: ', response);
       res.send(response);

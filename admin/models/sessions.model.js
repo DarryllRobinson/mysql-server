@@ -154,12 +154,14 @@ Session.getUser = function(email, password, result) {
     } else if (res.length === 0) {
       res.push({ user: {} });
       res.push({ logged_in: false });
+      res.push({ status: 401 });
       console.log('Email user not found in sessions.model.js: ', res);
       result(null, res);
     } else if (res[0].active !== 1) {
       res = [];
       res.push({ user: {} });
       res.push({ logged_in: false });
+      res.push({ status: 401 });
       console.log('User is not active in sessions.model.js: ', res);
       result(null, res);
     } else {
@@ -170,6 +172,7 @@ Session.getUser = function(email, password, result) {
           const token = jwt.sign({ sub: res.id }, config.secret, { expiresIn: '7d' });
           res.match = match;
           res.push({ logged_in: true });
+          res.push({ ok: true });
           res.push({ token: token });
           //console.log('Matched res in sessions.model.js: ', res);
           result(null, res);
@@ -178,6 +181,7 @@ Session.getUser = function(email, password, result) {
           res = [];
           res.push({ user: {} });
           res.push({ logged_in: false });
+          res.push({ status: 401 });
           console.log('Failed authentication in sessions.model.js: ', res);
           result(null, res);
         }

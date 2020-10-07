@@ -7,6 +7,7 @@ module.exports = function(app) {
   const users = require('../controllers/users.controller');
   const clients = require('../controllers/clients.controller');
   const email = require('../controllers/email.controller');
+  const sales = require('../controllers/salesforce.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -162,6 +163,10 @@ module.exports = function(app) {
   // email route
   app.route('/api/admin/email')
     .post(email.send_email);
+
+  // Salesforce callback
+  app.route('/api/salesforce')
+    .post(sales.receive_token);
 
 /*
   // Users

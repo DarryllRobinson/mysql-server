@@ -192,13 +192,30 @@ const taskEmail = cron.schedule('*/1 * * * *', () => {
         });
 
         const users = usersRaw.filter(onlyUnique);
-        //console.log('users: ', users);
+        let api = "";
+        switch (process.env.REACT_APP_STAGE) {
+          case 'development':
+            api = "http://localhost:3000/";
+            break;
+          case 'production':
+            api = "https://thesystem.co.za/";
+            break;
+          case 'sit':
+            api = "https://sit.thesystem.co.za/";
+            break;
+          case 'uat':
+            api = "https://uat.thesystem.co.za/";
+            break;
+          default:
+            port = 0;
+            break;
+        }
 
         users.forEach(user => {
           let casesArray = [];
           res.forEach((record, idx) => {
             if (record.currentAssignment === user) {
-              casesArray[idx] = `<p>Case ID ${record.caseId} is due by ${record.nextVisitDateTime}. Click <a href="http://localhost:3000/workzone/collections/collection/${record.caseId}" >here</a> to be taken to the case.</p>`;
+              casesArray[idx] = `<p>Case ID ${record.caseId} is due by ${record.nextVisitDateTime}. Click <a href="${api}workzone/collections/collection/${record.caseId}" >here</a> to be taken to the case.</p>`;
             }
           });
           let cases = casesArray.join('\n');
