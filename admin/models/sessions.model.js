@@ -9,6 +9,29 @@ const Session = function(model) {
   this.createdDate = new Date();
 };
 
+function ok(body) {
+  return ({
+    ok: true,
+    text: body
+  });
+  //resolve({ ok: true, text: () => Promise.resolve(JSON.stringify(body)) })
+}
+
+function unauthorised() {
+  return ({
+    status: 401,
+    text: 'Unauthorised'
+  });
+  //resolve({ status: 401, text: () => Promise.resolve(JSON.stringify({ message: 'Unauthorised' })) })
+}
+
+function error(message) {
+  return ({
+    status: 400,
+    text: message
+  });
+}
+
 Session.getServicesByClientId = function(clientId, result) {
   sql.query(`SELECT * FROM clientservices WHERE f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
@@ -143,6 +166,49 @@ Session.createUser = function(newUser, result) {
 }*/
 
 Session.getUser = function(email, password, result) {
+  sql.query(`SELECT firstName, surname, email, password, role, type, storeId, f_clientId, active FROM users WHERE email = ?;`, email, function(err, res) {
+    if (err) {
+      //console.log('getUser error: ', err);
+      const errorMsg = error(`getUser SELECT error`);
+      result(null, errorMsg);
+    } else if (res.length === 0) {
+      const errorMsg = error('Username or password is incorrect');
+      result(null, errorMsg);
+    } else {
+      //console.log('getUser res: ', res);
+
+      // check password matches
+      bcrypt.compare(password, res[0].password, function(err, match) {
+        //console.log('password: ', password);
+        //console.log('res[0].password: ', res[0].password);
+        //console.log('match: ', match);
+        if (match) {
+          if (res[0].active !== 1) {
+            const errorMsg = error('User is inactive');
+            result(null, errorMsg);
+          } else {
+            const user = ok({
+              token: jwt.sign({ sub: res.id }, config.secret, { expiresIn: '7d' }),
+              email: res[0].email,
+              firstName: res[0].firstName,
+              surname: res[0].surname,
+              role: res[0].role,
+              type: res[0].type,
+              clientId: res[0].f_clientId
+            });
+            result(null, user);
+          }
+        } else {
+          const errorMsg = error('Username or password is incorrect');
+          result(null, errorMsg);
+        }
+      });
+
+    }
+  })
+}
+
+Session.oldgetUser = function(email, password, result) {
   //console.log('getUser email: ', email);
   //console.log('getUser password: ', password);
   sql.query(`SELECT firstName, surname, email, role, type, storeId, password, f_clientId, active FROM users WHERE email = ?;`, email, function(err, res) {
