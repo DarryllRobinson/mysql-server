@@ -1,6 +1,7 @@
 const Session = require('../admin/models/sessions.model');
 
 exports.auth_user = function(req, res) {
+  //console.log('Session.getUser req.headers: ', req.headers);
   Session.getUser(req.body.email, req.body.password, function(err, session) {
     if (err) {
       console.log('auth error: ', err);

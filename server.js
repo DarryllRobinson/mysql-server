@@ -13,6 +13,8 @@ const business_sql = require('./business/config/db');
 const admin_sql = require('./admin/config/db');
 const moment = require('moment');
 const email = require('./controllers/email.controller');
+const jwt = require('./helpers/jwt');
+const errorHandler = require('./helpers/error-handler');
 //const crons = require('./cron.jobs/cron.jobs');
 
 console.log('process.env.REACT_APP_STAGE: ', process.env.REACT_APP_STAGE);
@@ -52,6 +54,10 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+app.use(jwt());
+// global error handler
+app.use(errorHandler);
 
 //const fileDir = __dirname + '/_uploads';
 //console.log('fileDir: ', fileDir);
