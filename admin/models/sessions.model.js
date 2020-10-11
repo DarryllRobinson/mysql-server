@@ -193,6 +193,7 @@ Session.getUser = function(email, password, result) {
               firstName: res[0].firstName,
               surname: res[0].surname,
               role: res[0].role,
+              storeId: res[0].storeId,
               type: res[0].type,
               clientId: res[0].f_clientId
             });

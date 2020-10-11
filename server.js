@@ -55,6 +55,7 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use(cors());
 app.use(jwt());
 // global error handler
 app.use(errorHandler);
@@ -63,7 +64,6 @@ app.use(errorHandler);
 //console.log('fileDir: ', fileDir);
 console.log('__dirname: ', __dirname);
 
-app.use(cors());
 
 // log HTTP requests to a daily file
 // create a rotating write stream

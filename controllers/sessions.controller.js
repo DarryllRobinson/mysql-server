@@ -51,6 +51,7 @@ exports.oldauth_user = function(req, res) {
 }
 
 exports.list_all_by_clientId = function(req, res) {
+  console.log('list_all_by_clientId');
   Session.getServicesByClientId(req.params.clientId, function(err, session) {
     if (err) {
       console.log('getServicesByClientId controller error: ', err);
