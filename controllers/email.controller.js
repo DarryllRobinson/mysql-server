@@ -1,9 +1,9 @@
 const Email = require('../admin/models/emailer');
 
 // Email error
-exports.send_email = function(req, res) {
-  console.log('Email send_email req.params: ', req.params);
-  console.log('Email send_email req.body: ', req.body);
+exports.send_error_email = function(req, res) {
+  console.log('Email send_error_email req.params: ', req.params);
+  console.log('Email send_error_email req.body: ', req.body);
 
   const purpose = req.body.purpose;
   const to = req.body.to;
@@ -13,7 +13,7 @@ exports.send_email = function(req, res) {
 
   Email.sendEmail(purpose, to, subject, text, html, function(err, email) {
     if (err) {
-      console.log('Email.send_email controller error: ', err);
+      console.log('Email.send_error_email controller error: ', err);
     } else {
       res.send(email);
     }
@@ -26,6 +26,25 @@ exports.send_today = function(req, res) {
   Email.sendEmail(req.purpose, req.to, req.subject, req.text, req.html, function(err, email) {
     if (err) {
       console.log('Email.send_today controller error: ', err);
+    } else {
+      res.send(email);
+    }
+  });
+}
+
+exports.send_email = function(req, res) {
+  console.log('Email send_email req.params: ', req.params);
+  console.log('Email send_email req.body: ', req.body);
+
+  const purpose = req.body.purpose;
+  const to = req.body.to;
+  const subject = req.body.subject;
+  const text = req.body.text;
+  const html = req.body.html;
+
+  Email.sendEmail(purpose, to, subject, text, html, function(err, email) {
+    if (err) {
+      console.log('Email.send_error_email controller error: ', err);
     } else {
       res.send(email);
     }

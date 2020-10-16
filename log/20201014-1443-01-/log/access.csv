@@ -1,0 +1,15 @@
+[2020-10-13T04:55:44.531Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-10-13 14:55:44"} 186.021 ms
+[2020-10-13T04:55:46.119Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 24.128 ms
+[2020-10-13T04:55:46.407Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 69.361 ms
+[2020-10-13T11:44:48.009Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-10-13 21:44:47"} 107.069 ms
+[2020-10-13T11:44:51.458Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.594 ms
+[2020-10-13T11:44:51.544Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 28.939 ms
+[2020-10-13T11:44:53.973Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 3.148 ms
+[2020-10-13T11:44:54.021Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 19.767 ms
+[2020-10-13T11:48:32.780Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 8.096 ms
+[2020-10-13T11:48:32.882Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 37.272 ms
+[2020-10-14T04:40:59.598Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-10-14 14:40:59"} 117.522 ms
+[2020-10-14T04:41:08.458Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 6.461 ms
+[2020-10-14T04:41:08.595Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 107.977 ms
+[2020-10-14T04:41:43.100Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 3.473 ms
+[2020-10-14T04:41:43.153Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 22.967 ms

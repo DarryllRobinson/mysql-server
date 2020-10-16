@@ -188,7 +188,7 @@ Session.getUser = function(email, password, result) {
             result(null, errorMsg);
           } else {
             const user = ok({
-              token: jwt.sign({ sub: res.id }, config.secret, { expiresIn: '7d' }),
+              token: jwt.sign({ sub: res.id }, config.secret, { expiresIn: '1d' }),
               email: res[0].email,
               firstName: res[0].firstName,
               surname: res[0].surname,

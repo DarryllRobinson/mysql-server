@@ -164,6 +164,9 @@ module.exports = function(app) {
   app.route('/api/admin/email')
     .post(email.send_email);
 
+  app.route('/api/admin/error_email')
+    .post(email.send_error_email);
+
   // Salesforce callback
   app.route('/api/salesforce')
     .post(sales.receive_token);
