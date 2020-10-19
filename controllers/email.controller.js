@@ -33,8 +33,8 @@ exports.send_today = function(req, res) {
 }
 
 exports.send_email = function(req, res) {
-  console.log('Email send_email req.params: ', req.params);
-  console.log('Email send_email req.body: ', req.body);
+  //console.log('Email send_email req.params: ', req.params);
+  //console.log('Email send_email req.body: ', req.body);
 
   const purpose = req.body.purpose;
   const to = req.body.to;
@@ -44,7 +44,7 @@ exports.send_email = function(req, res) {
 
   Email.sendEmail(purpose, to, subject, text, html, function(err, email) {
     if (err) {
-      console.log('Email.send_error_email controller error: ', err);
+      console.log('Email.send_email controller error: ', err);
     } else {
       res.send(email);
     }
