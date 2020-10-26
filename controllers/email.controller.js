@@ -2,8 +2,8 @@ const Email = require('../admin/models/emailer');
 
 // Email error
 exports.send_error_email = function(req, res) {
-  console.log('Email send_error_email req.params: ', req.params);
-  console.log('Email send_error_email req.body: ', req.body);
+  //console.log('Email send_error_email req.params: ', req.params);
+  //console.log('Email send_error_email req.body: ', req.body);
 
   const purpose = req.body.purpose;
   const to = req.body.to;

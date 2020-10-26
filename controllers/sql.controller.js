@@ -33,6 +33,16 @@ exports.list_all = function(req, res) {
             }
           });
           break;
+        // shouldn't be needed any longer
+        case 'list_all_report':
+          BusinessModel.getAllForReport(clientId, function(err, model) {
+            if (err) {
+              console.log('BusinessModel.getAllForReport controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
         default:
           console.log('task not found: ', task);
           res.send(task);

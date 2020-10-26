@@ -8,7 +8,7 @@ const Model = function(model) {
 Model.getAllCollections = function(clientId, result) {
   console.log('Running getAllCollections');
   sql.query(`SELECT * FROM customers, accounts, cases
-    WHERE  customers.customerRefNo = accounts.f_customerId
+    WHERE customers.customerRefNo = accounts.f_customerId
     AND accounts.accountNumber = cases.f_accountNumber
     AND customers.f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
@@ -24,7 +24,7 @@ Model.getAllCollections = function(clientId, result) {
 Model.getAllCollectionsForToday = function(clientId, user, result) {
   console.log('Running getAllCollectionsForToday');
   sql.query(`SELECT * FROM customers, accounts, cases
-    WHERE  customers.customerRefNo = accounts.f_customerId
+    WHERE customers.customerRefNo = accounts.f_customerId
     AND accounts.accountNumber = cases.f_accountNumber
     AND cases.nextVisitDateTime > (Now() - interval 1440 minute)
     AND cases.nextVisitDateTime IS NOT NULL
@@ -36,6 +36,24 @@ Model.getAllCollectionsForToday = function(clientId, user, result) {
     } else {
       console.log('getAllCollectionsForToday res: ', res);
       if (res.length > 0) result(null, res);
+    }
+  });
+}
+
+Model.getAllForReport = function(clientId, recordId, result) {
+  console.log('getAllForReport params: ', clientId, recordId);
+  sql.query(`SELECT * FROM customers, accounts, contacts, cases, outcomes
+     WHERE customers.customerRefNo = accounts.f_customerId
+     AND accounts.accountNumber = cases.f_accountNumber
+     AND contacts.f_accountNumber = accounts.accountNumber
+     AND cases.caseId = outcomes.f_caseId
+     AND customers.f_clientId = ${clientId};`, recordId, function(err, res) {
+    if (err) {
+      console.log('getAllForReport error: ', err);
+      result(null, err);
+    } else {
+      console.log('getAllForReport res: ', res);
+      result(null, res);
     }
   });
 }

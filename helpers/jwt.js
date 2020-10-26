@@ -9,7 +9,8 @@ function jwt() {
     path: [
       // public routes that don't require authentication
       '/api/admin/sessions/',
-      '/api/admin/email'
+      '/api/admin/email',
+      '/api/admin/error_email'
     ]
   });
 }
