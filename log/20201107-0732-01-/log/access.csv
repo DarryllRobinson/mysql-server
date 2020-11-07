@@ -1,0 +1,6 @@
+[2020-11-06T11:59:07.516Z] ::1 null POST /api/admin/error_email 200 {"error":"No role found","fileName":"ComponentRoutes.js","user":"user: null role: null","state":"props: {\"history\":{\"length\":18,\"action\":\"POP\",\"location\":{\"pathname\":\"/targets\",\"search\":\"\",\"hash\":\"\"}}}","dateTime":"2020-11-06 21:59:00","path":"/targets","purpose":"error","to":"darryll@thesystem.co.za","subject":"ALERT! Error picked up!"} 6579.994 ms
+[2020-11-06T11:59:49.472Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-11-06 21:59:49"} 160.441 ms
+[2020-11-06T11:59:52.426Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 14.816 ms
+[2020-11-06T11:59:53.174Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 205.465 ms
+[2020-11-06T12:03:54.436Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 12.765 ms
+[2020-11-06T12:03:54.743Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 57.125 ms
