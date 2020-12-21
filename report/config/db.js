@@ -1,7 +1,7 @@
 'use strict'
 const mysql = require('mysql');
 const dbConfig = require('./.stuff.js');
-console.log('dbConfig: ', dbConfig);
+//console.log('dbConfig: ', dbConfig);
 
 //console.log('process.env.NODE_ENV: ', process.env.NODE_ENV);
 let config = '';
@@ -9,18 +9,10 @@ let config = '';
 switch (process.env.REACT_APP_STAGE) {
   case 'development':
     config = dbConfig.devConfig;
-    console.log('config: ', config);
+    //console.log('config: ', config);
     break;
   case 'production':
     config = dbConfig.prodConfig;
-    //console.log('config: ', config);
-    break;
-  case 'sit':
-    config = dbConfig.sitConfig;
-    //console.log('config: ', config);
-    break;
-  case 'uat':
-    config = dbConfig.uatConfig;
     //console.log('config: ', config);
     break;
   default:
@@ -41,24 +33,7 @@ connection.connect(function(err) {
   if (err) {
     return console.error('Connection error: ' + err.message);
   }
-  console.log(`Connected to the ${process.env.REACT_APP_STAGE} MySQL server`);
-});
-
-const reportConfig = dbConfig.reportConfig;
-
-const reportConnection = mysql.createConnection({
-  host: reportConfig.host,
-  user: reportConfig.user,
-  port: reportConfig.port,
-  password: reportConfig.password,
-  database: reportConfig.database
-});
-
-reportConnection.connect(function(err) {
-  if (err) {
-    return console.error('Report connection error: ' + err.message);
-  }
-  console.log(`Connected to the ${process.env.REACT_APP_STAGE} MySQL report server`);
+  console.log(`Connected to the ${process.env.REACT_APP_STAGE} report MySQL server`);
 });
 
 function keepalive() {

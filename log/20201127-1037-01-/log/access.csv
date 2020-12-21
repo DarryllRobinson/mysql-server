@@ -1,0 +1,9 @@
+[2020-11-26T05:43:56.339Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-11-26 15:43:55"} 188.316 ms
+[2020-11-26T05:43:56.753Z] ::1 - POST /api/admin/error_email - {"error":"Get error: Error: Request failed with status code 401","fileName":"MysqlLayer.js","dateTime":"2020-11-26 15:43:56","user":"email@email.com","state":null,"path":"/admin/clientservices/1","purpose":"error","to":"darryll@thesystem.co.za","subject":"ALERT! Error picked up!"} - ms
+[2020-11-26T05:43:58.751Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 103.443 ms
+[2020-11-26T05:44:09.968Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 9251.768 ms
+[2020-11-26T05:52:43.217Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 5.388 ms
+[2020-11-26T05:59:55.192Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 63.437 ms
+[2020-11-26T06:00:19.769Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 156.286 ms
+[2020-11-26T06:01:31.306Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 11.384 ms
+[2020-11-26T06:02:53.593Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 68.556 ms

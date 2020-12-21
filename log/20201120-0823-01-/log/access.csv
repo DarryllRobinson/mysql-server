@@ -1,0 +1,21 @@
+[2020-11-19T04:48:32.826Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-11-19 14:48:32"} 209.908 ms
+[2020-11-19T04:48:36.217Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 40.026 ms
+[2020-11-19T04:48:36.743Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 416.347 ms
+[2020-11-19T04:48:51.129Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 200 {} 2.257 ms
+[2020-11-19T04:49:42.363Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 74.161 ms
+[2020-11-19T04:57:09.090Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 1.000 ms
+[2020-11-19T04:57:15.837Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 27.434 ms
+[2020-11-19T05:20:11.428Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 18.552 ms
+[2020-11-19T05:39:46.810Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 5.548 ms
+[2020-11-19T06:17:40.371Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-11-19 16:17:40"} 213.915 ms
+[2020-11-19T06:17:42.669Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 56.130 ms
+[2020-11-19T06:17:42.869Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 127.288 ms
+[2020-11-19T06:18:27.615Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.915 ms
+[2020-11-19T06:18:27.740Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 47.834 ms
+[2020-11-19T06:18:45.868Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 7.952 ms
+[2020-11-19T06:19:39.523Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 18.299 ms
+[2020-11-19T06:20:36.938Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 26.015 ms
+[2020-11-19T06:22:10.355Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 32.015 ms
+[2020-11-19T06:22:22.476Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 12.263 ms
+[2020-11-19T06:22:40.235Z] ::1 email@email.com GET /api/business/collections/list_all_customers/1 304 {} 39.353 ms
+[2020-11-19T06:22:46.902Z] ::1 email@email.com POST /api/business/customers/create_items/1 200 [{"customerEntity":"Consumer","createdBy":"System Upload - email@email.com","f_clientId":"1"}] 252.542 ms

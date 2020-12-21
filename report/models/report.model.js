@@ -5,14 +5,14 @@ const Model = function(model) {
   this.createdDate = new Date();
 };
 
-Model.getAllCollections = function(clientId, result) {
-  console.log('Running getAllCollections');
+Model.getAgingReport = function(clientId, result) {
+  console.log('Running getAgingReport');
   sql.query(`SELECT * FROM customers, accounts, cases
     WHERE customers.customerRefNo = accounts.f_customerId
     AND accounts.accountNumber = cases.f_accountNumber
     AND customers.f_clientId = ?;`, clientId, function(err, res) {
     if (err) {
-      console.log('getAllCollectionsByClientId error: ', err);
+      console.log('getAgingReport error: ', err);
       result(null, err);
     } else {
       //console.log('collections res: ', res);
@@ -53,20 +53,6 @@ Model.getAllForReport = function(clientId, recordId, result) {
       result(null, err);
     } else {
       console.log('getAllForReport res: ', res);
-      result(null, res);
-    }
-  });
-}
-
-Model.getAllCustomers = function(clientId, result) {
-  console.log('getAllCustomers params: ', clientId);
-  sql.query(`SELECT customerRefNo FROM customers
-     WHERE customers.f_clientId = ?;`, clientId, function(err, res) {
-    if (err) {
-      console.log('getAllCustomers error: ', err);
-      result(null, err);
-    } else {
-      //console.log('**********************getAllCustomers res: ', res);
       result(null, res);
     }
   });

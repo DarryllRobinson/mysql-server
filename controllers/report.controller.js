@@ -1,23 +1,22 @@
-const ConsumerModel = require('../consumer/models/sql.model');
-const BusinessModel = require('../business/models/sql.model');
+const ReportModel = require('../report/models/report.model');
 
 // List all records
-exports.list_all = function(req, res) {
-  console.log('list_all req.params: ', req.params);
-  const type = req.params.type;
-  const workspace = req.params.workspace;
-  const task = req.params.task;
-  const clientId = req.params.clientId;
+exports.extract_report = function(req, res) {
+  console.log('extract_report req.body: ', req.body);
+  const workspace = req.body.workspace;
+  const clientId = req.body.clientId;
+  const reportName = req.body.reportName;
+  //const variable = req.body.variable;
 
-  // Determine which type
-  switch (type) {
-    case 'business':
-      console.log('business');
-      switch (task) {
-        case 'list_all':
-          BusinessModel.getAllCollections(clientId, function(err, model) {
+  // Determine which workspace
+  switch (workspace) {
+    case 'collections':
+      console.log('collections');
+      switch (reportName) {
+        case 'aging':
+          ReportModel.getAgingReport(clientId, function(err, model) {
             if (err) {
-              console.log('BusinessModel.getAllCollections controller error: ', err);
+              console.log('ReportModel.getAgingReport controller error: ', err);
             } else {
               res.send(model);
             }
@@ -25,7 +24,7 @@ exports.list_all = function(req, res) {
           break;
         // shouldn't be needed any longer
         case 'list_today':
-          BusinessModel.getAllCollectionsForToday(clientId, function(err, model) {
+          ReportModel.getAllCollectionsForToday(clientId, function(err, model) {
             if (err) {
               console.log('BusinessModel.getAllCollectionsForToday controller error: ', err);
             } else {
@@ -35,21 +34,10 @@ exports.list_all = function(req, res) {
           break;
         // shouldn't be needed any longer
         case 'list_all_report':
-          BusinessModel.getAllForReport(clientId, function(err, model) {
+          ReportModel.getAllForReport(clientId, function(err, model) {
             if (err) {
               console.log('BusinessModel.getAllForReport controller error: ', err);
             } else {
-              res.send(model);
-            }
-          });
-          break;
-        // shouldn't be needed any longer
-        case 'list_all_customers':
-          BusinessModel.getAllCustomers(clientId, function(err, model) {
-            if (err) {
-              console.log('BusinessModel.getAllCustomers controller error: ', err);
-            } else {
-              //console.log('BusinessModel.getAllCustomers controller found');
               res.send(model);
             }
           });
@@ -60,35 +48,9 @@ exports.list_all = function(req, res) {
           break;
       }
       break;
-    case 'consumer':
-      console.log('consumer');
-      switch (task) {
-        case 'list_all':
-          ConsumerModel.getAllCollections(clientId, function(err, model) {
-            if (err) {
-              console.log('ConsumerModel.getAllCollections controller error: ', err);
-            } else {
-              res.send(model);
-            }
-          });
-          break;
-        case 'list_today':
-          ConsumerModel.getAllCollectionsForToday(clientId, function(err, model) {
-            if (err) {
-              console.log('ConsumerModel.getAllCollectionsForToday controller error: ', err);
-            } else {
-              res.send(model);
-            }
-          });
-          break;
-        default:
-          console.log('task not found: ', task);
-          res.send(task);
-          break;
-      }
     default:
-      console.log('type not found: ', type);
-      res.send(type);
+      console.log('workspace not found: ', workspace);
+      res.send(workspace);
       break;
     }
 }

@@ -30,9 +30,18 @@ const uatConfig = {
   database: 'thesyste_uat_cws_admin'
 };
 
+const reportConfig = {
+  host: 'localhost',
+  user: 'thesyste_reportuser',
+  port: '3306',
+  password: '92#A&4tBCXMfJ3',
+  database: 'thesyste_reports'
+};
+
 module.exports = {
   devConfig: devConfig,
   prodConfig: prodConfig,
   sitConfig: sitConfig,
-  uatConfig: uatConfig
+  uatConfig: uatConfig,
+  reportConfig: reportConfig
 };

@@ -8,6 +8,7 @@ module.exports = function(app) {
   const clients = require('../controllers/clients.controller');
   const email = require('../controllers/email.controller');
   const sales = require('../controllers/salesforce.controller');
+  const reports = require('../controllers/report.controller');
 
   function getTableName(path) {
     const searchTerm = '/';
@@ -167,158 +168,14 @@ module.exports = function(app) {
   app.route('/api/admin/error_email')
     .post(email.send_error_email);
 
+  // reports
+  app.route('/api/reports/')
+    .post(reports.extract_report);
+
   // Salesforce callback
   app.route('/api/salesforce')
     .post(sales.receive_token);
 
-/*
-  // Users
-  app.route('/api/:type/admin/users')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/:type/admin/users/:id')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Sessions
-  app.route('/api/:type/admin/sessions')
-    .post(sessions.auth_user);
-    //.post(sessions.auth);
-
-  app.route('/api/:type/admin/sessions/:email')
-    .get(sessions.authCheck)
-    //.put(sessions.update_item)
-    .delete(sessions.delete_item);
-
-  // Services
-  app.route('/api/:type/admin/clientservices')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/:type/admin/clientservices/:f_id')
-    .get(cont.f_read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Applications & Collections
-  app.route('/api/:type/:workspace/:clientId')
-    .get(cont.list_all_by_clientId);
-
-  app.route('/api/:type/:workspace/:workrecord/:id')
-    .get(cont.read_item)
-    .put(cont.update_item)
-
-  // Clients
-  app.route('/api/admin/clients')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/admin/clients/:id')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Blogs
-  app.route('/api/community/blogs')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/community/blogs/:id')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Comments
-  app.route('/api/community/comments')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/community/comments/:id')
-    .get(comments.read_item)
-    .put(comments.update_item)
-    .delete(cont.delete_item);
-
-  // Applications
-  app.route('/api/:type/:workspace/:id')
-    .get(cont.list_all)
-    .post(cont.create_item)
-    .post(cont.create_items);
-
-  app.route('/api/workspace/applications/application/:id')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  app.route('/api/workspace/:workspace/:clientId')
-    .get(cont.list_all_by_clientId)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Cases
-  app.route('/api/workspace/cases')
-    .get(cont.list_all)
-    .post(cont.create_item)
-    .post(cont.create_items);
-
-  app.route('/api/workspace/cases/:id')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Outcomes
-  app.route('/api/workspace/outcomes')
-    .get(cont.list_all)
-    .post(cont.create_item)
-    .post(cont.create_items);
-
-  app.route('/api/workspace/outcomes/:id')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Collections
-  app.route('/api/workspace/collections')
-    .get(coll.list_all)
-    .post(coll.create_item);
-
-  app.route('/api/workspace/collections/collection/:id')
-    //.get(coll.f_read_item)
-    .get(coll.read_item)
-    .put(coll.update_item)
-    .delete(coll.delete_item);
-
-  // Approved
-  app.route('/api/workspace/applications/approved')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/workspace/applications/approved/:applicationId')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Vetting
-  app.route('/api/maintenance/scorecards')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/maintenance/scorecards/:scorecardId')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-
-  // Policies
-  app.route('/api/maintenance/declines')
-    .get(cont.list_all)
-    .post(cont.create_item);
-
-  app.route('/api/maintenance/declines/:declineId')
-    .get(cont.read_item)
-    .put(cont.update_item)
-    .delete(cont.delete_item);
-*/
   // Uploads
   app.route('/api/:type/:workspace/upload/document')
     .post(storage.single_upload);
