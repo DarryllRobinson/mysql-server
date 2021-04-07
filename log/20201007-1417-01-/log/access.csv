@@ -1,6 +1,0 @@
-[2020-10-06T04:16:05.348Z] ::1 [object Object] POST /api/salesforce - {"username":"darryll@thesystem.co.za","password":"wRxYub28x$VG9@xvjtNPzWwzvnwRLqAKHOycS2","grant_type":"password","client_id":"3MVG9n_HvETGhr3AMsSL7XJCH5pjPIDIkzO2mZ30BhYSOAx1B0eNXgvMKKuKBBElSduYVvL_3jRvOrfA4uQ69","client_secret":"6A4E091EDA5ED3A9ADC80A31C0AAD038C3BB7F618CA88D7B821516EB29E3F8D4"} - ms
-[2020-10-06T04:42:46.275Z] ::1 [object Object] POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2020-10-06 14:42:46"} 183.517 ms
-[2020-10-06T04:42:46.381Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 25.121 ms
-[2020-10-06T04:42:46.490Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 200 {} 72.610 ms
-[2020-10-06T04:46:53.848Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 1.908 ms
-[2020-10-06T04:46:54.085Z] ::1 email@email.com GET /api/business/[object%20Object]/list_all/1 304 {} 61.343 ms

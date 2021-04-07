@@ -1,8 +1,0 @@
-[2021-03-18T07:51:56.236Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-03-18 17:51:55"} 943.124 ms
-[2021-03-18T07:51:57.041Z] ::1 - POST /api/admin/sessions/ - {"email":"email@email.com","password":"newpass","loginDate":"2021-03-18 17:51:55"} - ms
-[2021-03-18T07:52:00.093Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 52.716 ms
-[2021-03-18T07:52:00.361Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 94.913 ms
-[2021-03-18T10:58:52.489Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-03-18 20:58:52"} 3.124 ms
-[2021-03-18T10:59:19.436Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-03-18 20:59:19"} 276.537 ms
-[2021-03-18T10:59:22.769Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 65.879 ms
-[2021-03-18T10:59:23.130Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 204.675 ms
