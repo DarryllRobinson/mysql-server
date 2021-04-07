@@ -1,0 +1,4 @@
+[2021-01-20T03:28:57.194Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-01-20 13:28:56"} 223.995 ms
+[2021-01-20T03:28:57.545Z] ::1 - POST /api/admin/error_email - {"error":"Get error: Error: Request failed with status code 401","fileName":"MysqlLayer.js","dateTime":"2021-01-20 13:28:57","user":"email@email.com","state":null,"path":"/admin/clientservices/1","purpose":"error","to":"darryll@thesystem.co.za","subject":"ALERT! Error picked up!"} - ms
+[2021-01-20T03:28:59.157Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 121.111 ms
+[2021-01-20T03:28:59.433Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 228.763 ms

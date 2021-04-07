@@ -1,8 +1,9 @@
 const ConsumerModel = require('../consumer/models/sql.model');
 const BusinessModel = require('../business/models/sql.model');
+const ReportModel = require('../report/models/report.model');
 
 // List all records
-exports.list_all = function(req, res) {
+exports.list_all = function (req, res) {
   console.log('list_all req.params: ', req.params);
   const type = req.params.type;
   const workspace = req.params.workspace;
@@ -15,9 +16,12 @@ exports.list_all = function(req, res) {
       console.log('business');
       switch (task) {
         case 'list_all':
-          BusinessModel.getAllCollections(clientId, function(err, model) {
+          BusinessModel.getAllCollections(clientId, function (err, model) {
             if (err) {
-              console.log('BusinessModel.getAllCollections controller error: ', err);
+              console.log(
+                'BusinessModel.getAllCollections controller error: ',
+                err
+              );
             } else {
               res.send(model);
             }
@@ -25,9 +29,15 @@ exports.list_all = function(req, res) {
           break;
         // shouldn't be needed any longer
         case 'list_today':
-          BusinessModel.getAllCollectionsForToday(clientId, function(err, model) {
+          BusinessModel.getAllCollectionsForToday(clientId, function (
+            err,
+            model
+          ) {
             if (err) {
-              console.log('BusinessModel.getAllCollectionsForToday controller error: ', err);
+              console.log(
+                'BusinessModel.getAllCollectionsForToday controller error: ',
+                err
+              );
             } else {
               res.send(model);
             }
@@ -35,9 +45,12 @@ exports.list_all = function(req, res) {
           break;
         // shouldn't be needed any longer
         case 'list_all_report':
-          BusinessModel.getAllForReport(clientId, function(err, model) {
+          BusinessModel.getAllForReport(clientId, function (err, model) {
             if (err) {
-              console.log('BusinessModel.getAllForReport controller error: ', err);
+              console.log(
+                'BusinessModel.getAllForReport controller error: ',
+                err
+              );
             } else {
               res.send(model);
             }
@@ -45,9 +58,12 @@ exports.list_all = function(req, res) {
           break;
         // shouldn't be needed any longer
         case 'list_all_customers':
-          BusinessModel.getAllCustomers(clientId, function(err, model) {
+          BusinessModel.getAllCustomers(clientId, function (err, model) {
             if (err) {
-              console.log('BusinessModel.getAllCustomers controller error: ', err);
+              console.log(
+                'BusinessModel.getAllCustomers controller error: ',
+                err
+              );
             } else {
               //console.log('BusinessModel.getAllCustomers controller found');
               res.send(model);
@@ -64,18 +80,27 @@ exports.list_all = function(req, res) {
       console.log('consumer');
       switch (task) {
         case 'list_all':
-          ConsumerModel.getAllCollections(clientId, function(err, model) {
+          ConsumerModel.getAllCollections(clientId, function (err, model) {
             if (err) {
-              console.log('ConsumerModel.getAllCollections controller error: ', err);
+              console.log(
+                'ConsumerModel.getAllCollections controller error: ',
+                err
+              );
             } else {
               res.send(model);
             }
           });
           break;
         case 'list_today':
-          ConsumerModel.getAllCollectionsForToday(clientId, function(err, model) {
+          ConsumerModel.getAllCollectionsForToday(clientId, function (
+            err,
+            model
+          ) {
             if (err) {
-              console.log('ConsumerModel.getAllCollectionsForToday controller error: ', err);
+              console.log(
+                'ConsumerModel.getAllCollectionsForToday controller error: ',
+                err
+              );
             } else {
               res.send(model);
             }
@@ -86,15 +111,61 @@ exports.list_all = function(req, res) {
           res.send(task);
           break;
       }
+      break;
+    case 'reports':
+      switch (task) {
+        case 'aging':
+          ReportModel.getAgingReport(clientId, function (err, model) {
+            if (err) {
+              console.log('ReportModel.getAgingReport controller error: ', err);
+            } else {
+              //console.log('controller.getAgingReport model: ', model);
+              res.send(model);
+            }
+          });
+          break;
+        case 'agentPTP':
+          ReportModel.getAgentPTPReport(clientId, function (err, model) {
+            if (err) {
+              console.log(
+                'ReportModel.getAgentPTPReport controller error: ',
+                err
+              );
+            } else {
+              //console.log('controller.getAgentPTPReport model: ', model);
+              res.send(model);
+            }
+          });
+          break;
+        case 'datePTP':
+          ReportModel.getDatePTPReport(clientId, function (err, model) {
+            if (err) {
+              console.log(
+                'ReportModel.getDatePTPReport controller error: ',
+                err
+              );
+            } else {
+              //console.log('controller.getDatePTPReport model: ', model);
+              res.send(model);
+            }
+          });
+          break;
+        default:
+          console.log('report task not found: ', task);
+          res.send(task);
+          break;
+      }
+      break;
+
     default:
       console.log('type not found: ', type);
       res.send(type);
       break;
-    }
-}
+  }
+};
 
 // List all records
-exports.list_today = function(req, res) {
+exports.list_today = function (req, res) {
   console.log('list_today req.params: ', req.params);
   const type = req.params.type;
   const workspace = req.params.workspace;
@@ -108,9 +179,15 @@ exports.list_today = function(req, res) {
       console.log('business');
       switch (task) {
         case 'list_today':
-          BusinessModel.getAllCollectionsForToday(clientId, user, function(err, model) {
+          BusinessModel.getAllCollectionsForToday(clientId, user, function (
+            err,
+            model
+          ) {
             if (err) {
-              console.log('BusinessModel.getAllCollectionsForToday controller error: ', err);
+              console.log(
+                'BusinessModel.getAllCollectionsForToday controller error: ',
+                err
+              );
             } else {
               res.send(model);
             }
@@ -126,9 +203,15 @@ exports.list_today = function(req, res) {
       console.log('consumer');
       switch (task) {
         case 'list_today':
-          ConsumerModel.getAllCollectionsForToday(clientId, user, function(err, model) {
+          ConsumerModel.getAllCollectionsForToday(clientId, user, function (
+            err,
+            model
+          ) {
             if (err) {
-              console.log('ConsumerModel.getAllCollectionsForToday controller error: ', err);
+              console.log(
+                'ConsumerModel.getAllCollectionsForToday controller error: ',
+                err
+              );
             } else {
               res.send(model);
             }
@@ -143,11 +226,11 @@ exports.list_today = function(req, res) {
       console.log('type not found: ', type);
       res.send(type);
       break;
-    }
-}
+  }
+};
 
 // Create one
-exports.create_item = function(req, res) {
+/*exports.create_item = function (req, res) {
   console.log('create_item req.params: ', req.params);
   const type = req.params.type;
   const workspace = req.params.workspace;
@@ -158,7 +241,7 @@ exports.create_item = function(req, res) {
   switch (type) {
     case 'business':
       console.log('create_item business');
-      BusinessModel.createOne(workspace, req.body, function(err, model) {
+      BusinessModel.createOne(workspace, req.body, function (err, model) {
         if (err) {
           console.log('createOne controller error: ', err);
         } else {
@@ -175,10 +258,60 @@ exports.create_item = function(req, res) {
       res.send(type);
       break;
   }
-}
+};*/
+
+// Need a new function to pick up 'create items' that was being missed
+// Create one
+exports.create_item = function (req, res) {
+  console.log('create_item req.params: ', req.params);
+  const type = req.params.type;
+  const workspace = req.params.workspace;
+  const task = req.params.task;
+  const clientId = req.params.clientId;
+
+  // Determine which type
+  switch (type) {
+    case 'business':
+      switch (task) {
+        case 'create_item':
+          console.log('create_item business');
+          BusinessModel.createOne(workspace, req.body, function (err, model) {
+            if (err) {
+              console.log('createOne controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        case 'create_items':
+          console.log('create_items business');
+          BusinessModel.createMany(workspace, req.body, function (err, model) {
+            if (err) {
+              console.log('createMany controller error: ', err);
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        default:
+          console.log('create_item/s task not found: ', task);
+          res.send(task);
+          break;
+      }
+      break;
+    case 'consumer':
+      console.log('create_item consumer');
+      res.send(type);
+      break;
+    default:
+      console.log('create_item type not found: ', type);
+      res.send(type);
+      break;
+  }
+};
 
 // Create many
-exports.create_items = function(req, res) {
+exports.create_items = function (req, res) {
   console.log('create_items req.params: ', req.params);
   const type = req.params.type;
   const workspace = req.params.workspace;
@@ -189,7 +322,7 @@ exports.create_items = function(req, res) {
   switch (type) {
     case 'business':
       console.log('create_items business');
-      BusinessModel.createMany(workspace, req.body, function(err, model) {
+      BusinessModel.createMany(workspace, req.body, function (err, model) {
         if (err) {
           console.log('createMany controller error: ', err);
         } else {
@@ -206,10 +339,10 @@ exports.create_items = function(req, res) {
       res.send(type);
       break;
   }
-}
+};
 
 // Read one
-exports.read_item = function(req, res) {
+exports.read_item = function (req, res) {
   console.log('read_item req.params: ', req.params);
   const type = req.params.type;
   const workspace = req.params.workspace;
@@ -222,7 +355,10 @@ exports.read_item = function(req, res) {
     case 'business':
       console.log('read_item business');
       if (workspace === 'collections' && task === 'read_item') {
-        BusinessModel.getOneCase(workspace, clientId, recordId, function(err, model) {
+        BusinessModel.getOneCase(workspace, clientId, recordId, function (
+          err,
+          model
+        ) {
           if (err) {
             console.log('getOneCase controller error: ', err);
           } else {
@@ -231,24 +367,37 @@ exports.read_item = function(req, res) {
         });
       } else if (workspace === 'collections' && task === 'read_outcomes') {
         console.log('read_outcomes business');
-        BusinessModel.getOutcomesForCase(workspace, clientId, recordId, function(err, model) {
-          if (err) {
-            console.log('getOne controller error: ', err);
-          } else {
-            res.send(model);
+        BusinessModel.getOutcomesForCase(
+          workspace,
+          clientId,
+          recordId,
+          function (err, model) {
+            if (err) {
+              console.log('getOne controller error: ', err);
+            } else {
+              res.send(model);
+            }
           }
-        });
+        );
       } else if (workspace === 'collections' && task === 'read_contacts') {
         console.log('read_contacts business');
-        BusinessModel.getContactsForCase(workspace, clientId, recordId, function(err, model) {
-          if (err) {
-            console.log('getOne controller error: ', err);
-          } else {
-            res.send(model);
+        BusinessModel.getContactsForCase(
+          workspace,
+          clientId,
+          recordId,
+          function (err, model) {
+            if (err) {
+              console.log('getOne controller error: ', err);
+            } else {
+              res.send(model);
+            }
           }
-        });
+        );
       } else {
-        BusinessModel.getOne(workspace, clientId, recordId, function(err, model) {
+        BusinessModel.getOne(workspace, clientId, recordId, function (
+          err,
+          model
+        ) {
           if (err) {
             console.log('getOne controller error: ', err);
           } else {
@@ -266,10 +415,10 @@ exports.read_item = function(req, res) {
       res.send(type);
       break;
   }
-}
+};
 
 // Update one ***** Possibly incredibly unsafe!
-exports.update_item = function(req, res) {
+exports.update_item = function (req, res) {
   console.log('update_item req.params: ', req.params);
   const type = req.params.type;
   const workspace = req.params.workspace;
@@ -281,13 +430,19 @@ exports.update_item = function(req, res) {
   // Determine which type
   switch (type) {
     case 'business':
-      BusinessModel.updateOne(workspace, clientId, recordId, req.body, function(err, model) {
-        if (err) {
-          console.log('updateOne controller error: ', err);
-        } else {
-          res.send(model);
+      BusinessModel.updateOne(
+        workspace,
+        clientId,
+        recordId,
+        req.body,
+        function (err, model) {
+          if (err) {
+            console.log('updateOne controller error: ', err);
+          } else {
+            res.send(model);
+          }
         }
-      });
+      );
       break;
     case 'consumer':
       console.log('update_item consumer');
@@ -298,7 +453,7 @@ exports.update_item = function(req, res) {
       res.send(type);
       break;
   }
-}
+};
 
 /*exports.list_all_by_clientId = function(req, res) {
   console.log('list_all_by_clientId req.params: ', req.params);

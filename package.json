@@ -3,16 +3,19 @@
   "version": "1.0.0",
   "description": "MySQL server for all The System requests",
   "main": "server.js",
+  "bin": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "pkg": {
     "assets": [
-      "**/*"
+      "node_modules/**/*",
+      "src/**/*"
     ],
     "targets": [
       "node13-linux-x64"
-    ]
+    ],
+    "outputPath": "build"
   },
   "repository": {
     "type": "git",
@@ -31,7 +34,7 @@
   },
   "homepage": "https://github.com/DarryllRobinson/mysql-server#readme",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": ">=0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -46,9 +49,10 @@
     "mysql": "^2.18.1",
     "node-cron": "^2.0.3",
     "nodemailer": "^6.4.10",
+    "pkg": "^4.5.1",
     "rotating-file-stream": "^2.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.7"
   }
 }

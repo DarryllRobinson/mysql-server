@@ -1,0 +1,19 @@
+[2021-03-19T03:30:52.488Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-03-19 13:30:52"} 290.341 ms
+[2021-03-19T03:30:53.390Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 43.729 ms
+[2021-03-19T03:30:53.471Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 8.930 ms
+[2021-03-19T07:01:32.256Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-03-19 17:01:31"} 223.557 ms
+[2021-03-19T07:01:33.816Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 86.554 ms
+[2021-03-19T07:01:33.936Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 82.989 ms
+[2021-03-19T07:01:44.813Z] ::1 email@email.com GET /api/reports/collections/aging/1 200 {} 0.885 ms
+[2021-03-19T07:03:46.590Z] ::1 email@email.com GET /api/reports/1 404 {} 1.641 ms
+[2021-03-19T07:05:06.017Z] ::1 email@email.com GET /api/reports/1 404 {} 2.686 ms
+[2021-03-19T07:06:49.243Z] ::1 email@email.com GET /api/reports/1 404 {} 3.229 ms
+[2021-03-19T07:07:23.870Z] ::1 email@email.com GET /api/reports/collections/aging/1 304 {} 4.920 ms
+[2021-03-25T08:15:53.127Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-03-25 18:15:52"} 258.494 ms
+[2021-03-25T08:15:55.372Z] ::1 email@email.com GET /api/admin/clientservices/1 200 {} 59.962 ms
+[2021-03-25T08:15:55.540Z] ::1 email@email.com GET /api/business/collections/list_all/1 200 {} 40.315 ms
+[2021-03-25T08:18:30.047Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 49.443 ms
+[2021-03-25T08:18:30.365Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 220.232 ms
+[2021-03-25T11:32:00.426Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-03-25 21:31:59"} 627.907 ms
+[2021-03-25T11:32:06.408Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 2.932 ms
+[2021-03-25T11:32:06.637Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 98.634 ms

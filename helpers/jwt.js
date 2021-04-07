@@ -10,7 +10,7 @@ function jwt() {
       // public routes that don't require authentication
       '/api/admin/sessions/',
       '/api/admin/email',
-      '/api/admin/error_email'
-    ]
+      '/api/admin/error_email',
+    ],
   });
 }
