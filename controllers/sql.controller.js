@@ -28,6 +28,19 @@ exports.list_all = function (req, res) {
           });
           break;
         // shouldn't be needed any longer
+        case 'list_five':
+          BusinessModel.getFiveCollections(clientId, function (err, model) {
+            if (err) {
+              console.log(
+                'BusinessModel.getFiveCollections controller error: ',
+                err
+              );
+            } else {
+              res.send(model);
+            }
+          });
+          break;
+        // shouldn't be needed any longer
         case 'list_today':
           BusinessModel.getAllCollectionsForToday(clientId, function (
             err,

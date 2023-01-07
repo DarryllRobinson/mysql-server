@@ -1,0 +1,9 @@
+[2021-04-09T14:46:19.261Z] ::1 null GET /api/reports/collections/aging/1 304 {} 2.502 ms
+[2021-04-09T14:46:19.264Z] ::1 null GET /api/reports/collections/agentPTP/1 304 {} 3.869 ms
+[2021-04-09T14:46:19.291Z] ::1 null GET /api/reports/collections/datePTP/1 304 {} 1.440 ms
+[2021-04-09T23:55:02.844Z] ::1 null GET /api/reports/collections/aging/1 304 {} 1.374 ms
+[2021-04-09T23:55:02.854Z] ::1 null GET /api/reports/collections/agentPTP/1 304 {} 1.537 ms
+[2021-04-09T23:55:02.862Z] ::1 null GET /api/reports/collections/datePTP/1 304 {} 1.354 ms
+[2021-04-10T00:25:05.267Z] ::1 null GET /api/reports/collections/aging/1 304 {} 2.520 ms
+[2021-04-10T00:25:05.272Z] ::1 null GET /api/reports/collections/agentPTP/1 304 {} 1.552 ms
+[2021-04-10T00:25:05.290Z] ::1 null GET /api/reports/collections/datePTP/1 304 {} 2.217 ms

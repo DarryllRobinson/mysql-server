@@ -1,0 +1,16 @@
+[2021-04-12T15:57:14.055Z] ::1 null GET /api/reports/collections/aging/1 304 {} 10.416 ms
+[2021-04-12T15:57:14.063Z] ::1 null GET /api/reports/collections/agentPTP/1 304 {} 11.668 ms
+[2021-04-12T15:57:14.067Z] ::1 null GET /api/reports/collections/datePTP/1 304 {} 15.043 ms
+[2021-04-12T20:55:24.680Z] ::1 null GET /api/reports/collections/aging/1 304 {} 3.972 ms
+[2021-04-12T20:55:24.686Z] ::1 null GET /api/reports/collections/agentPTP/1 304 {} 1.791 ms
+[2021-04-12T20:55:24.704Z] ::1 null GET /api/reports/collections/datePTP/1 304 {} 2.856 ms
+[2021-04-12T22:35:30.226Z] ::1 null GET /api/reports/collections/aging/1 304 {} 109.736 ms
+[2021-04-12T22:35:30.326Z] ::1 null GET /api/reports/collections/datePTP/1 304 {} 207.187 ms
+[2021-04-12T22:35:30.355Z] ::1 null GET /api/reports/collections/agentPTP/1 304 {} 235.152 ms
+[2021-04-12T22:40:30.235Z] ::1 - POST /api/admin/sessions/ 200 {"email":"email@email.com","password":"newpass","loginDate":"2021-04-13 08:40:29"} 487.665 ms
+[2021-04-12T22:40:33.983Z] ::1 email@email.com GET /api/reports/collections/aging/1 304 {} 1.859 ms
+[2021-04-12T22:40:33.992Z] ::1 email@email.com GET /api/reports/collections/agentPTP/1 304 {} 1.779 ms
+[2021-04-12T22:40:34.022Z] ::1 email@email.com GET /api/reports/collections/datePTP/1 304 {} 20.873 ms
+[2021-04-12T22:40:34.043Z] ::1 email@email.com GET /api/admin/clientservices/1 304 {} 2.782 ms
+[2021-04-12T22:40:34.150Z] ::1 email@email.com GET /api/business/collections/list_five/1 304 {} 175.739 ms
+[2021-04-12T22:40:35.718Z] ::1 email@email.com GET /api/business/collections/list_all/1 304 {} 8.854 ms

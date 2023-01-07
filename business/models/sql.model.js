@@ -25,6 +25,27 @@ Model.getAllCollections = function (clientId, result) {
   );
 };
 
+Model.getFiveCollections = function (clientId, result) {
+  console.log('Running getFiveCollections');
+  sql.query(
+    `SELECT * FROM customers, accounts, cases
+    WHERE customers.customerRefNo = accounts.f_customerId
+    AND accounts.accountNumber = cases.f_accountNumber
+    AND customers.f_clientId = ?
+    LIMIT 5;`,
+    clientId,
+    function (err, res) {
+      if (err) {
+        console.log('getFiveCollections error: ', err);
+        result(null, err);
+      } else {
+        //console.log('collections res: ', res);
+        result(null, res);
+      }
+    }
+  );
+};
+
 Model.getAllCollectionsForToday = function (clientId, user, result) {
   console.log('Running getAllCollectionsForToday');
   sql.query(
